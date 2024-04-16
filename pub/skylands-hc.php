@@ -1,0 +1,1 @@
+/server/staging.brilliantdiamonds.com//link/skylands-hc.php

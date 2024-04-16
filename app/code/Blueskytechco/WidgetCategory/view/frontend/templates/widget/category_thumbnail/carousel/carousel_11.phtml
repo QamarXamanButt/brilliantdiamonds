@@ -1,0 +1,217 @@
+<div class="section  widget-category-thumbnail-image category-slider-11 margin_item--<?= /*@noEscape*/ $block->getDataWidgetConfig('margin_item') ?> image_hover_effects--<?= /*@noEscape*/ $block->getDataWidgetConfig('image_hover_effects') ?>">
+	<?php if($block->getDataWidgetConfig('title') != '' || $block->getDataWidgetConfig('short_description') != ''){ ?>
+	<div class="elementor__header">
+		<?php if($block->getDataWidgetConfig('title') != ''){ ?>
+		<h3 class="elementor__headline"><?= $block->escapeHtml($block->getDataWidgetConfig('title')) ?></h3>
+		<?php } ?>
+		<?php if($block->getDataWidgetConfig('short_description') != ''){ ?>
+		<div class="elementor__description"><?= $block->filterOutputContent($block->getDataWidgetConfig('short_description')) ?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+	<?php $_catCollection = $block->getCatCollection(); ?>
+	<?php $data_sizes = $block->getSizeThumbnail(); ?>
+	<?php if ($_catCollection->count()) { ?>
+	<div class="elementor__content widget-category-thumbnail-image-slider first-loading-slick">
+		<?php $items = 0; foreach ($_catCollection as $_cat) { $items ++; ?>
+			<div class="item-loading-slick">
+				<div class="elementor-category-thumbnail-image-item elementor__item--hover">
+					<?php 
+					$width = 300;
+					$height = 300;
+					$featuredImage = '';
+					if($_cat->getData('widget_category_thumbnail') != ''){
+						$featuredImage = $block->getCategoryThumnnail($_cat->getData('widget_category_thumbnail'));
+					}
+					if(isset($data_sizes['common']['img'])){
+						$width = $data_sizes['common']['img']['width'];
+						$height = $data_sizes['common']['img']['height'];
+					}
+					if(isset($data_sizes['custom']['img1'])){
+						$width = $data_sizes['custom']['img1']['width'];
+						$height = $data_sizes['custom']['img1']['height'];
+					}
+					if($block->getDataWidgetConfig('width') && $block->getDataWidgetConfig('width') != ''){
+						$width = $block->getDataWidgetConfig('width');
+					}
+					if($block->getDataWidgetConfig('height') && $block->getDataWidgetConfig('height') != ''){
+						$height = $block->getDataWidgetConfig('height');
+					}
+					if (!$featuredImage) {
+						$featuredImage = '//placehold.jp/1aada3/fff/'.$width.'x'.$height.'.png?text=Minimog';
+					}
+					$aspect_ratio = $width / $height;
+					?>
+					<div class="category-thumbnail_img overflow-hidden radius-26">
+						<a href="<?= /*@noEscape*/ $_cat->getUrl(); ?>" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: <?= $aspect_ratio;?>;" data-bgset="<?= $block->escapeHtml($featuredImage) ?>" data-sizes="auto">
+						</a>
+					</div>
+					<div class="category-thumbnail__info d-flex flex-column position-absolute">
+						<h5 class="category-thumbnail__title">
+							<a href="<?= /*@noEscape*/ $_cat->getUrl(); ?>"> <?= /*@noEscape*/ $_cat->getName(); ?> 
+							</a>
+						</h5>
+						<ul class="bls__collection-menu-list p-0 list-none">
+						<?php
+							$_cat_subs = $_cat->getChildrenCategories();
+							$i = 0;
+							foreach($_cat_subs as $child_cate) { ?>
+								<li><a href="<?= /*@noEscape*/ $child_cate->getUrl(); ?>"><?= $child_cate->getName() ?></a></li>
+							<?php 
+								$i++;
+								if ($i == 4) {
+									break;
+								}
+							} 
+							?>
+						</ul>
+
+						<a href="<?= /*@noEscape*/ $_cat->getUrl(); ?>" target="_blank" class="bls__collection-menu-btn whitespace-nowrap">
+							<?= __('All') ?> <?= /*@noEscape*/ $_cat->getName(); ?> 
+							<i class="ml-5 icon-chevrons-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+	</div>
+
+	<?php }else{ ?>
+		<div class="elementor__content widget-category-thumbnail-image-slider first-loading-slick">
+			<div class="elementor-category-thumbnail-image-item elementor__item--hover item-loading-slick">
+				<div class="category-thumbnail_img overflow-hidden radius-26">
+					<a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 1.5812;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-shoes_1.png" data-sizes="auto">
+					</a>
+				</div>
+				<div class="category-thumbnail__info d-flex flex-column position-absolute">
+					<h5 class="category-thumbnail__title">
+						<a href="#">Accessories</a>
+					</h5>
+					<ul class="bls__collection-menu-list p-0 list-none">
+						<li><a href="#" tabindex="0">iPhone</a></li>
+							<li><a href="#" tabindex="0">Phone Accessories</a></li>
+							<li><a href="#" tabindex="0">Phone Cases</a></li>
+							<li><a href="#" tabindex="0">Postpaid Phones</a></li>
+					</ul>
+					<a href="#" target="_blank" class="bls__collection-menu-btn whitespace-nowrap">
+						Accessories
+						<i class="ml-5 icon-chevrons-right"></i>
+                    </a>
+
+				</div>
+			</div>
+			
+			<div class="elementor-category-thumbnail-image-item elementor__item--hover item-loading-slick">
+				<div class="category-thumbnail_img overflow-hidden radius-26">
+					<a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 1.5812;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-shoes_1.png" data-sizes="auto">
+					</a>
+				</div>
+				<div class="category-thumbnail__info d-flex flex-column position-absolute">
+					<h5 class="category-thumbnail__title">
+						<a href="#">Accessories</a>
+					</h5>
+					<ul class="bls__collection-menu-list p-0 list-none">
+						<li><a href="#" tabindex="0">iPhone</a></li>
+							<li><a href="#" tabindex="0">Phone Accessories</a></li>
+							<li><a href="#" tabindex="0">Phone Cases</a></li>
+							<li><a href="#" tabindex="0">Postpaid Phones</a></li>
+					</ul>
+					<a href="#" target="_blank" class="bls__collection-menu-btn whitespace-nowrap">
+						Accessories
+						<i class="ml-5 icon-chevrons-right"></i>
+                    </a>
+
+				</div>
+			</div>
+			<div class="elementor-category-thumbnail-image-item elementor__item--hover item-loading-slick">
+				<div class="category-thumbnail_img overflow-hidden radius-26">
+					<a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 1.5812;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-shoes_1.png" data-sizes="auto">
+					</a>
+				</div>
+				<div class="category-thumbnail__info d-flex flex-column position-absolute">
+					<h5 class="category-thumbnail__title">
+						<a href="#">Accessories</a>
+					</h5>
+					<ul class="bls__collection-menu-list p-0 list-none">
+						<li><a href="#" tabindex="0">iPhone</a></li>
+							<li><a href="#" tabindex="0">Phone Accessories</a></li>
+							<li><a href="#" tabindex="0">Phone Cases</a></li>
+							<li><a href="#" tabindex="0">Postpaid Phones</a></li>
+					</ul>
+					<a href="#" target="_blank" class="bls__collection-menu-btn whitespace-nowrap">
+						Accessories
+						<i class="ml-5 icon-chevrons-right"></i>
+                    </a>
+
+				</div>
+			</div>
+			<div class="elementor-category-thumbnail-image-item elementor__item--hover item-loading-slick">
+				<div class="category-thumbnail_img overflow-hidden radius-26">
+					<a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 1.5812;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-shoes_1.png" data-sizes="auto">
+					</a>
+				</div>
+				<div class="category-thumbnail__info d-flex flex-column position-absolute">
+					<h5 class="category-thumbnail__title">
+						<a href="#">Accessories</a>
+					</h5>
+					<ul class="bls__collection-menu-list p-0 list-none">
+						<li><a href="#" tabindex="0">iPhone</a></li>
+							<li><a href="#" tabindex="0">Phone Accessories</a></li>
+							<li><a href="#" tabindex="0">Phone Cases</a></li>
+							<li><a href="#" tabindex="0">Postpaid Phones</a></li>
+					</ul>
+					<a href="#" target="_blank" class="bls__collection-menu-btn whitespace-nowrap">
+						Accessories
+						<i class="ml-5 icon-chevrons-right"></i>
+                    </a>
+
+				</div>
+			</div>
+			<div class="elementor-category-thumbnail-image-item elementor__item--hover item-loading-slick">
+				<div class="category-thumbnail_img overflow-hidden radius-26">
+					<a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 1.5812;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-shoes_1.png" data-sizes="auto">
+					</a>
+				</div>
+				<div class="category-thumbnail__info d-flex flex-column position-absolute">
+					<h5 class="category-thumbnail__title">
+						<a href="#">Accessories</a>
+					</h5>
+					<ul class="bls__collection-menu-list p-0 list-none">
+						<li><a href="#" tabindex="0">iPhone</a></li>
+							<li><a href="#" tabindex="0">Phone Accessories</a></li>
+							<li><a href="#" tabindex="0">Phone Cases</a></li>
+							<li><a href="#" tabindex="0">Postpaid Phones</a></li>
+					</ul>
+					<a href="#" target="_blank" class="bls__collection-menu-btn whitespace-nowrap">
+						Accessories
+						<i class="ml-5 icon-chevrons-right"></i>
+                    </a>
+
+				</div>
+			</div>
+			<div class="elementor-category-thumbnail-image-item elementor__item--hover item-loading-slick">
+				<div class="category-thumbnail_img overflow-hidden radius-26">
+					<a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 1.5812;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-shoes_1.png" data-sizes="auto">
+					</a>
+				</div>
+				<div class="category-thumbnail__info d-flex flex-column position-absolute">
+					<h5 class="category-thumbnail__title">
+						<a href="#">Accessories</a>
+					</h5>
+					<ul class="bls__collection-menu-list p-0 list-none">
+						<li><a href="#" tabindex="0">iPhone</a></li>
+							<li><a href="#" tabindex="0">Phone Accessories</a></li>
+							<li><a href="#" tabindex="0">Phone Cases</a></li>
+							<li><a href="#" tabindex="0">Postpaid Phones</a></li>
+					</ul>
+					<a href="#" target="_blank" class="bls__collection-menu-btn whitespace-nowrap">
+						Accessories
+						<i class="ml-5 icon-chevrons-right"></i>
+                    </a>
+
+				</div>
+			</div>
+		</div>
+		
+	<?php } ?>
+</div>

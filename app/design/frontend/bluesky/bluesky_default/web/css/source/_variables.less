@@ -1,0 +1,227 @@
+// /**
+//  * Copyright © Bluesky Techco, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Bluesky theme variables
+//  _____________________________________________
+
+//
+//  Typography
+//  ---------------------------------------------
+//  Fonts-family
+@font-family-name__base: var(--font-family-name__base, 'Open Sans');
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
+@flex: flex;
+
+@heading_letter_spacing: -0.5px;
+
+//Topbar
+//===================
+
+@topbarbg: var(--topbarbg);
+@topbarcolor: var(--topbarcolor);
+@topbarhovercolor: var(--topbarhovercolor);
+@mainsectionbg: @topbarbg;
+@topbar-size: var(--topbar-size);
+@topbar-border-color: @header-border-color;
+
+// Header
+//===================
+
+@header_shadow: false;
+// Couter qty
+@counter_qty-radius: 50%;
+@counter_qty-color: @button__color;
+@counter_qty-bg: @button__background;
+
+
+// Icon in header
+@type_icon_header: icon-font;
+
+@icon-header-content: '';
+@icon_header_font_family: @icon-font;
+
+@icon_account_header: "\ea18";
+@icon_wishlist_header: "\e995";
+@icon_mini_cart_header: "\e9ed";
+@icon_search: "\e9e4";
+@icon_header-size: 2.8rem;
+@icon_header_mobile-size: 2.1rem;
+@icon_header_height: 1.6rem; // For svg type
+@icon_header_mobile_height: 1.6rem;
+
+@icon_header-l-size: 2.8rem;
+@icon_header-l-vertical_size: 2.4rem;
+
+.lib-icon-header(@_type_icon_header: @type_icon_header,
+  @_icon-header-content: @icon-header-content,
+  @_icon_header_font-size: @icon_header-size) when (@_type_icon_header =icon-font) {
+  .lib-css(content, @_icon-header-content);
+  .lib-css(font-family, @icon_header_font_family);
+  .lib-css(font-size, @icon_header-size);
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+
+  @media all and (max-width: @screen__xs) {
+    .lib-css(font-size, @icon_header_mobile-size);
+  }
+}
+
+.lib-icon-header(@_type_icon_header: @type_icon_header,
+  @_icon-header-content: @icon-header-content,
+  @_icon_header_font-size: @icon_header-size) when (@_type_icon_header =svg) {
+  content: '';
+  .lib-css(mask, @_icon-header-content, 1);
+  .lib-css(background-color, @header-icons-color);
+  .lib-css(width, @icon_header-size);
+  .lib-css(height, @icon_header_height);
+  -webkit-mask-size: contain;
+
+  @media all and (max-width: @screen__m) {
+    .lib-css(width, @icon_header-l-size);
+    .lib-css(height, @icon_header-l-vertical_size);
+  }
+
+  @media all and (max-width: @screen__xs) {
+    .lib-css(height, @icon_header_mobile_height);
+  }
+
+  &:hover {
+    &:before {
+      .lib-css(width, @icon_header_mobile-size);
+      background-color: @theme__color__primary;
+    }
+  }
+}
+
+// Space bettwen action in header
+
+/* Breacrumbs background */
+@breadcrumbs_background_color: @color-white;
+
+//
+@remove-line-height: 0;
+
+// Owl dot, owl nav
+// owl nav
+@owl-nav-bg: #cacaca;
+@owl-nav-bg-width: 50px;
+@owl-nav-height: 50px;
+@owl-nav-border-radius: 50%;
+@owl-nav-color: @color-white;
+@owl-nav-border: 1px solid @heading__color__base;
+
+// Control (dot)
+@owl-dot-margin-top: 2rem;
+@owl-dot-bg: #dddbde;
+@owl-dot-active-bg: @theme__color__primary;
+@owl-dot-width: 6px;
+@owl-dot-height: 6px;
+@owl-nav-border: 1px solid @heading__color__base;
+@owl-nav-active-border: 1px solid @heading__color__base;
+@owl-dot-border-radius: 50%;
+
+//  Pager variables pages-items
+@pager_item-position: center;
+
+@image_border-radius: 20px;
+
+.image_border-radius(@_image_border-radius: @image_border-radius,
+) {
+  .lib-css(border-radius, @image_border-radius, @_prefix: 1);
+  @transform: translate3d(0, 0, 0);
+  .lib-css(transform, @transform, @_prefix: 1);
+}
+
+// Custom variables color
+//  _____________________________________________
+@greycolor: #999;
+
+@block-items__counter__color: @color-gray43;
+
+@second_button_bg: @color-white-smoke; // #f5f5f5
+@second_button_color: @heading__color__base;
+
+@viewcart-button-bg: #f5f5f5;
+@viewcart-button-color: @heading__color__base;
+
+//  Tabs
+//  _____________________________________________
+
+//  Sidebar
+//  _____________________________________________
+@sidebar__background-color: @color-white-smoke; // #f5f5f5  Used in cart sidebar, Checkout sidebar, Tier Prices, My account navigation, Rating block background
+// @sidebar__width: 28.5rem;
+
+// // Product
+// //  _____________________________________________
+
+// Product detail page 
+@product_detail_title-font-size: var(--product_detail_title-font-size);
+@product_detail_title-font-weight: var(--heading__font-weight__base);
+@product_detail_title-text-transform: false;
+@product_detail_title-margin: 0 0 3px;
+
+@product_detail_price-font-size: var(--product_detail_price-font-size);
+@product_detail_price-margin: 0 0 1.9rem;
+@product_detail_price-border: false;
+@product_detail_rate-margin: 7px 0 0 0;
+
+.hidden {
+  display: none;
+}
+
+.w-max-45 {
+  max-width: 45% !important;
+}
+
+// Define extend value
+//_____________________________________
+//
+// Small button
+.small_button_padding() {
+  .lib-button(@_button-padding: @button_small_padding,
+  )
+}
+
+// Scroll bar
+.bls-scrollbar() {
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .15);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .25);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .25);
+  }
+}
+
+// Extend class
+.color_primary {
+  .lib-css(color, @theme__color__primary);
+}
+
+.color_heading {
+  .lib-css(color, @heading__color__base);
+}
+
+// Gobal space (such as: bettween module in inner page....)
+
+
+// Media screen depend on responsive file
+//  _____________________________________________

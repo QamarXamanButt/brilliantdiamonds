@@ -1,0 +1,366 @@
+//Body
+//  _____________________________________________
+
+@font-size-ratio__base: 1.6;
+@font-size__base: unit(@font-size-unit-ratio * @font-size-ratio__base, px); // Base font size value in <b>px</b>
+@line-height__base: 1.75;
+@text-weight: var(--text-weight, @font-weight__regular);
+@text__color: var(--text__color, @color-gray40); // #666 Body text color
+@font-weight__regular: var(--text-weight, 400);
+//
+//  Layout variables
+//  _____________________________________________
+@layout__max-width: var(--layout__max-width, 1200px); // Main content max-width
+@layout-indent__width: 15px;
+
+//  Variables for layout columns depending on layout used
+//  _____________________________________________
+@gutter-width: 0;
+@layout-column__sidebar-width: 3; // Side bar column width (3/12)
+@layout-column-main__sidebar-offset: 1.5rem; // Spacing bettween sidebar and content
+
+//  Line heights
+
+@line-height__computed: 24px;
+//  _____________________________________________
+// Heading
+@heading__font-family__base: var(--heading__font-family__base, false);
+@heading__color__base: var(--heading__color__base, #000);
+@heading__font-weight__base: var(--heading__font-weight__base, @font-weight__semibold);
+@heading__line-height__base: 1.1;
+@heading__margin-top__base: @indent__base;
+@heading__margin-bottom__base: @indent__base;
+
+@font-size__xl: 21px; // 21px
+@font-size__l: 18px; // 18px
+@font-size__s: 12px; // 12px
+@font-size__xs: 11px; // 11px
+// h1
+
+@h1__font-size: 45px; // 38px
+@h1__font-size-desktop: 48px; //48px H1 on destop font size
+@h1__margin-bottom__desktop: @h1__margin-bottom;
+@h1__margin-top: 0;
+@h1__margin-bottom: 30px;
+
+// h2
+
+@h2__font-size: 36px; // 30px
+@h2__margin-top: 0;
+@h2__margin-bottom: 20px;
+
+// h3
+
+@h3__font-size: 24px; // 24px  
+@h3__margin-top: 0;
+@h3__margin-bottom: 17px;
+
+// h4
+
+@h4__font-size: 18px; // 18px
+@h4__font-weight: @heading__font-weight__base;
+
+// h5
+
+@h5__font-size: 16px;
+@h5__font-weight: @heading__font-weight__base;
+
+// h6
+@h6__font-size: 14px;
+@h6__font-weight: @heading__font-weight__base;
+@heading__small-size: 14px;
+// p
+@p__margin-bottom: 18px;
+
+//ul, ol
+@list__margin-bottom: @indent__base; // ul, ol margin bottom
+
+//
+//  Navigation variables
+//  _____________________________________________
+@navigation-desktop__font-weight: @text-weight;
+
+//========================================
+//Breadcrumbs
+
+@breadcrumbs-icon__font-vertical-align: middle;
+@breadcrumbs__font-size: 1.4rem;
+@breadcrumbs-current__color: @heading__color__base ;
+@breadcrumbs-link__color: @text__color;
+@breadcrumbs__container-margin: var(--breadcrumbs__container-margin);
+
+//===================================
+//Tab
+
+@tab-control__background-color: transparent;
+@tab-content__border: 0;
+@tab-control__color: @heading__color__base; //color tab
+@tab-control__active__color: @theme__color__primary; //color tab active
+@tab-control__active__border-color: false;
+@tab-control__font-size: @font-size__base + 4px;
+@tab-control__font-weight: @heading__font-weight__base;
+@tab-control__height: 100%;
+@tab-content__margin-top: 5.1rem;
+@tab-control__padding-top: 1.7rem;
+@tab-control__padding-bottom: @tab-control__padding-top;
+//tab content
+
+@tab-content__padding-top: var(--tab-content__padding-top, 6rem);
+@tab-content__padding-right: 0;
+@tab-content__padding-bottom: 0;
+@tab-content__padding-left: @tab-content__padding-right;
+@accordion-control__height: false; //Remove default tab height in product view on mobile version
+@tab-content__background-color: @color-white;
+//===================================
+
+//Swatch 
+@swatch-option-text__background: @color-white;
+@swatch-option-text__color: @heading__color__base;
+@swatch-option__hover__border: 2px solid @theme__color__primary;
+@swatch-option__border: 2px solid @border-color__base;
+@swatch-option__hover__outline: false;
+@swatch-option-link-layered__focus__box-shadow: false;
+
+//  Focus
+//  ---------------------------------------------
+
+@focus__color: @theme__color__primary;
+@focus__box-shadow: none;
+
+//
+//COLOR
+//=================================
+//  Color nesting
+//  ---------------------------------------------
+@theme__color__primary: var(--theme__color__primary, #D73F0F);
+@theme__color__primary-alt: @theme__color__primary;
+@theme__color__secondary: @theme__color__primary;
+
+@primary__color: @color-very-dark-gray; // #666 Using as body color
+@primary__color__dark: @heading__color__base; // #000
+@primary__color__darker: @heading__color__base; // #333
+@primary__color__lighter: #7ddae8; // #7d7d7d
+@primary__color__light: #93e0ec; // #a6a6a6
+
+@secondary__color: @color-gray91;
+@secondary__color__light: #f2f2f2;
+
+@page__background-color: @color-white;
+@panel__background-color: @color-white;
+
+@active__color: #111111;
+@error__color: @color-red10;
+
+//==============================
+/* link color */
+@link__color: var(--link__color);
+@link__hover__color: var(--link__hover__color);
+
+@link__hover__text-decoration: none;
+@link__active__text-decoration: none;
+@link__visited__text-decoration: none;
+//==============================
+//  Borders
+//  ---------------------------------------------
+
+@border-color__base: var(--border-color__base, #eee);
+@shadown_inset: 0 0 0 2px @border-color__base inset;
+@shadown_hover_inset: 0 0 0 2px @theme__color__primary inset;
+
+//
+//  Blockquotes
+//  ---------------------------------------------
+@blockquote__border-color: false;
+@blockquote__border-width: false;
+@blockquote__font-size: 2rem;
+@blockquote__font-style: italic;
+@blockquote__margin: 0;
+@blockquote__background: @greycolor;
+@blockquote__padding: 2% 6%;
+@blockquote__content-before: '“';
+@blockquote__content-size: @blockquote__font-size;
+
+@blockquote-small__color: @primary__color;
+@blockquote-small__font-size: @font-size__xs;
+
+//  Input in form 
+//  ---------------------------------------------
+@form-element-input__border-color: @border-color__base;
+@form-element-input__border-radius: 2px;
+@form-element-input__height: 45px;
+@form-element-input__font-size: 14px;
+@form-element-input__font-weight: var(--text-weight);
+
+//  Placeholder
+@form-element-input-placeholder__color: #999999; //Placeholder color
+
+//  Form field control
+@form-field-type-control-inline__width: 100%;
+//
+//  Field
+//  ---------------------------------------------
+@form-field-label__font-weight: @font-weight__regular;
+@form-field-type-label-inline__margin: 0 0 8px;
+@form-field-type-label-block__margin: 0 0 8px;
+
+@form-field-type-label-inline__padding-top: 0;
+
+@form-field-type-label-inline__width: false; //Remove default control width
+//
+//  Fieldset
+//  ---------------------------------------------
+@form-field-type-inline__margin: 0 0 20px 0;
+@form-fieldset__margin: @form-field-type-inline__margin; //Field and fieldset have same margin
+@form-field__vertical-indent__desktop: 20px;
+@form-field__vertical-indent: 20px;
+
+//  Pager variables pages-items
+@pager__font-size: @font-size__base;
+@pager__font-weight: @text-weight;
+@pager__line-height: 35px;
+@pager-item__margin: 0 10px 0 0;
+@pager-item__padding: false;
+
+@pager__border: 1px solid @border-color__base;
+
+@pager__background: #f5f5f5; // #f5f5f5
+@pager__color: @text__color;
+
+//  Pager link.action hover
+@pager__hover__background: @color-white;
+@pager__hover__color: @theme__color__primary;
+
+//  Pager current page
+@pager-current__font-weight: @pager__font-weight;
+@pager-current__background: @theme__color__primary;
+@pager-current__color: @button__hover__color;
+
+@pager__active__color: @pager-current__color;
+@pager__active__border: false;
+@pager__active__background: @pager-current__background;
+
+@pager__visited__color: @pager__color;
+@pager__visited__border: @pager__border;
+//  Pager link.action default
+@pager-action__color: @pager__color;
+@pager-icon__font-size: 32px;
+@pager-icon__font-margin: 0 0 0 0;
+
+//  Pager link.action active
+@pager-action__active__color: @pager__active__color;
+@pager-action__active__border: false;
+@pager-action__active__background: @pager__active__background;
+
+
+@pager-action__hover__color: @theme__color__primary;
+@pager-action__hover__background: @color-white;
+
+//  Theme variables (Redefine in modul magento_theme)
+//  _____________________________________________
+@header__background-color: var(--header__background-color);
+@header-icons-color: @heading__color__base;
+@header-icons-color-hover: @theme__color__primary;
+@headerpadding: 15px; // Make header height bigger than menu height
+@header-border-color: @border-color__base;
+
+@header_sticky_bg: var(--header_sticky_bg);
+@header_sticky_border: @border-color__base;
+
+@footer__background-color: var(--footer__background-color);
+@footer-links-separator-border-color: @color-gray-light4;
+
+@footer-links-color: var(--footer-links-color);
+@footer-links-color-hover: var(--footer-links-hover-color);
+@footer-links-color-current: @primary__color__light;
+
+@addto-color: #000;
+@addto-hover-color: @primary__color;
+
+@minicart-icons-color: @header-icons-color;
+@minicart-icons-color-hover: @header-icons-color-hover;
+
+
+
+@h1__margin-bottom__desktop: @h1__margin-bottom;
+
+
+// Redefine vairable in listing.less Magento_Catalog
+@product-name-link__color: @heading__color__base;
+@product-name-link__color__active: @link__hover__color;
+@product-name-link__color__hover: @link__hover__color;
+@product-name-link__color__visited: @heading__color__base;
+
+// Swatch option
+@swatch-attribute-option__selected__color: @theme__color__primary;
+@swatch-option__background: @color-white;
+@swatch-option__border: @border-width__base solid @border-color__base;
+
+@swatch-option__hover__border: @border-width__base solid @theme__color__primary;
+@swatch-option__hover__color: @theme__color__primary;
+@swatch-option__hover__outline: false;
+
+@swatch-more__hover__border: @swatch-option__hover__border;
+@swatch-more__hover__color: @swatch-option__hover__color;
+@swatch-more__hover__outline: false;
+
+@swatch-option__selected__border: @swatch-option__hover__border;
+@swatch-option__selected__color: @swatch-option__hover__color;
+@swatch-option__selected__outline: false;
+
+//  Text attributes
+@swatch-option-text__background: @swatch-option__background;
+@swatch-option-text__color: @heading__color__base;
+
+@swatch-option-text__selected__background-color: @theme__color__primary;
+
+//  Size and Manufacturer attributes
+@attr-swatch-option__background: @swatch-option__background;
+@attr-swatch-option__color: @heading__color__base;
+
+@attr-swatch-option__selected__background: @button__hover__background;
+@attr-swatch-option__selected__border: 1px solid @button__hover__background;
+@attr-swatch-option__selected__color: @button__hover__color;
+
+//  Image and Color swatch
+@img-color-swatch-option__hover__border: @swatch-option__hover__border;
+
+//  Tooltip
+@swatch-option-tooltip__background: @color-white;
+@swatch-option-tooltip__border: @swatch-option__border;
+@swatch-option-tooltip__color: #949494;
+
+@swatch-option-tooltip-title__color: #282828;
+
+@swatch-option-tooltip-layered__background: @swatch-option-tooltip__background;
+@swatch-option-tooltip-layered__border: @swatch-option__border;
+@swatch-option-tooltip-layered__color: @swatch-option-tooltip__color;
+
+@swatch-option-tooltip-layered-title__color: @swatch-option-tooltip-title__color;
+
+//  Layered Features
+@swatch-option-link-layered__focus__box-shadow: none;
+
+// Loader
+@loader-overlay__background-color: rgba(255, 255, 255, .9);
+@modal-overlay__background-color: rgba(0, 0, 0, 0.5);
+
+// Tool tip
+@tooltip__background: @color-white;
+@tooltip__border-color: @color-gray-light2;
+@tooltip__border-width: 1px;
+@tooltip__border-radius: false;
+@tooltip__color: @primary__color;
+@tooltip__cursor: help;
+@tooltip__font-size: false;
+@tooltip__font-family: @font-family-name__base;
+@tooltip__font-weight: false;
+@tooltip__line-height: 1.4;
+@tooltip__font-style: false;
+@tooltip__margin: false;
+@tooltip__padding: 12px 16px;
+@tooltip__min-width: false;
+@tooltip__max-width: 360px;
+@tooltip__z-index: 100;
+
+@tooltip-arrow__size: 5px;
+@tooltip-arrow__offset: 10px;

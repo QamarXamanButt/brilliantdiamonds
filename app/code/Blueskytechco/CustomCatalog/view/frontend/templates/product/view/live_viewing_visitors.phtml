@@ -1,0 +1,16 @@
+<?php
+/**
+ * Custom Catalog for store
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php
+    $_helperThemeoption = $this->helper('Blueskytechco\Themeoption\Helper\Themeconfig');
+    $enable = $_helperThemeoption->getConfiguration('themesetting/live_viewing_visitors/enable');
+    $messages = $_helperThemeoption->getConfiguration('themesetting/live_viewing_visitors/messages');
+?>
+<?php if ($enable) { ?>
+    <span class="icon bls-pulse icon-eye"></span>
+    <span class="count"><?= rand(20,50) ?></span> <?= $block->escapeHtml($messages) ?>
+<?php } ?>

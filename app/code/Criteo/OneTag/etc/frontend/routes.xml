@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <!--defined id for frontend route is “standard”-->
+    <router id="standard">
+        <route id="criteo" frontName="criteo">
+            <module name="Criteo_OneTag" />
+        </route>
+    </router>
+</config>

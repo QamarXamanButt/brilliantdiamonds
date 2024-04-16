@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
+	<default>
+		<optimizespeed>
+            <image_webp>
+                <enabled>0</enabled>
+                <quality>95</quality>
+                <file_types>PNG, JPG, JPEG</file_types>
+            </image_webp>
+        </optimizespeed>
+	</default>
+</config>

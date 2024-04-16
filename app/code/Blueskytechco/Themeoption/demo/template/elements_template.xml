@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<root>
+  <templates>
+    <item>
+      <name><![CDATA[fas_product]]></name>
+      <preview_image><![CDATA[.template-managerfasproduct640fe6ace25a9.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=AXXF9A0],#html-body [data-pb-style=S4VRK51]{justify-content:flex-start;display:flex;flex-direction:column;margin-bottom:30px}#html-body [data-pb-style=AXXF9A0],#html-body [data-pb-style=S4VRK51],#html-body [data-pb-style=V4LV13L],#html-body [data-pb-style=XKDDWDO]{background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=XKDDWDO]{justify-content:flex-start;display:flex;flex-direction:column}#html-body [data-pb-style=V4LV13L]{align-self:stretch}#html-body [data-pb-style=P523G7C]{display:flex;width:100%}#html-body [data-pb-style=AMMCLQ9],#html-body [data-pb-style=IMGEI13]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:50%;align-self:stretch}#html-body [data-pb-style=ILGQRTT],#html-body [data-pb-style=Q7UXM0X]{margin-bottom:20px}#html-body [data-pb-style=F13CINL],#html-body [data-pb-style=KK028QG],#html-body [data-pb-style=PA4N3TN],#html-body [data-pb-style=POU018T],#html-body [data-pb-style=X6M439H]{margin-bottom:15px}</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="S4VRK51"><div data-content-type="text" data-appearance="default" data-element="main"><p>The garments labelled as committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact. Umino’s goal is to support the implementation of practices more committed to the environment. I am like a freight train. Working on the details, twisting them and playing with them over the years, but always staying on the same track. I design from instinct. It’s the only way I know how to live.&nbsp;</p></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="AXXF9A0"><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="V4LV13L"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="P523G7C"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="AMMCLQ9"><h3 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="ILGQRTT">Outstanding Features</h3><div data-content-type="text" data-appearance="default" data-element="main"><p id="CCJWCF5">– &nbsp;Tonal stitching: 98% cotton, 2% elastane.<br>– &nbsp;Supple and stretch knit with a rich touch of wool.<br>– &nbsp;Model: &nbsp;Model is 6′1″, wearing a size M.<br>– &nbsp;Caring for your clothes is caring for the environment.<br>– &nbsp;This take on the classic cardigan showcases a zippered stand collar.<br>– &nbsp;Slightly relaxed regular fit.<br>– &nbsp;Caring for your clothes is caring for the environment.</p></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="IMGEI13"><h3 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="Q7UXM0X">Washing Instructions</h3><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="F13CINL"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/wash_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>&nbsp;Machine wash max. 30ºC. Short spin.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="PA4N3TN"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/blech_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Do not bleach/bleach.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="X6M439H"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/iron_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Iron maximum 110ºC.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="POU018T"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/dry_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Do not dry clean.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="KK028QG"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/icon_4_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Tumble dry, medium hear.</p></div></div></div></div></div></div></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="XKDDWDO"><div data-content-type="text" data-appearance="default" data-element="main"><p>We work with monitoring programmes to ensure compliance with our social, environmental and health and safety standards for our garments. To assess compliance, we have developed a programme of audits and continuous improvement plans. Made of super-soft cotton, the Organic Cotton Cutaway Tank features a high neck and back, and a slight curve at the shoulders, which makes it extra flattering. If there’s one thing the ’90s got right, it’s the basics.</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[blog_detail_1]]></name>
+      <preview_image><![CDATA[.template-managerblogdetail164114858a95bd.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=QI3AFJ1]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=EREPGFC],#html-body [data-pb-style=SNB5TPU],#html-body [data-pb-style=T1JX9B2]{margin-bottom:30px}#html-body [data-pb-style=LGQNGLY]{margin-bottom:60px}#html-body [data-pb-style=S0JQLUU],#html-body [data-pb-style=X2M9WK9]{background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=X2M9WK9]{justify-content:flex-start;display:flex;flex-direction:column;margin-bottom:30px}#html-body [data-pb-style=S0JQLUU]{align-self:stretch}#html-body [data-pb-style=UQNVEIV]{display:flex;width:100%}#html-body [data-pb-style=A8WIUG5]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:50%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=NV5SVRW]{border-style:none}#html-body [data-pb-style=FC70YH0],#html-body [data-pb-style=G696S9C]{max-width:100%;height:auto}#html-body [data-pb-style=NCS233L]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:50%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=F2T1MQL]{border-style:none}#html-body [data-pb-style=ALD24JN],#html-body [data-pb-style=JIJ9N13]{max-width:100%;height:auto}#html-body [data-pb-style=VIY2H8Q]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=GVI6L22]{margin-bottom:30px}@media only screen and (max-width: 1024px) { #html-body [data-pb-style=F2T1MQL],#html-body [data-pb-style=NV5SVRW]{border-style:none} }@media only screen and (max-width: 768px) { #html-body [data-pb-style=F2T1MQL],#html-body [data-pb-style=NV5SVRW]{border-style:none} }</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="QI3AFJ1"><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="T1JX9B2"><p>These are the people who make your life asier. Large tiles were arranged on the counter top plate near the window of the living room, they were...This year, it marks its 50th anniversary by getting back to its roots in style with new, limited edition models. Celebrate this local brand and its exceptional craftsmanship with us.&nbsp;</p></div><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="SNB5TPU"><p>Umino story began in 1970 with the snow-covered landscape of Montreal as a backdrop. Louis Grenier, a young man whose family worked in the textile industry, was looking to develop technology that could brave the harshest winter conditions. Quickly, his coats gained popularity and became local legend. Unimo strength at that time remains the guarantee of its success today: Living own first saying saw second open third.</p></div><div data-content-type="htmlquote" data-appearance="default" data-background-images="{}" data-element="main" data-pb-style="EREPGFC"><div class="quote" data-element="quote">We are content to rest in peace, when the whole universe is changing every second. Take the opportunity because opportunities don't come twice "</div><div class="quote-author" data-element="author">MICHAEL ANTHONY</div><div class="quote-description" data-element="description"><div></div></div></div><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="LGQNGLY"><p>The Montreal-based company has been located on Rachel Street since the very beginning. It’s at this location in the heart of the Plateau-Mont-Royal where all Umino coats are crafted using a meticulous artisanal manufacturing process. Directly inspired by the climate in which they live, the artisans work with care to create warm, heavy-duty coats. Each model is designed to perform a specific function while still staying fashionable. No detail is left to chance! With a lifetime guarantee, Umino creations come with the promise of braving many winters, even the most difficult ones.</p></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="X2M9WK9"><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="S0JQLUU"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="UQNVEIV"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="A8WIUG5"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="NV5SVRW"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/blog_detail1_1.jpg}}" alt="" title="" width="" height="" data-element="desktop_image" data-pb-style="FC70YH0"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/blog_detail1_1.jpg}}" alt="" title="" width="" height="" data-element="mobile_image" data-pb-style="G696S9C"></figure></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="NCS233L"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="F2T1MQL"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/blog_detail1_2.jpg}}" alt="" title="" width="" height="" data-element="desktop_image" data-pb-style="JIJ9N13"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/blog_detail1_2.jpg}}" alt="" title="" width="" height="" data-element="mobile_image" data-pb-style="ALD24JN"></figure></div></div></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="VIY2H8Q"><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="GVI6L22"><p>Limited edition coats inspired by its iconic models. These robust parkas with vintage charm demonstrate a unique mix of yesterday's cult style with today's textile technology. Their Thermo+ synthetic insulation is known for its exceptional thermal properties and its performance in wet conditions. But the shore people would change their minds about it at sea, on a long voyage.</p></div><div data-content-type="text" data-appearance="default" data-element="main"><p>They are equipped with a breathable and waterproof membrane that’s resistant to weather and wind. The men’s Toundra model stands out for its four pockets in the front and elastic cuffs. The Typha style for women offers a loose-fitting silhouette that cinches at the waist. In the both cases, we absolutely love the cozy, sherpa-lined collar with a hidden hood, a detail that’s practical and trendy.&nbsp;</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[short_blog_1]]></name>
+      <preview_image><![CDATA[.template-managershortblog1641149794272d.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=W2M8A4I]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="W2M8A4I"><div data-content-type="text" data-appearance="default" data-element="main"><p>These are the people who make your life asier. Large tiles were arranged on the counter top plate near the window of the living room, they...</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[fs_4]]></name>
+      <preview_image><![CDATA[.template-managerfs4648a72d9e8b8b.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=COYSG07],#html-body [data-pb-style=SX0AKPQ]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=COYSG07]{background-color:#c7e2f1;margin-bottom:100px;padding-top:16px;padding-bottom:16px}#html-body [data-pb-style=GQQG2D2]{margin-bottom:100px;padding-left:30px;padding-right:30px}#html-body [data-pb-style=G8PF1LV],#html-body [data-pb-style=GQQG2D2],#html-body [data-pb-style=MM9XCRD],#html-body [data-pb-style=P29IQ2G]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=MM9XCRD]{margin-bottom:-100px;padding-top:31px;padding-bottom:31px}#html-body [data-pb-style=G8PF1LV],#html-body [data-pb-style=P29IQ2G]{margin-bottom:100px}#html-body [data-pb-style=X18MVDL]{justify-content:flex-start;display:flex;flex-direction:column;margin-bottom:100px;padding-bottom:100px}#html-body [data-pb-style=AV3JIBV],#html-body [data-pb-style=JC1X85Q],#html-body [data-pb-style=NDXFB8B],#html-body [data-pb-style=X18MVDL]{background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=AV3JIBV]{justify-content:flex-start;display:flex;flex-direction:column;margin-bottom:100px}#html-body [data-pb-style=JC1X85Q],#html-body [data-pb-style=NDXFB8B]{align-self:stretch}#html-body [data-pb-style=FG6Q5XW],#html-body [data-pb-style=PHK1PG3],#html-body [data-pb-style=Y0XC0J6]{text-align:center}#html-body [data-pb-style=WWI2VPU],#html-body [data-pb-style=YJFRHAS]{display:flex;width:100%}#html-body [data-pb-style=COVO9LN],#html-body [data-pb-style=KQINF3T],#html-body [data-pb-style=QF17CFY],#html-body [data-pb-style=VDVNCG4],#html-body [data-pb-style=WNR7PQ0]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:50%;align-self:stretch}#html-body [data-pb-style=KQINF3T],#html-body [data-pb-style=QF17CFY],#html-body [data-pb-style=VDVNCG4]{width:33.3333%;padding-left:45px;padding-right:45px}#html-body [data-pb-style=BIJ6IOM]{background-position:left center;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=P1GGRUQ]{border-radius:0;min-height:500px;background-color:transparent;padding-left:100px}#html-body [data-pb-style=L4SHT1L]{margin-top:0;margin-bottom:10px}#html-body [data-pb-style=FEEW5TW]{margin-bottom:30px}#html-body [data-pb-style=Q7WJGSA]{margin-bottom:50px}#html-body [data-pb-style=K6WDJBG]{background-position:left center;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=N937X78]{border-radius:0;min-height:500px;background-color:transparent;padding-left:100px}#html-body [data-pb-style=X79BSNC]{margin-top:0;margin-bottom:10px}#html-body [data-pb-style=TBWNJ2C]{margin-bottom:30px}#html-body [data-pb-style=DIT7AVR]{margin-bottom:50px}#html-body [data-pb-style=LOUC41N],#html-body [data-pb-style=QS7J692],#html-body [data-pb-style=YR29XJQ]{text-align:center}#html-body [data-pb-style=JMQRMHY]{display:inline-block}#html-body [data-pb-style=KCMQPMF]{text-align:center}#html-body [data-pb-style=HBKJYTW]{display:inline-block}#html-body [data-pb-style=NXMXFWC]{text-align:center}@media only screen and (max-width: 1024px) { #html-body [data-pb-style=COYSG07],#html-body [data-pb-style=GQQG2D2]{display:flex;flex-direction:column;margin-bottom:70px}#html-body [data-pb-style=MM9XCRD]{display:flex;flex-direction:column;margin-bottom:-70px}#html-body [data-pb-style=G8PF1LV],#html-body [data-pb-style=P29IQ2G]{display:flex;flex-direction:column;margin-bottom:70px}#html-body [data-pb-style=X18MVDL]{padding-bottom:70px}#html-body [data-pb-style=AV3JIBV],#html-body [data-pb-style=X18MVDL]{display:flex;flex-direction:column;margin-bottom:70px}#html-body [data-pb-style=COVO9LN],#html-body [data-pb-style=WNR7PQ0]{display:flex;flex-direction:column;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=KQINF3T],#html-body [data-pb-style=QF17CFY],#html-body [data-pb-style=VDVNCG4]{display:flex;flex-direction:column;padding-left:15px;padding-right:15px;align-self:stretch} }@media only screen and (max-width: 768px) { #html-body [data-pb-style=COYSG07],#html-body [data-pb-style=GQQG2D2]{display:flex;flex-direction:column;margin-bottom:50px}#html-body [data-pb-style=GQQG2D2]{padding-left:15px;padding-right:15px}#html-body [data-pb-style=MM9XCRD]{display:flex;flex-direction:column;margin-bottom:-50px}#html-body [data-pb-style=G8PF1LV],#html-body [data-pb-style=P29IQ2G]{display:flex;flex-direction:column;margin-bottom:50px}#html-body [data-pb-style=X18MVDL]{padding-bottom:50px}#html-body [data-pb-style=AV3JIBV],#html-body [data-pb-style=X18MVDL]{display:flex;flex-direction:column;margin-bottom:50px} }</style><div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="SX0AKPQ"><div data-content-type="text" data-appearance="default" data-element="main"><div>{{widget type="Nwdthemes\Revslider\Block\Widget\Revslider" alias="demo_fashion_4"}}</div></div></div><div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="COYSG07"><div data-content-type="html" data-appearance="default" data-element="main">&lt;div class="bls__page-scrolling-content d-flex align-items-center overflow-hidden "&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="31" height="1" viewBox="0 0 31 1" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;rect x="0.5" y="0.5" width="30" height="1"&gt;&lt;/rect&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="P29IQ2G"><div class="elementor__heading fs_45" data-content-type="heading" data-appearance="default" data-heading-mode="weditor" data-element="main" data-pb-style="FG6Q5XW"><div data-element="heading_text_editer"><p style="text-align: center;">You Might Like</p></div></div><div data-content-type="category_thumbnail_image" data-appearance="carousel" data-autoplay="false" data-autoplay-speed="4000" data-infinite-loop="false" data-show-arrows="true" data-show-dots="false" data-carousel-mode="default" data-slick-rows="1" data-col-xxl="5" data-col-xl="5" data-col-lg="4" data-col-md="3" data-col-sm="2" data-col-xs="2" data-center-padding="90px" data-element="main">{{widget type="Blueskytechco\WidgetCategory\Block\Widget\CategoryThumbnail" template="Blueskytechco_WidgetCategory::widget/category_thumbnail/carousel/carousel.phtml" category_ids="46,47,48,49,50" title="" short_description="&lt;p&gt;Our products are designed for everyone, environmentally friendly.&lt;/p&gt;" template_id="default" template_carousel_id="carousel_2" margin_item="30" type_name="carousel" image_hover_effects="zoom" col_xxl="5" col_xl="5" col_lg="4" col_md="3" col_sm="2" col_xs="2" width="330" height="320"}}</div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="G8PF1LV"><div class="elementor__heading fs_45" data-content-type="heading" data-appearance="default" data-heading-mode="weditor" data-element="main" data-pb-style="PHK1PG3"><div data-element="heading_text_editer"><p style="text-align: center;">Top Trending</p></div></div><div data-content-type="product_advanced" data-appearance="grid" data-element="main">{{widget type="Blueskytechco\ProductWidgetAdvanced\Block\Widget\ProductAdvanced" template="Blueskytechco_ProductWidgetAdvanced::widget/product_advanced/grid/default.phtml" product_type="trending" number_products="8" category_ids="3" title="" short_description="&lt;p&gt;Here’s some of our most new arrivals products that people are in love with.&lt;/p&gt;" template_id="default" space_between_item="30" type_name="grid" col_xxl="3" col_xl="4" col_lg="4" col_md="6" col_sm="12" col_xs="12" show_category="false"}}</div></div></div><div class="banner_fashion4" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="GQQG2D2"><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="NDXFB8B"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="WWI2VPU"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="WNR7PQ0"><div data-content-type="cbanner" data-appearance="poster" data-image-hover-effects="zoom" data-justify-content="center" data-show-button="never" data-show-overlay="never" data-element="main"><div data-element="empty_link"><div class="pagebuilder-banner-wrapper" data-background-images="{\&quot;desktop_image\&quot;:\&quot;{{media url=wysiwyg/fas4_banner_1.jpg}}\&quot;}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="wrapper" data-pb-style="BIJ6IOM"><div class="pagebuilder-overlay pagebuilder-poster-overlay" data-overlay-color="" data-element="overlay" data-pb-style="P1GGRUQ"><div class="pagebuilder-poster-content"><div data-element="content"></div><h4 class="fs_14 uppercase" data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="L4SHT1L">Hurry Up! Sale 50% Off</h4><h3 class="fs_45 lh_50 regular" data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="FEEW5TW">Top Trends Style</h3><div class="lh_23" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="Q7WJGSA"><p>In-store and online. Hurry Up! Limited time offer.</p></div><div data-content-type="buttons" data-appearance="inline" data-same-width="false" data-element="main"><div data-content-type="button-item" data-appearance="default" data-element="main" data-pb-style="JMQRMHY"><a class="pagebuilder-button-primary" href="{{widget type='Blueskytechco\PageBuilderCustom\Block\Widget\StoreUrl\Link' id_path='shop' template='Magento_PageBuilder::widget/link_href.phtml' type_name='Store Url Link' }}" target="_self" data-link-type="storeurl" data-element="link" data-pb-style="KCMQPMF"><span data-element="link_text">Shop Now</span></a></div></div></div></div></div></div></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="COVO9LN"><div data-content-type="cbanner" data-appearance="poster" data-image-hover-effects="zoom" data-justify-content="center" data-show-button="never" data-show-overlay="never" data-element="main"><div data-element="empty_link"><div class="pagebuilder-banner-wrapper" data-background-images="{\&quot;desktop_image\&quot;:\&quot;{{media url=wysiwyg/fas4_banner_2.jpg}}\&quot;}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="wrapper" data-pb-style="K6WDJBG"><div class="pagebuilder-overlay pagebuilder-poster-overlay" data-overlay-color="" data-element="overlay" data-pb-style="N937X78"><div class="pagebuilder-poster-content"><div data-element="content"></div><h4 class="fs_14 uppercase" data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="X79BSNC">PREMIUM - ONLINE EXCLUSIVE</h4><h3 class="fs_45 lh_50 regular" data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="TBWNJ2C">Here Your Style</h3><div class="lh_23" data-content-type="text" data-appearance="default" data-element="main" data-pb-style="DIT7AVR"><p>Discover selected items with many discount.</p></div><div data-content-type="buttons" data-appearance="inline" data-same-width="false" data-element="main"><div data-content-type="button-item" data-appearance="default" data-element="main" data-pb-style="HBKJYTW"><a class="pagebuilder-button-primary" href="{{widget type='Blueskytechco\PageBuilderCustom\Block\Widget\StoreUrl\Link' id_path='shop' template='Magento_PageBuilder::widget/link_href.phtml' type_name='Store Url Link' }}" target="_self" data-link-type="storeurl" data-element="link" data-pb-style="NXMXFWC"><span data-element="link_text">Shop Now</span></a></div></div></div></div></div></div></div></div></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div class="border-bottom" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="X18MVDL"><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="JC1X85Q"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="YJFRHAS"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="QF17CFY"><div data-content-type="imagebox" data-appearance="default" data-image-box-position="top" data-element="main" data-pb-style="QS7J692"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/policy1_f7.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title" data-element="title">Free Shipping</h3><div class="elementor-image-box-description" data-element="short_description"><p style="text-align: center;">Get complimentary ground shipping on every order. Don't love it? Send it back, on us.</p></div></div></div></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="VDVNCG4"><div data-content-type="imagebox" data-appearance="default" data-image-box-position="top" data-element="main" data-pb-style="LOUC41N"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/policy2_f7.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title" data-element="title">Free Returns</h3><div class="elementor-image-box-description" data-element="short_description"><p style="text-align: center;">Free returns within 10 days, please make sure the items are in undamaged condition.</p></div></div></div></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="KQINF3T"><div data-content-type="imagebox" data-appearance="default" data-image-box-position="top" data-element="main" data-pb-style="YR29XJQ"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/policy3_f7.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title" data-element="title">Support Online</h3><div class="elementor-image-box-description" data-element="short_description"><p style="text-align: center;">We support customers 24/7, send questions we will solve for you immediately.</p></div></div></div></div></div></div></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="AV3JIBV"><div class="elementor__heading fs_45" data-content-type="heading" data-appearance="default" data-heading-mode="weditor" data-element="main" data-pb-style="Y0XC0J6"><div data-element="heading_text_editer"><p style="text-align: center;">The Blog</p></div></div><div data-content-type="blog_posts" data-appearance="carousel" data-autoplay="false" data-autoplay-speed="4000" data-infinite-loop="false" data-show-arrows="true" data-show-dots="false" data-carousel-mode="default" data-slick-rows="1" data-col-xxl="3" data-col-xl="3" data-col-lg="3" data-col-md="2" data-col-sm="1" data-col-xs="1" data-center-padding="90px" data-element="main">{{widget type="Blueskytechco\PageBuilderCustom\Block\Widget\BlogPosts" template="Blueskytechco_PageBuilderCustom::widget/blog_posts/carousel/carousel.phtml" sort_order="newest" title="" short_description="&lt;p&gt;Provide you with useful knowledge about fashion trend.&lt;/p&gt;" category_id="4" posts_tag="0" posts_author="0" publish_date_from="" publish_date_to="" template_id="default" template_carousel_id="carousel_7" margin_item="30" type_name="carousel" image_hover_effects="zoom" number_posts="" col_xxl="3" col_xl="3" col_lg="3" col_md="2" col_sm="1" col_xs="1"}}</div></div></div><div class="border-top" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="MM9XCRD"><div data-content-type="html" data-appearance="default" data-element="main">&lt;div class="bls__page-scrolling-content d-flex align-items-center overflow-hidden "&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SUMMER SALE FOR ALL SWIMSUITS - 10% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SUMMER SALE FOR ALL SWIMSUITS - 10% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SUMMER SALE FOR ALL SWIMSUITS - 10% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SUMMER SALE FOR ALL SWIMSUITS - 10% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SUMMER SALE FOR ALL SWIMSUITS - 10% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;div class=" d-flex align-items-center"&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SIGN UP FOR 10% OFF YOUR FIRST ORDER&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - MID-SEASON SALE UP TO 50% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - SUMMER SALE FOR ALL SWIMSUITS - 10% OFF&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;a aria-label="links" role="link" aria-disabled="true"&gt;
+              &lt;p&gt;UMINO EDITORIAL - FREE DELIVERY AND RETURNS FROM $120&lt;/p&gt;
+              &lt;span class="scroll-line"&gt;
+                
+                  &lt;svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;circle cx="5.5" cy="5" r="4.5" fill="transparent"&gt;&lt;/circle&gt;
+                  &lt;/svg&gt;
+                
+              &lt;/span&gt;
+            &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[product_digital]]></name>
+      <preview_image><![CDATA[.template-managerproductdigital64b88851016b6.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=D8SQRA9],#html-body [data-pb-style=LRJQXKN]{justify-content:flex-start;display:flex;flex-direction:column;margin-bottom:30px}#html-body [data-pb-style=A1MFOVX],#html-body [data-pb-style=D8SQRA9],#html-body [data-pb-style=LRJQXKN],#html-body [data-pb-style=SEJFEQ0]{background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=SEJFEQ0]{justify-content:flex-start;display:flex;flex-direction:column}#html-body [data-pb-style=A1MFOVX]{align-self:stretch}#html-body [data-pb-style=FJIHRBF]{display:flex;width:100%}#html-body [data-pb-style=PQKYTKQ],#html-body [data-pb-style=XYMJ7SU]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:50%;align-self:stretch}#html-body [data-pb-style=AI21U4H],#html-body [data-pb-style=OBC3DS9],#html-body [data-pb-style=PATU7IX],#html-body [data-pb-style=U7E4KYO],#html-body [data-pb-style=XJCA4LO]{margin-bottom:15px}#html-body [data-pb-style=NFQTVOY],#html-body [data-pb-style=T5HFS0W]{margin-bottom:20px}</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="LRJQXKN"><div data-content-type="text" data-appearance="default" data-element="main"><p>The garments labelled as committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact. Umino’s goal is to support the implementation of practices more committed to the environment. I am like a freight train. Working on the details, twisting them and playing with them over the years, but always staying on the same track. I design from instinct. It’s the only way I know how to live.&nbsp;</p></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="D8SQRA9"><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="A1MFOVX"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="FJIHRBF"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="XYMJ7SU"><h3 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="NFQTVOY">Outstanding Features</h3><div data-content-type="text" data-appearance="default" data-element="main"><p id="CCJWCF5">– &nbsp;Tonal stitching: 98% cotton, 2% elastane.<br>– &nbsp;Supple and stretch knit with a rich touch of wool.<br>– &nbsp;Model: &nbsp;Model is 6′1″, wearing a size M.<br>– &nbsp;Caring for your clothes is caring for the environment.<br>– &nbsp;This take on the classic cardigan showcases a zippered stand collar.<br>– &nbsp;Slightly relaxed regular fit.<br>– &nbsp;Caring for your clothes is caring for the environment.</p></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="PQKYTKQ"><h3 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="T5HFS0W">Washing Instructions</h3><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="PATU7IX"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/wash_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>&nbsp;Machine wash max. 30ºC. Short spin.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="XJCA4LO"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/blech_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Do not bleach/bleach.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="OBC3DS9"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/iron_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Iron maximum 110ºC.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="U7E4KYO"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/dry_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Do not dry clean.</p></div></div></div></div><div data-content-type="imagebox" data-appearance="default" data-image-box-position="left" data-element="main" data-pb-style="AI21U4H"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazyload" data-src="{{media url=wysiwyg/icon_4_480x480.png}}" alt="" title="" data-element="desktop_image"></figure><div class="elementor-image-box-content"><div class="elementor-image-box-description" data-element="short_description"><p>Tumble dry, medium hear.</p></div></div></div></div></div></div></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="SEJFEQ0"><div data-content-type="text" data-appearance="default" data-element="main"><p>We work with monitoring programmes to ensure compliance with our social, environmental and health and safety standards for our garments. To assess compliance, we have developed a programme of audits and continuous improvement plans. Made of super-soft cotton, the Organic Cotton Cutaway Tank features a high neck and back, and a slight curve at the shoulders, which makes it extra flattering. If there’s one thing the ’90s got right, it’s the basics.</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[New_digital_description]]></name>
+      <preview_image><![CDATA[.template-managernewdigitaldescription64bf3873142b4.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=WO1SQXH]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=N7PW9XM]{margin-bottom:15px}#html-body [data-pb-style=O8HFLGU]{margin-bottom:25px;border-style:none}#html-body [data-pb-style=JFJQ3E0],#html-body [data-pb-style=TCYMFU4]{max-width:100%;height:auto}#html-body [data-pb-style=WDBG2P0]{margin-bottom:20px}#html-body [data-pb-style=JW4BCYN]{margin-bottom:30px}#html-body [data-pb-style=FNOH3K8]{background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;align-self:stretch}#html-body [data-pb-style=DJRW4MN]{display:flex;width:100%}#html-body [data-pb-style=OFN45O6]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=VVCXT93]{border-style:none}#html-body [data-pb-style=F8KNJBS],#html-body [data-pb-style=QWFGJ42]{max-width:100%;height:auto}#html-body [data-pb-style=SJEYEEN]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=EDOQCW2]{border-style:none}#html-body [data-pb-style=IOX5FHK],#html-body [data-pb-style=TWKBVOT]{max-width:100%;height:auto}#html-body [data-pb-style=J60I4VA]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=TLMPTNA]{border-style:none}#html-body [data-pb-style=VQ3WKCV],#html-body [data-pb-style=XD2YWU1]{max-width:100%;height:auto}#html-body [data-pb-style=O5H0XTQ]{margin-bottom:20px}#html-body [data-pb-style=KW4LB6E]{margin-bottom:15px}@media only screen and (max-width: 1024px) { #html-body [data-pb-style=EDOQCW2],#html-body [data-pb-style=O8HFLGU],#html-body [data-pb-style=TLMPTNA],#html-body [data-pb-style=VVCXT93]{border-style:none} }@media only screen and (max-width: 768px) { #html-body [data-pb-style=EDOQCW2],#html-body [data-pb-style=O8HFLGU],#html-body [data-pb-style=TLMPTNA],#html-body [data-pb-style=VVCXT93]{border-style:none} }</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="WO1SQXH"><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="N7PW9XM"><p id="V7HDOSW">IPad Air with a vibrant 10.9-inch Liquid Retina display. Breakthrough Apple M1 chip for faster performance, making iPad Air super-powerful for creativity and mobile gaming. Get Touch ID, an advanced camera, lightning-fast 5G2 and Wi-Fi 6, a USB-C port, and support for the Magic Keyboard and Apple Pencil (2nd generation).</p></div><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="O8HFLGU"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_1.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="JFJQ3E0"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_1.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="TCYMFU4"></figure><h4 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="WDBG2P0">Work wonders With ease</h4><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="JW4BCYN"><p>There are so many things you can do with iPad and all the amazing apps designed for it. Now App Library automatically organizes those apps for you. And new widgets let you see information at a glance, right on your Home Screen. iPad is the world’s best note-taking device. And now Notes goes system‑wide with Quick Note, a fast and easy way to get to a note no matter what you’re doing. Highlight text in Safari or add a link from an app, and you’ll see a Quick Note thumbnail next time you visit the site, taking you right to what you were viewing before. And if you make a Quick Note on your iPad, it will be on your iPhone and Mac.&nbsp;</p></div><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="FNOH3K8"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="DJRW4MN"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="OFN45O6"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="VVCXT93"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_2.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="F8KNJBS"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_2.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="QWFGJ42"></figure></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="SJEYEEN"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="EDOQCW2"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_3.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="TWKBVOT"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_3.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="IOX5FHK"></figure></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="J60I4VA"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="TLMPTNA"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_4.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="XD2YWU1"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_4.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="VQ3WKCV"></figure></div></div></div><h4 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="O5H0XTQ">Product supreme quality</h4><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="KW4LB6E"><p>Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet, maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&nbsp;</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[blog_digital]]></name>
+      <preview_image><![CDATA[.template-managerblogdigital64cb7fbda0423.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=LQSG5S0]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=BO9VDRL],#html-body [data-pb-style=DFYDK99],#html-body [data-pb-style=PL59L61]{margin-bottom:30px}#html-body [data-pb-style=UKAPFQ5]{margin-bottom:60px}#html-body [data-pb-style=EFLA5J8],#html-body [data-pb-style=RSKVUSK]{background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=RSKVUSK]{justify-content:flex-start;display:flex;flex-direction:column;margin-bottom:30px}#html-body [data-pb-style=EFLA5J8]{align-self:stretch}#html-body [data-pb-style=K3VT9WJ]{display:flex;width:100%}#html-body [data-pb-style=P1U607Q]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:50%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=EX6N3H4]{border-style:none}#html-body [data-pb-style=LRO07DO],#html-body [data-pb-style=QOKGXBU]{max-width:100%;height:auto}#html-body [data-pb-style=FLM1OUQ]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:50%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=I9MHQ1C]{border-style:none}#html-body [data-pb-style=IGU8GAL],#html-body [data-pb-style=TUCJUFA]{max-width:100%;height:auto}#html-body [data-pb-style=F4CL82N]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=N05CAXU]{margin-bottom:30px}@media only screen and (max-width: 1024px) { #html-body [data-pb-style=EX6N3H4],#html-body [data-pb-style=I9MHQ1C]{border-style:none} }@media only screen and (max-width: 768px) { #html-body [data-pb-style=EX6N3H4],#html-body [data-pb-style=I9MHQ1C]{border-style:none} }</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="LQSG5S0"><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="DFYDK99"><p id="SJFMLDI">iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level performance and custom technologies like the advanced image signal processor and unified memory architecture of M1. And with the incredible power efficiency of M1.</p></div><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="BO9VDRL"><p id="N5YE05W">Faster performance and graphics. The 8‑core CPU of M1 delivers up to 50 percent faster performance. And M1 has an 8‑core GPU in a class of its own, providing up to 40 percent faster graphics performance to iPad Pro. So you can build intricate AR models, play games with console quality graphics at high frame rates, and more. Unika is a mouth blown an series of small, glass pendant lamps, originally designed for the restaurant. Best and brightest. Liquid Retina XDR display.&nbsp;</p></div><div data-content-type="htmlquote" data-appearance="default" data-background-images="{}" data-element="main" data-pb-style="PL59L61"><div class="quote" data-element="quote">“ We are content to rest in peace, when the whole universe is changing every second. Take the opportunity because opportunities don't come twice ”</div><div class="quote-author" data-element="author">MICHAEL ANTHONY</div><div class="quote-description" data-element="description"><div></div></div></div><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="UKAPFQ5"><p>iPad has always been uniquely portable with superfast Wi‑Fi and cellular options. Now with 5G capabilities, you can connect to the fastest wireless networks when you need to download files, stream movies, collaborate with colleagues, and upload content on the go. And iPad Pro has the most 5G bands of any device of its kind — so it can get 5G in more places. Form is an armless modern with a minimalistic expression. With a simple and contemporary design form Foody has a soft and welcoming silhouette and a distinctly residential look. The legs appear almost as if they are growing out of the shell.&nbsp;</p></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="RSKVUSK"><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="EFLA5J8"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="K3VT9WJ"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="P1U607Q"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="EX6N3H4"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/blog_left.jpg}}" alt="" title="" width="" height="" data-element="desktop_image" data-pb-style="QOKGXBU"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/blog_left.jpg}}" alt="" title="" width="" height="" data-element="mobile_image" data-pb-style="LRO07DO"></figure></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="FLM1OUQ"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="I9MHQ1C"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/blog_right.jpg}}" alt="" title="" width="" height="" data-element="desktop_image" data-pb-style="IGU8GAL"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/blog_right.jpg}}" alt="" title="" width="" height="" data-element="mobile_image" data-pb-style="TUCJUFA"></figure></div></div></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="F4CL82N"><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="N05CAXU"><p>The Magic Keyboard is an amazing companion for iPad Pro and iPad Air. It features a great typing experience, a trackpad that opens up new ways to work with iPadOS, a USB‑C port for pass‑through charging, and front and back protection. The Magic Keyboard features a floating cantilever design, allowing you to attach it magnetically and smoothly adjust it to the perfect viewing angle for you.</p></div><div data-content-type="text" data-appearance="default" data-element="main"><p>Magic Keyboard. Apple Pencil. Endless possibilities. Pro accessories. Apple Pencil, Magic Keyboard, and the Smart Keyboard Folio open up even more ways to use iPad Pro. Draw a masterpiece, take notes, or knock out a business plan. These versatile accessories are designed to take your work and creativity to the next level. Apple Pencil. With the power of Apple Pencil, iPad Pro transforms into an immersive drawing canvas and the world’s best note‑taking device. It sets the standard for how drawing, marking up documents, and even filling in text fields should feel — intuitive, precise, and magical.</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[short_blog_digital]]></name>
+      <preview_image><![CDATA[.template-managershortblogdigital64cb8129b292c.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=FDO60LY]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="FDO60LY"><div data-content-type="text" data-appearance="default" data-element="main"><p>These are the people who make your life easier. Large tiles were arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+    <item>
+      <name><![CDATA[a_detail_digital2]]></name>
+      <preview_image><![CDATA[.template-manageradetaildigital264d743d4620b1.jpg]]></preview_image>
+      <template><![CDATA[<style>#html-body [data-pb-style=WA8JM6X]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}#html-body [data-pb-style=NTPEJRW]{margin-bottom:36px}#html-body [data-pb-style=JJWIWYO]{margin-bottom:25px;border-style:none}#html-body [data-pb-style=HO0JQVS],#html-body [data-pb-style=V8EIFO7]{max-width:100%;height:auto}#html-body [data-pb-style=XE4GYJV]{margin-bottom:20px}#html-body [data-pb-style=B8MY2EI]{margin-bottom:30px}#html-body [data-pb-style=BBU2DJR]{background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;align-self:stretch}#html-body [data-pb-style=GRC1E0T]{display:flex;width:100%}#html-body [data-pb-style=G3O1R8T]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=NTKS2R6]{border-style:none}#html-body [data-pb-style=F1E8TSK],#html-body [data-pb-style=R6DTSSI]{max-width:100%;height:auto}#html-body [data-pb-style=NY8JFRO]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=XT8S4NE]{border-style:none}#html-body [data-pb-style=CEP6ONQ],#html-body [data-pb-style=O0H2XPF]{max-width:100%;height:auto}#html-body [data-pb-style=B04JIBV]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll;width:33.3333%;margin-bottom:30px;align-self:stretch}#html-body [data-pb-style=W77ACB6]{border-style:none}#html-body [data-pb-style=B461P2N],#html-body [data-pb-style=FY7DJ7K]{max-width:100%;height:auto}#html-body [data-pb-style=SEBNQ5A]{margin-bottom:20px}#html-body [data-pb-style=BSLQE3O]{margin-bottom:15px}@media only screen and (max-width: 1024px) { #html-body [data-pb-style=JJWIWYO],#html-body [data-pb-style=NTKS2R6],#html-body [data-pb-style=W77ACB6],#html-body [data-pb-style=XT8S4NE]{border-style:none} }@media only screen and (max-width: 768px) { #html-body [data-pb-style=JJWIWYO],#html-body [data-pb-style=NTKS2R6],#html-body [data-pb-style=W77ACB6],#html-body [data-pb-style=XT8S4NE]{border-style:none} }</style><div data-content-type="row" data-appearance="contained" data-element="main"><div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="WA8JM6X"><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="NTPEJRW"><p id="V7HDOSW">IPad Air with a vibrant 10.9-inch Liquid Retina display. Breakthrough Apple M1 chip for faster performance, making iPad Air super-powerful for creativity and mobile gaming. Get Touch ID, an advanced camera, lightning-fast 5G2 and Wi-Fi 6, a USB-C port, and support for the Magic Keyboard and Apple Pencil (2nd generation).</p></div><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="JJWIWYO"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_1.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="V8EIFO7"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_1.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="HO0JQVS"></figure><h4 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="XE4GYJV">Work wonders With ease</h4><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="B8MY2EI"><p>There are so many things you can do with iPad and all the amazing apps designed for it. Now App Library automatically organizes those apps for you. And new widgets let you see information at a glance, right on your Home Screen. iPad is the world’s best note-taking device. And now Notes goes system‑wide with Quick Note, a fast and easy way to get to a note no matter what you’re doing. Highlight text in Safari or add a link from an app, and you’ll see a Quick Note thumbnail next time you visit the site, taking you right to what you were viewing before. And if you make a Quick Note on your iPad, it will be on your iPhone and Mac.&nbsp;</p></div><div class="pagebuilder-column-group" data-background-images="{}" data-content-type="column-group" data-appearance="default" data-grid-size="12" data-element="main" data-pb-style="BBU2DJR"><div class="pagebuilder-column-line" data-content-type="column-line" data-element="main" data-pb-style="GRC1E0T"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="G3O1R8T"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="NTKS2R6"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_2.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="R6DTSSI"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_2.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="F1E8TSK"></figure></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="NY8JFRO"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="XT8S4NE"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_3.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="O0H2XPF"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_3.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="CEP6ONQ"></figure></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" data-pb-style="B04JIBV"><figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="W77ACB6"><img class="pagebuilder-mobile-hidden" src="{{media url=wysiwyg/detail_digital_4.jpg}}" alt="" title="" width="100%" height="" data-element="desktop_image" data-pb-style="B461P2N"><img class="pagebuilder-mobile-only" src="{{media url=wysiwyg/detail_digital_4.jpg}}" alt="" title="" width="100%" height="" data-element="mobile_image" data-pb-style="FY7DJ7K"></figure></div></div></div><h4 data-content-type="heading" data-appearance="default" data-heading-mode="default" data-element="main" data-pb-style="SEBNQ5A">Product supreme quality</h4><div data-content-type="text" data-appearance="default" data-element="main" data-pb-style="BSLQE3O"><p>Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet, maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&nbsp;</p></div></div></div>]]></template>
+      <created_for><![CDATA[any]]></created_for>
+    </item>
+  </templates>
+</root>

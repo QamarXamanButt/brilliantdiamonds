@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<config>
+  <default>
+    <themesetting>
+      <product>
+        <enable_hover_image><![CDATA[enable]]></enable_hover_image>
+        <image_hover_effects><![CDATA[zoom]]></image_hover_effects>
+        <show_new><![CDATA[enable]]></show_new>
+        <show_new_text><![CDATA[New]]></show_new_text>
+        <show_sale><![CDATA[enable]]></show_sale>
+        <sale_discount_percent><![CDATA[1]]></sale_discount_percent>
+        <show_sale_text><![CDATA[SALE]]></show_sale_text>
+        <main_image_width><![CDATA[850]]></main_image_width>
+        <thumbnail_width><![CDATA[data_null]]></thumbnail_width>
+        <thumbnail_cropping><![CDATA[1_1]]></thumbnail_cropping>
+        <product_page_layout><![CDATA[product_style_1]]></product_page_layout>
+        <custom_tabs><![CDATA[a:2:{s:18:"_1653445753237_237";a:4:{s:9:"tabs_type";s:6:"blocks";s:10:"tabs_title";s:20:"Shipping and Returns";s:9:"tabs_code";s:34:"default_custom_tab_shipping_return";s:10:"sort_order";s:1:"2";}s:18:"_1653445775724_724";a:4:{s:9:"tabs_type";s:6:"blocks";s:10:"tabs_title";s:12:" About Brand";s:9:"tabs_code";s:30:"default_custom_tab_about_brand";s:10:"sort_order";s:1:"1";}}]]></custom_tabs>
+        <big_desktops><![CDATA[5]]></big_desktops>
+        <desktops><![CDATA[4]]></desktops>
+        <small_desktops><![CDATA[3]]></small_desktops>
+        <tablet><![CDATA[3]]></tablet>
+        <mobile><![CDATA[2]]></mobile>
+        <small_mobile><![CDATA[2]]></small_mobile>
+        <thumbnail_image_width><![CDATA[80]]></thumbnail_image_width>
+        <small_image_width><![CDATA[800]]></small_image_width>
+        <mini_cart_image_width><![CDATA[300]]></mini_cart_image_width>
+        <swatch_image_width><![CDATA[50]]></swatch_image_width>
+        <cropping><![CDATA[custom]]></cropping>
+        <cropping_width><![CDATA[1]]></cropping_width>
+        <cropping_height><![CDATA[1]]></cropping_height>
+        <sticky_add_to_cart><![CDATA[enable]]></sticky_add_to_cart>
+        <display_thumbnails><![CDATA[data_null]]></display_thumbnails>
+        <images_zoom><![CDATA[data_null]]></images_zoom>
+        <enable_photoswipe_popup><![CDATA[enable]]></enable_photoswipe_popup>
+        <enable_buy_now_button><![CDATA[enable]]></enable_buy_now_button>
+        <enable_product_sticky><![CDATA[enable]]></enable_product_sticky>
+        <display_custom_tabs><![CDATA[data_null]]></display_custom_tabs>
+        <disable_add_to_cart_related><![CDATA[data_null]]></disable_add_to_cart_related>
+        <enable_image_preload><![CDATA[enable]]></enable_image_preload>
+        <type_load_image><![CDATA[replace]]></type_load_image>
+      </product>
+      <general>
+        <layout><![CDATA[data_null]]></layout>
+        <back_to_top_enabled><![CDATA[enable]]></back_to_top_enabled>
+        <icon_lazyload><![CDATA[data_null]]></icon_lazyload>
+        <default_banner><![CDATA[data_null]]></default_banner>
+        <lazy_javascript><![CDATA[enable]]></lazy_javascript>
+      </general>
+      <header>
+        <select_header_type><![CDATA[header_layout_7]]></select_header_type>
+        <sticky_enabled><![CDATA[enable]]></sticky_enabled>
+        <add_section_to_top_header><![CDATA[data_null]]></add_section_to_top_header>
+        <enable_topbar><![CDATA[1]]></enable_topbar>
+        <disable_store_view_topbar><![CDATA[data_null]]></disable_store_view_topbar>
+        <sticky_enabled_mobile><![CDATA[data_null]]></sticky_enabled_mobile>
+      </header>
+      <footer>
+        <select_footer_type><![CDATA[demo_digital_1_footer]]></select_footer_type>
+        <menu_mobile><![CDATA[1]]></menu_mobile>
+      </footer>
+      <category>
+        <product_style><![CDATA[product__style-3]]></product_style>
+        <show_product_rating_stars><![CDATA[1]]></show_product_rating_stars>
+        <show_product_price><![CDATA[1]]></show_product_price>
+        <show_product_quickview><![CDATA[1]]></show_product_quickview>
+        <show_product_compare><![CDATA[1]]></show_product_compare>
+        <show_product_wishlist><![CDATA[1]]></show_product_wishlist>
+        <show_product_add_to_cart><![CDATA[1]]></show_product_add_to_cart>
+        <page_layout><![CDATA[data_null]]></page_layout>
+        <load_more_ajax><![CDATA[data_null]]></load_more_ajax>
+        <enable_sub_cat><![CDATA[1]]></enable_sub_cat>
+        <product_infor_align><![CDATA[default]]></product_infor_align>
+        <sub_cat_ratio><![CDATA[1]]></sub_cat_ratio>
+        <show_product_brand><![CDATA[1]]></show_product_brand>
+      </category>
+      <blog>
+        <page_layout><![CDATA[grid-3]]></page_layout>
+        <default_banner><![CDATA[stores/14/bg.jpg]]></default_banner>
+        <recent_image_width><![CDATA[1500]]></recent_image_width>
+        <recent_image_hieght><![CDATA[902]]></recent_image_hieght>
+      </blog>
+      <newsletter>
+        <enable><![CDATA[data_null]]></enable>
+        <cms_block><![CDATA[default_newsletter_popup]]></cms_block>
+        <max_width><![CDATA[530px]]></max_width>
+      </newsletter>
+      <fake_order>
+        <enable_f_o><![CDATA[1]]></enable_f_o>
+        <seconds_displayed><![CDATA[5]]></seconds_displayed>
+        <seconds_hide><![CDATA[5]]></seconds_hide>
+        <messages><![CDATA[Someone purchased a]]></messages>
+      </fake_order>
+      <product_popup>
+        <enable><![CDATA[data_null]]></enable>
+        <cms_block><![CDATA[default_product_popup]]></cms_block>
+        <seconds_displayed><![CDATA[6]]></seconds_displayed>
+        <max_width><![CDATA[data_null]]></max_width>
+      </product_popup>
+      <live_chat>
+        <enable_l_c><![CDATA[1]]></enable_l_c>
+        <widget_js><![CDATA[data_null]]></widget_js>
+      </live_chat>
+      <live_viewing_visitors>
+        <enable><![CDATA[1]]></enable>
+        <messages><![CDATA[people are viewing this right now]]></messages>
+      </live_viewing_visitors>
+      <fake_time_cart>
+        <enable_f_c><![CDATA[1]]></enable_f_c>
+        <text><![CDATA[Please, hurry! Someone has placed an order on one of the items you have in the cart. Products are limited, checkout within]]></text>
+        <enable_f_m_c><![CDATA[1]]></enable_f_m_c>
+        <text_m_c><![CDATA[Products are limited, checkout within]]></text_m_c>
+        <date_m_c><![CDATA[5]]></date_m_c>
+        <date><![CDATA[10]]></date>
+      </fake_time_cart>
+      <free_shipping_cart>
+        <enable_f_c><![CDATA[1]]></enable_f_c>
+      </free_shipping_cart>
+    </themesetting>
+    <themeoption>
+      <general>
+        <debug_mode><![CDATA[data_null]]></debug_mode>
+        <layout><![CDATA[1440px]]></layout>
+        <button_border_radius><![CDATA[data_null]]></button_border_radius>
+        <icon_lazyload><![CDATA[data_null]]></icon_lazyload>
+      </general>
+      <font>
+        <font_family><![CDATA[custom]]></font_family>
+        <custom_font_family><![CDATA[GeneralSans]]></custom_font_family>
+        <font_size><![CDATA[14px]]></font_size>
+        <google_font_weight><![CDATA[500]]></google_font_weight>
+        <heading_family><![CDATA[custom]]></heading_family>
+        <menu_family><![CDATA[custom]]></menu_family>
+        <other_family><![CDATA[custom]]></other_family>
+        <google_font_family><![CDATA[Jost]]></google_font_family>
+        <customize><![CDATA[ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900]]></customize>
+        <google_other_family><![CDATA[Jost]]></google_other_family>
+        <customize_other_family><![CDATA[ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900]]></customize_other_family>
+        <google_heading_family><![CDATA[Jost]]></google_heading_family>
+        <customize_heading_family><![CDATA[ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900]]></customize_heading_family>
+        <heading_font_weight><![CDATA[600]]></heading_font_weight>
+        <google_menu_family><![CDATA[Jost]]></google_menu_family>
+        <customize_menu_family><![CDATA[data_null]]></customize_menu_family>
+        <menu_font_size><![CDATA[14px]]></menu_font_size>
+        <menu_font_weight><![CDATA[600]]></menu_font_weight>
+        <custom_heading_family><![CDATA[GeneralSans]]></custom_heading_family>
+        <custom_menu_family><![CDATA[GeneralSans]]></custom_menu_family>
+        <custom_other_family><![CDATA[GeneralSans]]></custom_other_family>
+      </font>
+      <colors>
+        <theme_colors><![CDATA[#00A2C2]]></theme_colors>
+        <base_color_custom><![CDATA[data_null]]></base_color_custom>
+        <button_color_custom><![CDATA[1]]></button_color_custom>
+        <text_color><![CDATA[#878787]]></text_color>
+        <heading_color><![CDATA[#222222]]></heading_color>
+        <link_hover_color><![CDATA[#56CFE1]]></link_hover_color>
+        <link_color><![CDATA[#56CFE1]]></link_color>
+        <button_text_color><![CDATA[data_null]]></button_text_color>
+        <button_bg_color><![CDATA[data_null]]></button_bg_color>
+        <button_hover_text_color><![CDATA[#FFFFFF]]></button_hover_text_color>
+        <button_hover_bg_color><![CDATA[#00A2C2]]></button_hover_bg_color>
+      </colors>
+      <header>
+        <sticky_select_bg_color><![CDATA[data_null]]></sticky_select_bg_color>
+        <header_custom><![CDATA[1]]></header_custom>
+        <header_custom_style><![CDATA[data_null]]></header_custom_style>
+        <header_topbar_text_color><![CDATA[#FFFFFF]]></header_topbar_text_color>
+        <header_topbar_background_color><![CDATA[#253380]]></header_topbar_background_color>
+        <header_text_color><![CDATA[#FFFFFF]]></header_text_color>
+        <header_background_color><![CDATA[#253380]]></header_background_color>
+        <header_bg_image><![CDATA[data_null]]></header_bg_image>
+      </header>
+      <footer>
+        <footer_custom><![CDATA[1]]></footer_custom>
+        <footer_custom_style><![CDATA[data_null]]></footer_custom_style>
+        <footer_background_color><![CDATA[#F1F3F7]]></footer_background_color>
+      </footer>
+      <magemenu>
+        <menu_custom><![CDATA[data_null]]></menu_custom>
+      </magemenu>
+      <page>
+        <page_wrapper_custom><![CDATA[data_null]]></page_wrapper_custom>
+        <page_custom_style><![CDATA[data_null]]></page_custom_style>
+      </page>
+      <main>
+        <main_content_container_custom><![CDATA[1]]></main_content_container_custom>
+        <main_custom_style><![CDATA[data_null]]></main_custom_style>
+        <main_bgcolor><![CDATA[data_null]]></main_bgcolor>
+        <main_bg_image><![CDATA[data_null]]></main_bg_image>
+      </main>
+      <customization>
+        <custom_style><![CDATA[.elementor-image-box-title,
+a.pagebuilder-button-link, button.pagebuilder-button-link, div.pagebuilder-button-link, .cart.table-wrapper .actions-toolbar > .action.pagebuilder-button-link, .action-gift.pagebuilder-button-link {
+  font-weight: 500;
+}
+.product-label {
+    top: 0;
+    left: 0;
+}
+.cms-no-route-v2 .pagebuilder-button-primary {
+    background: var(--button-primary__hover__background);
+    border: 1px solid var(--button-primary__hover__background);
+}
+[data-layout="style_2"] .elementor-newsletter-wrapper .actions-subscribe button, [data-layout="style_2"] .elementor-newsletter-wrapper .actions-subscribe .cart.table-wrapper .actions-toolbar > .action, [data-layout="style_2"] .elementor-newsletter-wrapper .actions-subscribe .action-gift {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+:root {
+--headings__font-weight-secondary:  var(--heading__font-weight__base);
+--border-item-image-border-radius:10px;
+--border-details-image-border-radius:5px;
+--bls_image-box-top-max-width:30px;
+--bls_image-box-title-font-size:15px;
+--bls_image-box-des-font-size:14px;
+--bls_image-box-title-margin:0 0 2px 0;
+--bls_image-box-top-margin: 0 0 2px 0;
+--bls_elementor-static-menu-title--font-size:1.6rem;
+ --border-color__base:#E5E8EC;
+    --module_title-size: 2.8rem;
+    --product_item-size: 1.4rem;
+--product-name-font-weight:500;
+--button__font-size:1.4rem;
+--button__text_transform:capitalize;
+
+}
+.widget-category-thumbnail-image {
+    --category_item_title-size: 1.4rem;
+}
+@media only screen and (max-width: 1199px){
+:root {
+    --module_title-size: 2.8rem;
+}
+}
+@media only screen and (max-width: 767px){
+:root {
+    --module_title-size: 2.4rem;
+}
+}
+
+.products-list .product-item{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 2rem;
+}
+.product-item-price > .price-box  {
+    margin-top: 1rem;
+}
+.price-box .price {
+    font-size: 1.8rem;
+}
+
+.product-info-main .old-price .price,
+ .product-item .old-price .price{
+    color: #8D979E !important;
+    font-size: 1.4rem;
+}
+.product-info-main .price-final_price *,
+.product-item .price-final_price *,
+.product-info-main .price-configured_price *,
+.product-item .price-configured_price * {
+    color: #111111;
+}
+.rating-summary .rating-result > span:before {
+    color: #FFB800;
+}
+.product-item .product-item-name > a:hover,
+.product-item-name > a:hover{
+color:var(--theme__color__primary);
+}
+[data-content-type="newsletter"] {
+    --bls_newsletter-input-bg-color: #ffffff;
+}
+@media only screen and (min-width: 993px){
+.elementor-image-box-wrapper {
+position:relative;
+}
+p.rs-p-wp-fix + rs-module-wrap {
+    min-height: 450px;
+}
+.pagebuilder-column:not(:last-child) .elementor-image-box-wrapper:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 60px;
+    width: 1px;
+    transform: translateY(-50%);
+    border-right: 1px solid #E5E8EC;
+}
+}
+rs-module-wrap {
+    border-radius: 20px;
+    overflow: hidden !important;
+}
+.search_type_defaut .input-text {
+    font-size: 1.3rem;
+}
+.elementor-show__category {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.post-holder .post-ftimg-hld > a {
+    border-radius: 5px;
+}
+.post-image, .post-ftimg-hld {
+    border-radius: 5px;
+}
+]]></custom_style>
+      </customization>
+    </themeoption>
+    <mfblog>
+      <general>
+        <enabled><![CDATA[1]]></enabled>
+        <mfmodule><![CDATA[Blog]]></mfmodule>
+        <mftype><![CDATA[1]]></mftype>
+      </general>
+      <design>
+        <format_date><![CDATA[F d, Y]]></format_date>
+        <publication_date><![CDATA[1]]></publication_date>
+      </design>
+      <index_page>
+        <title><![CDATA[Blog]]></title>
+      </index_page>
+      <post_view/>
+      <post_list>
+        <posts_per_page><![CDATA[12]]></posts_per_page>
+        <shortcotent_length><![CDATA[1000]]></shortcotent_length>
+        <lazyload_padding><![CDATA[200]]></lazyload_padding>
+      </post_list>
+      <tag>
+        <robots><![CDATA[INDEX,FOLLOW]]></robots>
+      </tag>
+      <search>
+        <robots><![CDATA[NOINDEX,FOLLOW]]></robots>
+      </search>
+      <author>
+        <enabled><![CDATA[1]]></enabled>
+        <page_enabled><![CDATA[1]]></page_enabled>
+        <robots><![CDATA[NOINDEX,FOLLOW]]></robots>
+      </author>
+      <sidebar/>
+      <product_page>
+        <related_posts_enabled><![CDATA[1]]></related_posts_enabled>
+        <number_of_related_posts><![CDATA[5]]></number_of_related_posts>
+      </product_page>
+      <permalink>
+        <route><![CDATA[blog]]></route>
+        <redirect_to_no_slash><![CDATA[1]]></redirect_to_no_slash>
+        <type><![CDATA[default]]></type>
+        <post_route><![CDATA[post]]></post_route>
+        <category_route><![CDATA[category]]></category_route>
+        <archive_route><![CDATA[archive]]></archive_route>
+        <tag_route><![CDATA[tag]]></tag_route>
+        <author_route><![CDATA[author]]></author_route>
+        <search_route><![CDATA[search]]></search_route>
+        <rss_route><![CDATA[rss]]></rss_route>
+      </permalink>
+      <seo>
+        <use_canonical_meta_tag_for><![CDATA[all]]></use_canonical_meta_tag_for>
+      </seo>
+      <social>
+        <add_this_enabled><![CDATA[1]]></add_this_enabled>
+        <add_this_pubid><![CDATA[ra-608baa0f7d533322]]></add_this_pubid>
+        <add_this_language><![CDATA[en]]></add_this_language>
+      </social>
+      <top_menu>
+        <show_item><![CDATA[1]]></show_item>
+        <item_text><![CDATA[Blog]]></item_text>
+        <include_categories><![CDATA[1]]></include_categories>
+      </top_menu>
+      <developer/>
+    </mfblog>
+    <instagramsection>
+      <instagramgroup>
+        <active><![CDATA[1]]></active>
+        <userid><![CDATA[17841458567396468]]></userid>
+        <accesstoken><![CDATA[IGQVJYdTF3WlR1a2RtdXFwNXNNQTkzMW5JMmJpaFFlR3c2MXBSaWFuNElQbml1NUY4UThHcElwM1JWNUJMUUtnU2VKeHFocmlJT2ViWlFWRkdHZA3FtSXp3OG44TGhNcDZATUFVHNmVR]]></accesstoken>
+        <username><![CDATA[blueskyskincareumino]]></username>
+        <limit><![CDATA[8]]></limit>
+      </instagramgroup>
+    </instagramsection>
+    <menus>
+      <horizontal>
+        <active><![CDATA[1]]></active>
+        <horizontal_menu><![CDATA[168448843963483600]]></horizontal_menu>
+        <animation><![CDATA[down_to_up]]></animation>
+      </horizontal>
+      <vertical>
+        <active><![CDATA[1]]></active>
+        <heading><![CDATA[All Departments]]></heading>
+        <limit_show><![CDATA[10]]></limit_show>
+        <animation><![CDATA[down_to_up]]></animation>
+        <vertical_menu><![CDATA[1682148277112502167]]></vertical_menu>
+      </vertical>
+      <builder_label>
+        <new_bg_label><![CDATA[#516CF4]]></new_bg_label>
+        <new_text_label><![CDATA[#FFFFFF]]></new_text_label>
+        <sale_bg_label><![CDATA[#D73F0F]]></sale_bg_label>
+        <sale_text_label><![CDATA[#FFFFFF]]></sale_text_label>
+        <hot_bg_label><![CDATA[#E02F60]]></hot_bg_label>
+        <hot_text_label><![CDATA[#FFFFFF]]></hot_text_label>
+      </builder_label>
+      <flat>
+        <flat_data><![CDATA[1]]></flat_data>
+      </flat>
+    </menus>
+    <ajaxsuite>
+      <general>
+        <enabled><![CDATA[1]]></enabled>
+      </general>
+      <ajaxcompare>
+        <enabled><![CDATA[1]]></enabled>
+      </ajaxcompare>
+      <ajaxwishlist>
+        <enabled><![CDATA[1]]></enabled>
+        <title><![CDATA[My Wishlist]]></title>
+        <description><![CDATA[We love Magento]]></description>
+        <logo_pupup_login><![CDATA[default/logosmall.png]]></logo_pupup_login>
+        <bg_pupup_login><![CDATA[default/home-bg.jpg]]></bg_pupup_login>
+      </ajaxwishlist>
+      <ajaxcart>
+        <enabled><![CDATA[1]]></enabled>
+        <success_action><![CDATA[popup]]></success_action>
+      </ajaxcart>
+    </ajaxsuite>
+    <quickview_product>
+      <general>
+        <enabled><![CDATA[1]]></enabled>
+        <label><![CDATA[Quick View]]></label>
+        <position><![CDATA[append]]></position>
+        <class_position><![CDATA[.actions-secondary]]></class_position>
+        <nav><![CDATA[dots]]></nav>
+        <navdir><![CDATA[left]]></navdir>
+      </general>
+    </quickview_product>
+    <searchsuite>
+      <search>
+        <enable><![CDATA[1]]></enable>
+        <type><![CDATA[defaut]]></type>
+        <limit><![CDATA[6]]></limit>
+      </search>
+      <product>
+        <enable_image><![CDATA[1]]></enable_image>
+        <enable_price><![CDATA[1]]></enable_price>
+        <enable_reviews_rating><![CDATA[1]]></enable_reviews_rating>
+        <enable_brand><![CDATA[1]]></enable_brand>
+      </product>
+      <search_category>
+        <enable_search_category><![CDATA[1]]></enable_search_category>
+        <show_category><![CDATA[dropdown]]></show_category>
+      </search_category>
+      <product_suggestion>
+        <enable><![CDATA[1]]></enable>
+        <text_suggestion><![CDATA[Need some inspiration?]]></text_suggestion>
+        <category><![CDATA[59]]></category>
+      </product_suggestion>
+    </searchsuite>
+  </default>
+</config>

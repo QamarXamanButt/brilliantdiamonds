@@ -1,0 +1,146 @@
+
+
+<?php if ($block->displayPosts()) { ?>
+    <?php $postCollection = $block->getPostCollection(); ?>
+    <?php if (count($postCollection)) { ?>
+    <div class="mfblog-replated-posts-block block related post-list-wrapper">
+        <?php if (!$block->getHideTitle()) { ?>
+        <div class="elementor__header">
+            <h3 class="elementor__headline">
+                <span id="block-relatedposts-heading" role="heading" aria-level="2">
+                    <?= $block->escapeHtml(__('Related Posts')) ?>
+                </span>
+            </h3>
+        </div>
+        <?php } ?>
+        <ul class="post-list slick-slider" data-rtl="false" data-items="3" 
+			data-bigdesktop="3" data-smalldesktop="3" 
+			data-bigtablet="2" data-tablet="2" 
+			data-smalltablet="2" data-mobile="1" 
+			data-margin="30" data-loop="true" data-center="false" data-mousedrag="true" data-touchdrag="true" data-stagepadding="0" 
+			data-nav="true" data-navnext="" data-navprev="" data-rewind="false" data-dots="true" data-autoplay="false" data-speed="250">
+                <?php foreach ($postCollection as $post) { ?>
+                <li class="post-holder">
+                    <div class="post-header">
+                        <?php if ($featuredImage = $post->getFeaturedImage()) { ?>
+                            <?php
+                            $featuredImgAlt = $post->getData('featured_img_alt');
+                            if (!$featuredImgAlt) {
+                                $featuredImgAlt = $post->getTitle();
+                            }
+                            ?>
+                            <div class="post-ftimg-hld">
+                                <a href="<?= $block->escapeUrl($post->getPostUrl()) ?>" title="<?= $block->escapeHtml($post->getTitle()) ?>">
+                                    <img src="<?= $block->escapeUrl($featuredImage) ?>" alt="<?= $block->escapeHtml($featuredImgAlt) ?>" />
+                                </a>
+                            </div>
+                        <?php } ?>
+                        <div class="post-content">
+                            <div class="post-info">
+                                <?php if ($_categoriesCount = $post->getCategoriesCount()) { ?>
+                                    <div class="item post-categories">
+                                        <?php $n = 0; ?>
+                                        <?php foreach ($post->getParentCategories() as $ct) { ?>
+                                            <?php $n++; ?>
+                                            <a title="<?= $block->escapeHtml($ct->getTitle()) ?>"
+                                            href="<?= $block->escapeUrl($ct->getCategoryUrl()) ?>"
+                                            ><?= $block->escapeHtml($ct->getTitle()) ?></a><?= /*@noEscape*/ ($n != $_categoriesCount) ? ',' : '' ?>
+                                        <?php } ?>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                            <div class="post-title">
+                                <a class="post-item-link" title="<?= $block->escapeHtml($post->getTitle()) ?>"
+                                    href="<?= $block->escapeUrl($post->getPostUrl()) ?>">
+                                        <?= $block->escapeHtml($post->getTitle()) ?>
+                                </a>
+                            </div>
+                            <div class="post-info d-flex align-items-center flex-wrap">
+                                <div class="item post-posed-date">
+                                    <span class="value"><?= $block->escapeHtml($post->getPublishDate()) ?></span>
+                                </div>
+                                <?php if ($_author = $post->getAuthor()) { ?>
+                                    <div class="item post-author">
+                                        <span class="label"><?= $block->escapeHtml(__('By')) ?></span>
+                                        <span class="value">
+                                        <?php if ($authorPageEnabled = $block->authorPageEnabled()) { ?>
+                                            <a title="<?= $block->escapeHtml($_author->getTitle()) ?>"
+                                            href="<?= $block->escapeUrl($_author->getAuthorUrl()) ?>">
+                                            <?php } ?>
+
+                                            <?= $block->escapeHtml($_author->getTitle()) ?>
+
+                                            <?php if ($authorPageEnabled) { ?>
+                                            </a>
+                                        <?php } ?>
+                                        </span>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+    <script> 
+        require([
+            'jquery',
+            'slick'
+            ], function ($) {
+            'use strict';
+            $(document).ready(function() {
+                var $carouselElement = $('.related .post-list'),
+                slickConfig = {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    rows: 1,
+                    autoplay: false,
+                    autoplaySpeed: false,
+                    arrows: true,
+                    dots: false,
+                    responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 2
+                        }
+                    }
+                    ]
+                };
+                $carouselElement.slick(slickConfig);
+            });
+        });
+    </script>
+    <?php } ?>
+<?php } ?>
+

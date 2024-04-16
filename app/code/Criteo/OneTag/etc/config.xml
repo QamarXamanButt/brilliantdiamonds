@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<cto_onetag_section>
+			<general>
+				<cto_partner>39902</cto_partner>
+				<cto_version>1.1.10</cto_version>
+				<cto_enable_home>1</cto_enable_home>
+				<cto_enable_listing>1</cto_enable_listing>
+				<cto_enable_product>1</cto_enable_product>
+				<cto_enable_basket>1</cto_enable_basket>
+				<cto_enable_sale>1</cto_enable_sale>
+				<cto_enable_loader>1</cto_enable_loader>
+				<cto_enable_eec_dl>0</cto_enable_eec_dl>
+				<cto_use_sku>0</cto_use_sku>
+			</general>
+		</cto_onetag_section>
+	</default>
+</config>

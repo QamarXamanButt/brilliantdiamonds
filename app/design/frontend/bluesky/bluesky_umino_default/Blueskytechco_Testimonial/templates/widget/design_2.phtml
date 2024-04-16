@@ -1,0 +1,184 @@
+<div class="section widget-testimonial design--2 margin_item--<?= /*@noEscape*/ $block->getDataWidgetConfig('margin_item') ?> image_hover_effects--<?= /*@noEscape*/ $block->getDataWidgetConfig('image_hover_effects') ?>">
+	<?php if($block->getDataWidgetConfig('title') != '' || $block->getDataWidgetConfig('short_description') != ''){ ?>
+	<div class="elementor__header">
+		<?php if($block->getDataWidgetConfig('title') != ''){ ?>
+		<h3 class="elementor__headline"><?= $block->escapeHtml($block->getDataWidgetConfig('title')) ?></h3>
+		<?php } ?>
+		<?php if($block->getDataWidgetConfig('short_description') != ''){ ?>
+		<div class="elementor__description"><?= $block->filterOutputContent($block->getDataWidgetConfig('short_description')) ?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+	<?php $testimonials = $block->getTestimonials(); ?>
+	<?php if ($testimonials->count()) { ?>
+	<div class="elementor__content widget-testimonial-slider first-loading-slick">
+		<?php foreach ($testimonials as $testimonial){ ?>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover item-loading-slick">
+					<div class="testimonial-text"> 
+						<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M39.2609 1H23.6087C22.6497 1 21.8696 1.78572 21.8696 2.75149V17.6392C21.8696 18.605 22.6497 19.3907 23.6087 19.3907H31V29.8996C31 30.3117 31.5367 30.4925 31.7826 30.1624L40.913 17.9019C40.9695 17.8262 41 17.734 41 17.6392V2.75149C41 1.78572 40.2199 1 39.2609 1ZM40.1304 17.4932L31.8696 28.586V18.9528C31.8696 18.7109 31.675 18.5149 31.4348 18.5149H23.6087C23.1292 18.5149 22.7391 18.1221 22.7391 17.6392V2.75149C22.7391 2.26861 23.1292 1.87575 23.6087 1.87575H39.2609C39.7403 1.87575 40.1304 2.26861 40.1304 2.75149V17.4932ZM18.3913 1H2.73913C1.78017 1 1 1.78572 1 2.75149V17.6392C1 18.605 1.78017 19.3907 2.73913 19.3907H10.1304V29.8997C10.1304 30.3094 10.667 30.4928 10.913 30.1624L20.0435 17.9019C20.0999 17.8262 20.1304 17.734 20.1304 17.6392V2.75149C20.1304 1.78572 19.3503 1 18.3913 1ZM19.2609 17.4932L11 28.586V18.9528C11 18.7109 10.8053 18.5149 10.5652 18.5149H2.73913C2.25965 18.5149 1.86957 18.1221 1.86957 17.6392V2.75149C1.86957 2.26861 2.25965 1.87575 2.73913 1.87575H18.3913C18.8708 1.87575 19.2609 2.26861 19.2609 2.75149V17.4932Z" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+						</svg>
+						<?php if ($this->getImage($testimonial)) { ?>
+						<div class="testimonial-img">
+							<img class="avatar" src="<?= $this->escapeUrl($this->getImage($testimonial))?>" alt="<?php echo __($this->escapeHtml($testimonial->getName())) ?>" title="<?php echo __($this->escapeHtml($testimonial->getName())) ?>" />
+						</div>
+						<?php } ?>
+						<div class="testimonial-content"><?= $this->escapeHtml($testimonial->getText()); ?></div>				
+						<div class="testimonial-rating">
+							<div class="rating-summary d-flex justify-content-center">
+								<span class="rating-result" style="display:block;">
+									<span style="display:block; width:<?php echo $testimonial->getData('rating_summary')*20; ?>%;" class="rating"></span>
+								</span>
+							</div>
+						</div>
+						<div class="testimonial-job d-flex justify-content-center align-items-center">
+							<span class="testimonial-name"><?= $this->escapeHtml($testimonial->getName()); ?></span>
+							<span> - </span>
+							<span class="tm-testimonial__position"><?= $testimonial->getJob(); ?></span>					
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+	</div>
+
+
+	<?php }else{ ?>
+		<div class="elementor__content widget-testimonial-slider first-loading-slick">
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover">
+					<div class="testimonial-text"> 
+						<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M39.2609 1H23.6087C22.6497 1 21.8696 1.78572 21.8696 2.75149V17.6392C21.8696 18.605 22.6497 19.3907 23.6087 19.3907H31V29.8996C31 30.3117 31.5367 30.4925 31.7826 30.1624L40.913 17.9019C40.9695 17.8262 41 17.734 41 17.6392V2.75149C41 1.78572 40.2199 1 39.2609 1ZM40.1304 17.4932L31.8696 28.586V18.9528C31.8696 18.7109 31.675 18.5149 31.4348 18.5149H23.6087C23.1292 18.5149 22.7391 18.1221 22.7391 17.6392V2.75149C22.7391 2.26861 23.1292 1.87575 23.6087 1.87575H39.2609C39.7403 1.87575 40.1304 2.26861 40.1304 2.75149V17.4932ZM18.3913 1H2.73913C1.78017 1 1 1.78572 1 2.75149V17.6392C1 18.605 1.78017 19.3907 2.73913 19.3907H10.1304V29.8997C10.1304 30.3094 10.667 30.4928 10.913 30.1624L20.0435 17.9019C20.0999 17.8262 20.1304 17.734 20.1304 17.6392V2.75149C20.1304 1.78572 19.3503 1 18.3913 1ZM19.2609 17.4932L11 28.586V18.9528C11 18.7109 10.8053 18.5149 10.5652 18.5149H2.73913C2.25965 18.5149 1.86957 18.1221 1.86957 17.6392V2.75149C1.86957 2.26861 2.25965 1.87575 2.73913 1.87575H18.3913C18.8708 1.87575 19.2609 2.26861 19.2609 2.75149V17.4932Z" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+						</svg>
+						<div class="testimonial-img">
+							<img style="width:50px" class="avatar" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="alex" title="alex" />
+						</div>
+						<div class="testimonial-content">The theme is beautiful. Just got a compliment on it today. The customer service </div>
+						<div class="testimonial-rating">
+							<div class="rating-summary d-flex justify-content-center">
+								<span class="rating-result" style="display:block;">
+									<span style="display:block; width:100%;" class="rating"></span>
+								</span>
+							</div>
+						</div>
+						<div class="testimonial-job d-flex justify-content-center align-items-center">
+							<span class="testimonial-name">alex</span>
+							<span> - </span>
+							<span class="tm-testimonial__position"> California</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover">
+					<div class="testimonial-text"> 
+						<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M39.2609 1H23.6087C22.6497 1 21.8696 1.78572 21.8696 2.75149V17.6392C21.8696 18.605 22.6497 19.3907 23.6087 19.3907H31V29.8996C31 30.3117 31.5367 30.4925 31.7826 30.1624L40.913 17.9019C40.9695 17.8262 41 17.734 41 17.6392V2.75149C41 1.78572 40.2199 1 39.2609 1ZM40.1304 17.4932L31.8696 28.586V18.9528C31.8696 18.7109 31.675 18.5149 31.4348 18.5149H23.6087C23.1292 18.5149 22.7391 18.1221 22.7391 17.6392V2.75149C22.7391 2.26861 23.1292 1.87575 23.6087 1.87575H39.2609C39.7403 1.87575 40.1304 2.26861 40.1304 2.75149V17.4932ZM18.3913 1H2.73913C1.78017 1 1 1.78572 1 2.75149V17.6392C1 18.605 1.78017 19.3907 2.73913 19.3907H10.1304V29.8997C10.1304 30.3094 10.667 30.4928 10.913 30.1624L20.0435 17.9019C20.0999 17.8262 20.1304 17.734 20.1304 17.6392V2.75149C20.1304 1.78572 19.3503 1 18.3913 1ZM19.2609 17.4932L11 28.586V18.9528C11 18.7109 10.8053 18.5149 10.5652 18.5149H2.73913C2.25965 18.5149 1.86957 18.1221 1.86957 17.6392V2.75149C1.86957 2.26861 2.25965 1.87575 2.73913 1.87575H18.3913C18.8708 1.87575 19.2609 2.26861 19.2609 2.75149V17.4932Z" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+						</svg>
+						<div class="testimonial-img">
+							<img style="width:50px" class="avatar" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="alex" title="alex" />
+						</div>
+						<div class="testimonial-content">The theme is beautiful. Just got a compliment on it today. The customer service </div>
+						<div class="testimonial-rating">
+							<div class="rating-summary d-flex justify-content-center">
+								<span class="rating-result" style="display:block;">
+									<span style="display:block; width:100%;" class="rating"></span>
+								</span>
+							</div>
+						</div>
+						<div class="testimonial-job d-flex justify-content-center align-items-center">
+							<span class="testimonial-name">alex</span>
+							<span> - </span>
+							<span class="tm-testimonial__position"> California</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover">
+					<div class="testimonial-text"> 
+						<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M39.2609 1H23.6087C22.6497 1 21.8696 1.78572 21.8696 2.75149V17.6392C21.8696 18.605 22.6497 19.3907 23.6087 19.3907H31V29.8996C31 30.3117 31.5367 30.4925 31.7826 30.1624L40.913 17.9019C40.9695 17.8262 41 17.734 41 17.6392V2.75149C41 1.78572 40.2199 1 39.2609 1ZM40.1304 17.4932L31.8696 28.586V18.9528C31.8696 18.7109 31.675 18.5149 31.4348 18.5149H23.6087C23.1292 18.5149 22.7391 18.1221 22.7391 17.6392V2.75149C22.7391 2.26861 23.1292 1.87575 23.6087 1.87575H39.2609C39.7403 1.87575 40.1304 2.26861 40.1304 2.75149V17.4932ZM18.3913 1H2.73913C1.78017 1 1 1.78572 1 2.75149V17.6392C1 18.605 1.78017 19.3907 2.73913 19.3907H10.1304V29.8997C10.1304 30.3094 10.667 30.4928 10.913 30.1624L20.0435 17.9019C20.0999 17.8262 20.1304 17.734 20.1304 17.6392V2.75149C20.1304 1.78572 19.3503 1 18.3913 1ZM19.2609 17.4932L11 28.586V18.9528C11 18.7109 10.8053 18.5149 10.5652 18.5149H2.73913C2.25965 18.5149 1.86957 18.1221 1.86957 17.6392V2.75149C1.86957 2.26861 2.25965 1.87575 2.73913 1.87575H18.3913C18.8708 1.87575 19.2609 2.26861 19.2609 2.75149V17.4932Z" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+						</svg>
+						<div class="testimonial-img">
+							<img style="width:50px" class="avatar" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="alex" title="alex" />
+						</div>
+						<div class="testimonial-content">The theme is beautiful. Just got a compliment on it today. The customer service </div>
+						<div class="testimonial-rating">
+							<div class="rating-summary d-flex justify-content-center">
+								<span class="rating-result" style="display:block;">
+									<span style="display:block; width:100%;" class="rating"></span>
+								</span>
+							</div>
+						</div>
+						<div class="testimonial-job d-flex justify-content-center align-items-center">
+							<span class="testimonial-name">alex</span>
+							<span> - </span>
+							<span class="tm-testimonial__position"> California</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover">
+					<div class="testimonial-text"> 
+						<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M39.2609 1H23.6087C22.6497 1 21.8696 1.78572 21.8696 2.75149V17.6392C21.8696 18.605 22.6497 19.3907 23.6087 19.3907H31V29.8996C31 30.3117 31.5367 30.4925 31.7826 30.1624L40.913 17.9019C40.9695 17.8262 41 17.734 41 17.6392V2.75149C41 1.78572 40.2199 1 39.2609 1ZM40.1304 17.4932L31.8696 28.586V18.9528C31.8696 18.7109 31.675 18.5149 31.4348 18.5149H23.6087C23.1292 18.5149 22.7391 18.1221 22.7391 17.6392V2.75149C22.7391 2.26861 23.1292 1.87575 23.6087 1.87575H39.2609C39.7403 1.87575 40.1304 2.26861 40.1304 2.75149V17.4932ZM18.3913 1H2.73913C1.78017 1 1 1.78572 1 2.75149V17.6392C1 18.605 1.78017 19.3907 2.73913 19.3907H10.1304V29.8997C10.1304 30.3094 10.667 30.4928 10.913 30.1624L20.0435 17.9019C20.0999 17.8262 20.1304 17.734 20.1304 17.6392V2.75149C20.1304 1.78572 19.3503 1 18.3913 1ZM19.2609 17.4932L11 28.586V18.9528C11 18.7109 10.8053 18.5149 10.5652 18.5149H2.73913C2.25965 18.5149 1.86957 18.1221 1.86957 17.6392V2.75149C1.86957 2.26861 2.25965 1.87575 2.73913 1.87575H18.3913C18.8708 1.87575 19.2609 2.26861 19.2609 2.75149V17.4932Z" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+						</svg>
+						<div class="testimonial-img">
+							<img style="width:50px" class="avatar" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="alex" title="alex" />
+						</div>
+						<div class="testimonial-content">The theme is beautiful. Just got a compliment on it today. The customer service </div>
+						<div class="testimonial-rating">
+							<div class="rating-summary d-flex justify-content-center">
+								<span class="rating-result" style="display:block;">
+									<span style="display:block; width:100%;" class="rating"></span>
+								</span>
+							</div>
+						</div>
+						<div class="testimonial-job d-flex justify-content-center align-items-center">
+							<span class="testimonial-name">alex</span>
+							<span> - </span>
+							<span class="tm-testimonial__position"> California</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover">
+					<div class="testimonial-text"> 
+						<svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M39.2609 1H23.6087C22.6497 1 21.8696 1.78572 21.8696 2.75149V17.6392C21.8696 18.605 22.6497 19.3907 23.6087 19.3907H31V29.8996C31 30.3117 31.5367 30.4925 31.7826 30.1624L40.913 17.9019C40.9695 17.8262 41 17.734 41 17.6392V2.75149C41 1.78572 40.2199 1 39.2609 1ZM40.1304 17.4932L31.8696 28.586V18.9528C31.8696 18.7109 31.675 18.5149 31.4348 18.5149H23.6087C23.1292 18.5149 22.7391 18.1221 22.7391 17.6392V2.75149C22.7391 2.26861 23.1292 1.87575 23.6087 1.87575H39.2609C39.7403 1.87575 40.1304 2.26861 40.1304 2.75149V17.4932ZM18.3913 1H2.73913C1.78017 1 1 1.78572 1 2.75149V17.6392C1 18.605 1.78017 19.3907 2.73913 19.3907H10.1304V29.8997C10.1304 30.3094 10.667 30.4928 10.913 30.1624L20.0435 17.9019C20.0999 17.8262 20.1304 17.734 20.1304 17.6392V2.75149C20.1304 1.78572 19.3503 1 18.3913 1ZM19.2609 17.4932L11 28.586V18.9528C11 18.7109 10.8053 18.5149 10.5652 18.5149H2.73913C2.25965 18.5149 1.86957 18.1221 1.86957 17.6392V2.75149C1.86957 2.26861 2.25965 1.87575 2.73913 1.87575H18.3913C18.8708 1.87575 19.2609 2.26861 19.2609 2.75149V17.4932Z" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+						</svg>
+						<div class="testimonial-img">
+							<img style="width:50px" class="avatar" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="alex" title="alex" />
+						</div>
+						<div class="testimonial-content">The theme is beautiful. Just got a compliment on it today. The customer service </div>
+						<div class="testimonial-rating">
+							<div class="rating-summary d-flex justify-content-center">
+								<span class="rating-result" style="display:block;">
+									<span style="display:block; width:100%;" class="rating"></span>
+								</span>
+							</div>
+						</div>
+						<div class="testimonial-job d-flex justify-content-center align-items-center">
+							<span class="testimonial-name">alex</span>
+							<span> - </span>
+							<span class="tm-testimonial__position"> California</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	<?php } ?>
+</div>

@@ -1,0 +1,18 @@
+    //
+    //sub-category-slide
+    //  _____________________________________________
+    & when (@media-common =true) {
+        .sub-category-slide {
+            margin-bottom: 3rem;
+
+            @media only screen and (min-width: @screen__l) {
+                margin-bottom: 6rem;
+            }
+        }
+    }
+
+    .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
+        .sub-category-slide {
+            --layout-indent__width: 15px;
+        }
+    }

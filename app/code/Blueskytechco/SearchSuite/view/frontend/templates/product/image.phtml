@@ -1,0 +1,7 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+$product = $block->getProduct();
+$imageDisplayArea = 'category_page_grid';
+$productImage = $block->getImage($product, $imageDisplayArea);
+?>
+<?= $productImage->toHtml() ?>

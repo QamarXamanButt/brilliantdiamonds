@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<move element="page.main.title" destination="product.title.wrap" before="-"/>
+		<move element="product.info.type" destination="product.info.main" before="product.info.stock.sku"/>
+		<move element="product.info.stock.sku" destination="product.info.main" before="product-category"/>
+		<move element="product.info.overview" destination="product.info.main" after="product.rate.price"/>
+		<referenceContainer name="product.info.main">
+			<container name="product.title.wrap" htmlTag="div" htmlClass="product-title-wrap" before="-">
+			</container>
+			<container name="trust.Seal" htmlTag="div" htmlClass="trust_seal" after="-">
+				<block name="trustSeal" before="contactForm" class="Magento\Cms\Block\Block">    
+					<arguments>
+						<argument name="block_id" xsi:type="string">bluesky_default_trust_seal</argument>
+					</arguments>
+				</block>
+			</container>
+            <container name="extra.popup.link" htmlTag="div" htmlClass="extra-popup" before="trust.Seal">
+                <block class="Magento\Catalog\Block\Product\View" name="product.delivery" template="product/view/delivery.phtml">
+				</block>
+            </container>
+			<container name="product.rate.price" htmlTag="div" htmlClass="product-rate-price" before="product.info"/>
+            <container name="product.badges.label" htmlTag="div" htmlClass="entry-product-badges product-badges product-badges-label" before="-">
+                <block class="Magento\Catalog\Block\Product\View" name="product.badges" template="product/view/badges.phtml"></block>
+            </container>
+			<container name="product-category" htmlTag="div" htmlClass="product-category">
+				<block class="Magento\Catalog\Block\Product\View" name="product.category.name" template="product/view/productscategory.phtml">
+				</block>
+			</container>
+		</referenceContainer>
+		<referenceContainer name="product.info.options.wrapper.bottom">
+			<container name="product.options.addons" htmlTag="div" htmlClass="bls__product-addons" before="-">
+				<block class="Magento\Catalog\Block\Product\View" name="product.options.share" after="-" template="product/view/share.phtml">
+				</block>
+            </container>
+			<container name="product.options.countdown" htmlTag="div" htmlClass="bls__stock-countdown" after="product.options.addons">
+				<block class="Magento\Catalog\Block\Product\View" name="product.stock.countdown" after="-" template="product/view/stock.phtml">
+					<arguments>
+						<argument name="view_model" xsi:type="object">Blueskytechco\CustomCatalog\ViewModel\Catalog</argument>
+					</arguments>
+				</block>
+            </container>
+		</referenceContainer>
+		<referenceContainer name="product.info.form.content">
+			<container name="product.form.addons" htmlTag="div" htmlClass="bls__product-addons" before="-">
+				<block class="Magento\Catalog\Block\Product\View" name="product.form.share" after="-" template="product/view/share.phtml">
+				</block>
+            </container>
+			<container name="product.form.countdown" htmlTag="div" htmlClass="bls__stock-countdown" after="product.form.addons">
+				<block class="Magento\Catalog\Block\Product\View" name="product.stock.countdown" after="-" template="product/view/stock.phtml">
+					<arguments>
+						<argument name="view_model" xsi:type="object">Blueskytechco\CustomCatalog\ViewModel\Catalog</argument>
+					</arguments>
+				</block>
+            </container>
+		</referenceContainer>
+		<move element="product.info.review" destination="product.rate.price" after="-"/>
+		<move element="product.info.price" destination="product.info.addtocart.additional" before="-"/>
+		<!-- <move element="product.info.price" destination="product.info.addtocart" before="-"/> -->
+		<!-- update via jason jemel request 10/13/23 -->
+		<move element="upsell.stock" destination="product.info.main" after="product.info.overview"/>
+        <move element="sizechart.options.popup" destination="product.options.addons" before="-"/>
+		<move element="sizechart.info.popup" destination="product.form.addons" before="-"/>
+		<move element="product.options.question.ask" destination="product.options.addons" after="sizechart.options.popup"/>
+		<move element="product.info.question.ask" destination="product.form.addons" after="sizechart.info.popup"/>
+		<move element="product.options.share" destination="product.options.addons" after="product.options.question.ask"/>
+		<move element="product.info.share" destination="product.form.addons" after="product.info.question.ask"/>
+		<referenceBlock name="product.info.configurable.catalog_inventory_stockqty_default" remove="true"/>
+		<referenceBlock name="product.info.simple.extra.catalog_inventory_stockqty_default" remove="true"/>
+		<referenceBlock name="product.info.virtual.extra.catalog_inventory_stockqty_default" remove="true"/>
+		<referenceBlock name="product.info.downloadable.extra" remove="true"/>
+	</body>
+</page>

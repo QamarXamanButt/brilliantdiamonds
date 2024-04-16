@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+	<widget class="Blueskytechco\GroupedProduct\Block\Grouped" id="blueskytechco_groupedproduct_widget">
+		<label>GroupedProduct Widget</label>
+		<description>Show a Grouped Product detail</description>
+		<parameters>
+            <parameter name="title" sort_order="10" visible="true" xsi:type="text">
+                <label>Title</label>
+            </parameter>
+            <parameter name="description" sort_order="20" visible="true" xsi:type="text">
+                <label>Description</label>
+            </parameter>
+            <parameter name="product_id" xsi:type="select" source_model="Blueskytechco\GroupedProduct\Model\Config\Source\Grouped" visible="true" sort_order="30" >
+                <label translate="true">Select Grouped Product</label>
+            </parameter>
+		</parameters>
+	</widget>
+</widgets>

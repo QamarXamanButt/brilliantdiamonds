@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<move element="page.main.title" destination="product.info.main" before="-"/> 
+		<move element="product.info.main" destination="product.sticky.sidebar.info"/> 
+		<move element="product.info.media" destination="product.sticky.sidebar.images"/> 
+		<referenceContainer name="content">
+			<container name="product.main.content" htmlTag="div" htmlClass="product-main-content" before="-">
+                <container name="product.main.row" htmlTag="div" htmlClass="row gx-5" before="-">
+                    <container name="product.main.images" htmlTag="div" htmlClass="col-md-6 col-12 product-images img_action_zoom pr_sticky_img">
+                        <container name="product.sticky.sidebar.images" htmlTag="div" htmlClass="theiaStickySidebar"/>
+			        </container>
+                    <container name="product.main.infors" htmlTag="div" htmlClass="col-md-6 col-12 product-infors pr_sticky_info">
+                        <container name="product.sticky.sidebar.info" htmlTag="div" htmlClass="theiaStickySidebar"/>
+			        </container>
+			    </container>
+			</container>
+		</referenceContainer>
+	</body>
+</page>

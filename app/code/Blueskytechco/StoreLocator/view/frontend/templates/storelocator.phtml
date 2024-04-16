@@ -1,0 +1,51 @@
+<div id="locator_filter" class="block flex-layout gx-5 row">
+    <div class="column_left col-lg-4">
+        <div class="block-content">
+            <div id="current-address" class="bstlocator_input">
+                <div class="input-box">
+                    <input type="text" value="" class="input-text" id="locator-search" name="address" placeholder="<?= __('Enter a location')?>">
+					<input type="hidden" id="lat" name="lat">
+                    <input type="hidden" id="long" name="long">
+				</div>
+                <button class="action" title="Filter"  id="sortByFilter" >
+                    <span>
+                        <span>
+                            <?= __('Search')?>
+                        </span>
+                    </span>
+                </button>
+            </div>
+
+            
+        </div>
+		
+		<div class="center"> 
+			<div class="store_list"><?= $block->getChildHtml('store_list') ?></div>
+		</div>
+    </div>
+	<div class="column_right col-lg-8">
+		 <div id="bst-map-load" style="height: 100%"></div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?php echo $block->getApiKey() ?>&libraries=places"></script>
+<script>
+    var baloonTemplate = <?php echo $block->getBaloonTemplate() ?>;
+</script>
+<script>
+    require([
+        'jquery',
+        'Blueskytechco_StoreLocator/js/loadmap',
+        'Blueskytechco_StoreLocator/js/cluster',
+        'domReady!'
+    ], function ($) { 
+        $('#bst-map-load').bstLocator({
+            jsonLocations: <?php echo $this->getJsonLocations() ?>,
+			ajaxCallUrl: "<?php echo $this->getUrl('store-locator/index/ajax') ?>",
+			imageShop: "<?php echo $block->getViewFileUrl('Blueskytechco_StoreLocator::images/shop.jpg'); ?>",
+            imageLocations: "<?php echo $block->getViewFileUrl('Blueskytechco_StoreLocator::images/'); ?>"
+        })
+    });
+</script>
+
+
+

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string" translate="true">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Contact Us</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Contact Us</item>
+                    <item name="label" xsi:type="string" translate="true">Contact Us</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+			<block name="maps" before="contact.content.form" class="Magento\Cms\Block\Block">    
+				<arguments>
+					<argument name="block_id" xsi:type="string">default_contact_map</argument>
+				</arguments>
+            </block>
+			<container name="contact.content" htmlTag="div" htmlClass="row gx-5 contact-us">
+                <container name="contact.Infor" htmlTag="div" htmlClass="col-md-4" before="form.additional">
+					<block name="contactInfor" before="contactForm" class="Magento\Cms\Block\Block">    
+						<arguments>
+							<argument name="block_id" xsi:type="string">default_contact_infor</argument>
+						</arguments>
+					</block>
+				</container> 
+				<container name="form.additional" htmlTag="div" htmlClass="col-md-8">
+				</container>
+				
+			</container>
+        </referenceContainer>
+		<move element="contactForm" destination="form.additional" before="-" />
+    </body>
+</page>

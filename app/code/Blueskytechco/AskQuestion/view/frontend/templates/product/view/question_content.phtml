@@ -1,0 +1,51 @@
+<?php
+/**
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php
+    $_product = $block->getProduct();
+?>
+<div id="askquestion-popup" class="max-width-500 m-auto radius_as_form bg-white mfp-with-anim mfp-hide">
+    <div class="bls_popup-content p-5">
+        <form method="post" action="<?= $block->escapeUrl($this->getUrl('askquestion/index/save')) ?>" id="ContactFormAsk" accept-charset="UTF-8" class="contact-form" data-mage-init='{"validation": {}}'>
+            <input type="hidden" name="form_type" value="contact">
+            <input type="hidden" name="product_id" value="<?= $_product->getId()?>">
+            <h3 class="fs_20 mb_32 text-center border-bottom pb_10"><?= $block->escapeHtml(__('Ask a Question')) ?></h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="field mb-4 pb-2 askquestion-field-customer-name required">
+                        <div class="control">
+                            <input type="text" name="customer_name" id="askquestion-customer-name"
+                                class="input-text" data-validate="{required:true}" aria-required="true" placeholder="Your Name *">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="field mb-4 pb-2 askquestion-field-customer-email required">
+                        <div class="control">
+                            <input type="email" name="email" id="askquestion-customer-email"
+                                class="input-text" data-validate="{required:true, 'validate-email':true}" aria-required="true" placeholder="Your Email *">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field mb-4 pb-2 askquestion-field-customer-phone required">
+                <div class="control">
+                    <input type="tel" name="phone" id="askquestion-customer-phone"
+                        class="input-text" data-validate="{required:true}" pattern="[0-9\-]*" aria-required="true" placeholder="Your Phone *">
+                </div>
+            </div>
+            <div class="field mb-4 pb-2 askquestion-field-message required">
+                <div class="control">
+                    <textarea rows="10" id="askquestion-message" name="message" data-validate="{required:true}"  placeholder="Your Message *"></textarea>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="button action primary"><span><?= $block->escapeHtml(__('Submit Now')) ?></span></button>
+            </div>
+        </form>
+    </div>
+</div>

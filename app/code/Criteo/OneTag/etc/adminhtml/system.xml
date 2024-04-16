@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="cto_onetag_tab" translate="label" sortOrder="1000">
+			<label>Criteo OneTag</label>
+		</tab>
+		<section id="cto_onetag_section" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Criteo OneTag</label>
+			<tab>cto_onetag_tab</tab>
+			<resource>Criteo_OneTag::config</resource>
+			<group id="general" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Tags and Feed</label>
+				<field id="cto_partner" type="text" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Criteo Partner ID</label>
+					<comment>
+						<![CDATA[If you're unaware of this value, please contact your commercial contact at Criteo.]]>
+					</comment>
+					<validate>required-entry</validate>
+				</field>
+				<field id="cto_enable_home" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable Homepage Tag</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="cto_enable_listing" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable Listing Tag</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="cto_enable_product" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable Product Tag</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="cto_enable_basket" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable Basket Tag</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="cto_enable_sale" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable Sale Tag</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="cto_enable_loader" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable Criteo Loader Library</label>
+					<comment>Only disable if you want to disable all Criteo Tracking on your Website.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="cto_enable_eec_dl" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable GTM dataLayer Implementation</label>
+					<comment>Use this option if you prefer to configure Criteo Tags through GTM. Do NOT enable, if you already have an enhanced ecommerce dataLayer in place. Once enabled please log into your Criteo Account and follow the instructions in the "Events Tracking" section to configure your Tags for GTM enhanced ecommerce dataLayer.</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>								
+				<field id="cto_use_sku" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Use SKU for Product ID?</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

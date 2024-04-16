@@ -1,0 +1,80 @@
+<?php 
+$_helper = $this->helper('Blueskytechco\Themeoption\Helper\Product');
+?>
+<?php if ($detailedInfoGroup = $block->getGroupSortedChildNames('detailed_info', 'getChildHtml')) :?>
+    <div class="product info detailed">
+        <?php $layout = $block->getLayout(); ?>
+        <div class="product data items">
+            <?php foreach ($detailedInfoGroup as $name) :?>
+                <?php
+                $html = $layout->renderElement($name);
+                if (!trim($html)) {
+                    continue;
+                }
+                $alias = $layout->getElementAlias($name);
+                $label = $block->getChildData($alias, 'title');
+                ?>
+                <div class="data item title" id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>">
+                    <a class="data switch" data-tab="<?= $block->escapeHtmlAttr($alias) ?>"
+                       href="#<?= $block->escapeUrl($alias) ?>"
+                       id="tab-label-<?= $block->escapeHtmlAttr($alias) ?>-title">
+                        <?= /* @noEscape */ $label ?>
+                    </a>
+                </div>
+                <div class="data item content"
+                    id="<?= $block->escapeHtmlAttr($alias) ?>">
+                    <?= /* @noEscape */ $html ?>
+                </div>
+            <?php endforeach;?>
+            <?php 
+            $customTab = $_helper->getProductCustomTab();
+            if(count($customTab) > 0){
+                foreach($customTab as $custom_tab){
+            ?>
+            <div class="data item title" id="tab-label-<?= $block->escapeHtmlAttr($custom_tab['id']) ?>">
+                <a class="data switch" data-tab="<?= $block->escapeHtmlAttr($custom_tab['id']) ?>"
+                   href="#<?= $block->escapeHtmlAttr($custom_tab['id']) ?>"
+                   id="tab-label-<?= $block->escapeHtmlAttr($custom_tab['id']) ?>-title">
+                    <?= /* @noEscape */ $custom_tab['title']; ?>
+                </a>
+            </div>
+            <div class="data item content" id="<?= $block->escapeHtmlAttr($custom_tab['id']) ?>">
+                <?= $custom_tab['content'] ?>
+            </div>
+            <?php
+                }
+            }
+            ?>
+        </div>
+    </div>
+    <script>
+		require([
+			'jquery',
+			'mage/mage'
+		], function ($) {
+			'use strict';
+            $(document).ready(function () {
+                $( ".detailed .item.title" ).first().addClass("active");
+                $( ".detailed .item.content" ).first().show();
+                var width = $(window).width();
+                $(document).on('click','.detailed .item.title a', function() {
+                    var tab = $(this).data('tab');
+                    if ($(this).closest('.item.title').hasClass('active')) {
+                        if (width > 991) {
+                            return false;
+                        } else {
+                            $(this).closest('.item.title').removeClass('active');
+                            $('#'+tab).hide();
+                        }
+                    } else {
+                        $( ".detailed .item.title" ).removeClass("active");
+                        $( ".detailed .item.content" ).hide();
+                        $(this).closest('.item.title').addClass('active');
+                        $('#'+tab).show();
+                    }
+                    return false;
+                });
+            });
+		});
+	</script>
+<?php endif; ?>

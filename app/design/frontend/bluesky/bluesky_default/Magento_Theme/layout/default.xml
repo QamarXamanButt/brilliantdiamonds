@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    	<!-- Start custom header -->
+		<referenceContainer name="header.container">
+            <block class="Blueskytechco\Themeoption\Block\Html\Header" name="bluesky.header" before="-" />
+
+			<block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">header links</argument>
+                </arguments>
+            </block>
+		</referenceContainer>
+
+		<referenceBlock name="header.links">
+            <block class="Magento\Customer\Block\Account\Customer" name="customer" template="Magento_Customer::account/customer.phtml" before="-"/>
+            <block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link-login" template="Magento_Customer::account/link/authorization_login.phtml">
+                <arguments>
+                    <argument name="sortOrder" xsi:type="number">10</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+		<move element="header" destination="header.links" before="-"/>
+        <move element="register-link" destination="header.links"/>
+        <move element="top.links" destination="customer" before="-"/>
+        <!-- <move element="authorization-link" destination="top.links" after="catalog.compare.link"/> -->
+		<move element="header.links" destination="bluesky.header"/>
+		<move element="horizontal.menu" destination="bluesky.header"/>
+		<move element="vertical.menu" destination="bluesky.header"/>
+		<move element="rokan-search-autocomplete" destination="bluesky.header"/>
+		
+		<move element="currency" destination="bluesky.header"/>
+        <move element="logo" destination="bluesky.header"/>
+        <move element="store_language" destination="bluesky.header"/>
+        <move element="top.search" destination="bluesky.header"/>
+        <move element="minicart" destination="bluesky.header"/>
+        <move element="store.menu" destination="bluesky.header"/>
+		<!-- End custom header -->
+
+		<!-- Start remove top.links -->
+
+		<!-- Start remove navigation.sections -->
+		<referenceBlock name="navigation.sections" remove="true"/>
+		<!-- End remove navigation.sections -->
+
+		<!-- Start custom footer -->
+		<referenceContainer name="footer-container"> 
+            <block class="Blueskytechco\Themeoption\Block\Html\Footer" name="bluesky.footer" before="-"/>
+		</referenceContainer>
+		<!-- End custom footer -->
+
+
+		<!-- remove default block on footer -->
+		<referenceBlock name="report.bugs" remove="true"/>
+		<!-- End remove default block on footer -->
+
+		<referenceBlock name="catalog.compare.sidebar" remove="true"/>
+		<referenceBlock name="form.subscribe" remove="true"/>
+		<referenceBlock name="copyright" remove="true"/>
+		<referenceBlock name="footer_links" remove="true"/>
+
+		<!-- Breadcrumbs -->
+		<move element="page.main.title" destination="page.top" before="breadcrumbs"/> 
+
+        <!-- Add class -->
+        <referenceBlock name="register-link">
+            <arguments>
+                <argument name="class" xsi:type="string" translate="true">link-account</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="my-account-link">
+            <arguments>
+                <argument name="class" xsi:type="string" translate="true">link-account</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

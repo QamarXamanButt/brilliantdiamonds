@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+    <widget id="widget_product_review_list" class="Blueskytechco\ReviewProduct\Block\Widget\ReviewProduct" is_email_compatible="true" placeholder_image="Magento_Catalog::images/category_widget_link.png" ttl="86400">
+        <label translate="true">List Reviews Product</label>
+		<description translate="true">List Review of Products</description>  
+        <parameters>
+			<parameter name="title" xsi:type="text" visible="true" required="true" sort_order="10">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="description" xsi:type="text" visible="true" required="false" sort_order="20">
+                <label translate="true">Description</label> 
+            </parameter>
+            <parameter name="type_review" xsi:type="select" required="true" visible="true" sort_order="25">
+                <label>Type List Review</label>
+                <options>
+                    <option name="all" value="all" selected="true">
+                        <label translate="true">All Review</label>
+                    </option>
+					<option name="each" value="product">
+                        <label translate="true">Each Product</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="number_reviews" xsi:type="text" required="true" visible="true" sort_order="30">
+                <label translate="true">Number Reviews</label>
+                <value>8</value>
+            </parameter>
+            <parameter name="owl_nav" xsi:type="select" visible="true" sort_order="130">
+                <label translate="true">Slide Nav</label>
+                <options>
+                    <option name="false" value="false">
+                        <label translate="true">False</label>
+                    </option>
+                    <option name="true" value="true">
+                        <label translate="true">True</label>
+                    </option>
+                </options>
+            </parameter>
+			<parameter name="owl_dots" xsi:type="select" visible="true" sort_order="131">
+                <label translate="true">Slide Dots</label>
+                <options>
+                    <option name="false" value="false">
+                        <label translate="true">False</label>
+                    </option>
+                    <option name="true" value="true">
+                        <label translate="true">True</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="owl_bigdesktop" xsi:type="text" required="true" visible="true" sort_order="135">
+                <label translate="true">Slide Items On Big Desktop</label>
+				<description translate="true">Big desktop: Over 1440 pixels</description>
+                <value>4</value>
+            </parameter>
+            <parameter name="owl_items" xsi:type="text" required="true" visible="true" sort_order="135">
+                <label translate="true">Slide Items Desktop</label>
+				<description translate="true">Desktop: 1200px - 1439px</description>
+                <value>3</value>
+            </parameter>
+            <parameter name="owl_smalldesktop" xsi:type="text" required="true" visible="true" sort_order="145">
+                <label translate="true">Slide Items On Desktop Small</label>
+				<description translate="true">Desktop Small: 1024px - 1199px</description>
+                <value>3</value>
+            </parameter>
+            <parameter name="owl_bigtablet" xsi:type="text" required="true" visible="true" sort_order="147">
+                <label translate="true">Slide Items On Big Tablet</label>
+				<description translate="true">Big Tablet: 992px - 1023px</description>
+                <value>2</value>
+            </parameter>
+            <parameter name="owl_tablet" xsi:type="text" required="true" visible="true" sort_order="150">
+                <label translate="true">Slide Items On Tablet</label>
+				<description translate="true">Tablet: 768px - 991px</description>
+                <value>2</value>
+            </parameter>
+            <parameter name="owl_smalltablet" xsi:type="text" required="true" visible="true" sort_order="160">
+                <label translate="true">Slide Items On Small Tablet</label>
+				<description translate="true">Tablet Small: 576px - 767px</description>
+                <value>2</value>
+            </parameter>
+            <parameter name="owl_mobile" xsi:type="text" required="true" visible="true" sort_order="170">
+                <label translate="true">Slide Items On Mobile</label>
+				<description translate="true"> Mobile: Under 575px</description>
+                <value>1</value>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

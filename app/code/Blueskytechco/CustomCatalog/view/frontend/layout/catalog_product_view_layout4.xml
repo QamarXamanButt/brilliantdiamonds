@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceBlock name="product.info.media.image">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Blueskytechco_CustomCatalog::product/view/gallery_layout4.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="view_model" xsi:type="object">Blueskytechco\CustomCatalog\ViewModel\Catalog</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="product.main.images" htmlClass="col-12 product-images" />
+        <referenceContainer name="product.main.infors" htmlClass="col-md-6 col-12 product-infors" />
+	</body>
+</page>

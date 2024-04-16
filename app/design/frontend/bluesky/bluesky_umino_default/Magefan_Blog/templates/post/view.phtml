@@ -1,0 +1,129 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post view template
+ *
+ * @var $block \Magefan\Blog\Block\Post\View
+ */
+?>
+<?php
+    $_post = $block->getPost();
+    $_postUrl = $_post->getPostUrl();
+    $_postName = $block->escapeHtml($_post->getTitle(), null);
+?>
+  <?php if ($featuredImage = $_post->getFeaturedImage()) { ?>
+                    <?php
+                    $featuredImgAlt = $_post->getData('featured_img_alt');
+                    if (!$featuredImgAlt) {
+                        $featuredImgAlt = $_postName;
+                    }
+                    ?>
+                    <div class="post-ftimg-hld">
+                        <img src="<?= $block->escapeUrl($featuredImage) ?>"
+                             alt="<?= $block->escapeHtml($featuredImgAlt) ?>" />
+                    </div>
+                <?php } ?>
+<div class="post-view">
+    <div class="post-holder post-holder-<?= (int)$_post->getId() ?>">
+        
+        <div class="post-header">
+            <div class="category-comment">
+                <?php if ($_categoriesCount = $_post->getCategoriesCount()) { ?>
+                    <div class="item post-categories">
+                        <?php $n = 0; ?>
+                        <?php foreach ($_post->getParentCategories() as $ct) { ?>
+                            <?php $n++; ?>
+                            <a title="<?= $block->escapeHtml($ct->getTitle()) ?>"
+                                href="<?= $block->escapeUrl($ct->getCategoryUrl()) ?>"
+                            ><?= $block->escapeHtml($ct->getTitle()) ?></a>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            </div>
+            <h1 class="post-title"><?php echo $_post->getTitle(); ?></h1>
+            <div class="post-info">
+                <?php if ($block->authorEnabled()) { ?>
+                    <?php if ($_author = $_post->getAuthor()) { ?>
+                    <div class="item post-author">
+                            <span class="label"><?= $block->escapeHtml(__('By')) ?></span>
+                            <span class="value">
+                            <?php if ($authorPageEnabled = $block->authorPageEnabled()) { ?>
+                            <a title="<?= $block->escapeHtml($_author->getTitle()) ?>"
+                            href="<?= $block->escapeUrl($_author->getAuthorUrl()) ?>">
+                            <?php } ?>
+
+                            <?= $block->escapeHtml($_author->getTitle()) ?>
+
+                            <?php if ($authorPageEnabled) { ?>
+                            </a>
+                            <?php } ?>
+                        </span>
+                    </div>
+                    <?php } ?>
+                <?php } ?>
+                <?php if ($_post->isPublishDateEnabled()) { ?> 
+                    <div class="item post-date">
+                        <span class="label"><?= $block->escapeHtml(__('on')) ?></span>
+                        <span class="value"><?= $block->escapeHtml($_post->getPublishDate()) ?></span>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>        
+        <div class="post-content">
+            <div class="post-description clearfix">
+                <div class="post-text-hld">
+                    <?= /*@noEscape*/ $block->getContent() ?>
+                    <div class="clear clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="post-infor-bottom border_bottom d-flex align-items-center justify-content-between">
+            <div class="post-tag-comment">
+                <?php if ($_tagsCount = $_post->getTagsCount()) { ?>
+                    <div class="item post-tags">
+                    <span class="label"><?= $block->escapeHtml(__('Tag:')) ?></span>
+                        <?php $n = 0; ?>
+                        <?php foreach ($_post->getRelatedTags() as $tag) { ?>
+                            <?php $n++; ?>
+                            <a title="<?= $block->escapeHtml($tag->getTitle()) ?>"
+                            href="<?= $block->escapeUrl($tag->getTagUrl()) ?>"
+                            ><?= $block->escapeHtml($tag->getTitle()) ?></a><?= ($n != $_tagsCount) ? '' : '' ?>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            </div>    
+            <div class="addthis_toolbox addthis_default_style d-flex align-items-center" addthis:url="<?= $block->escapeUrl($_postUrl) ?>">
+                <span class="label"><?= $block->escapeHtml(__('Share:')) ?></span>
+                    <a  href="#" onclick=" window.open( 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=436,height=436'); return false;"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="19.5" fill="white" stroke="#EBEBEB"></circle>
+                            <path d="M18.3334 16.6667V18H17V20H18.3334V26H21V20H22.7734L23 18H21V16.8334C21 16.2934 21.0533 16.0067 21.8866 16.0067H23V14H21.2134C19.08 14.0001 18.3334 15 18.3334 16.6667Z" fill="#111111"></path>
+                          </svg><span class="tooltip-content no-wrap"><?= $block->escapeHtmlAttr(__('Facebook')) ?></span></a>
+                    <a href="#" onclick=" window.open( 'http://twitter.com/home/?status='+encodeURIComponent(location.href), 'twitter-share-dialog', 'width=436,height=436'); return false;"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="19.5" fill="white" stroke="#EBEBEB"></circle>
+                            <path d="M25.6699 15.1753C25.1855 15.4746 24.656 15.6861 24.1039 15.801C23.6347 15.2878 22.9839 14.9982 22.3039 15.0001C20.9645 14.9896 19.8669 16.1062 19.8439 17.5028C19.8445 17.6967 19.8666 17.8899 19.9099 18.0785C17.9372 17.9814 16.0949 17.023 14.8339 15.4381C14.6182 15.8171 14.5023 16.2488 14.4979 16.6895C14.498 17.5392 14.9115 18.3309 15.596 18.7918C15.2051 18.7786 14.8227 18.6692 14.4799 18.4727C14.4799 18.4727 14.4799 18.4727 14.4799 18.504C14.476 19.7244 15.3048 20.7753 16.454 21.0068C16.0917 21.1075 15.7124 21.1224 15.344 21.0506C15.6753 22.0844 16.5968 22.787 17.642 22.8026C16.7719 23.5081 15.7021 23.8932 14.6 23.8975C14.3995 23.8973 14.1991 23.8848 14 23.86C15.1291 24.6048 16.4379 24.9998 17.774 24.9988C21.5841 25.0714 24.7292 21.9092 24.7989 17.9359C24.7996 17.8938 24.8 17.8517 24.8 17.8095C24.8 17.701 24.8 17.5926 24.8 17.4841C25.2702 17.1247 25.6764 16.6821 26 16.1764C25.5496 16.3821 25.0724 16.517 24.584 16.5769C25.0976 16.2633 25.4838 15.7649 25.6699 15.1753Z" fill="#111111"></path>
+                          </svg><span class="tooltip-content no-wrap"><?= $block->escapeHtmlAttr(__('Twitter')) ?></span></a>
+                    <a href="#" onclick=" window.open( 'http://pinterest.com/pin/create/button/?url='+encodeURIComponent(location.href), 'pinterest-share-dialog', 'width=436,height=436'); return false;"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="19.5" fill="white" stroke="#EBEBEB"></circle>
+                            <path d="M19.8517 14.001L19.0501 14.0967C18.5464 14.1872 18.0577 14.3421 17.5972 14.5573C16.5464 15.0853 15.7207 15.946 15.2613 16.9918C15.1994 17.1879 15.1513 17.3877 15.1173 17.5899C14.7663 18.7809 15.2194 20.0554 16.2571 20.796C16.4136 20.8857 16.7768 21.0533 16.8833 20.8319C16.9323 20.6962 16.966 20.5558 16.9835 20.4132C17.0439 20.2934 17.078 20.1632 17.0837 20.0304C17.0461 19.833 16.8269 19.7134 16.733 19.5519C16.5786 19.2263 16.4813 18.8787 16.4449 18.523V18.3495C16.4914 16.881 17.5697 15.6275 19.0689 15.299C19.5379 15.1779 20.0268 15.1434 20.5093 15.1973L21.2044 15.3109C21.9989 15.5091 22.6558 16.0418 22.9892 16.7585C23.2078 17.3726 23.2511 18.0312 23.1145 18.6666C23.0456 18.9417 23.0581 19.181 22.9704 19.4322C22.651 20.3594 22.1814 21.2267 21.123 21.454C20.5474 21.5977 19.9496 21.3109 19.7265 20.7841C19.6471 20.6239 19.6188 20.4451 19.6451 20.2697C19.8267 19.516 20.096 18.846 20.2713 18.0924C20.4873 17.5347 20.1892 16.9154 19.6053 16.709C19.5752 16.6983 19.5445 16.6889 19.5135 16.6808C18.7871 16.5133 18.2297 17.1593 18.0356 17.578C17.8541 18.0214 17.8106 18.5053 17.9104 18.9717C18.0161 19.1741 18.0919 19.3895 18.1358 19.6117C17.998 20.2099 17.8352 20.8081 17.6661 21.4062C17.497 22.0043 17.3906 22.6025 17.2152 23.2007C17.1338 23.4638 17.1401 23.745 17.0712 24.0201V24.4209C17.0278 24.7379 17.0427 25.0598 17.1151 25.3719C17.1527 25.5335 17.1151 25.7309 17.1777 25.8505C17.175 25.9035 17.1904 25.956 17.2216 26C17.4784 26 17.8478 25.348 17.9606 25.1626C18.2045 24.792 18.4141 24.4017 18.5868 23.9962C18.7559 23.6193 18.7809 23.2007 18.9125 22.7999C19.045 22.4697 19.1395 22.1267 19.1942 21.777C19.2755 21.9468 19.4116 22.0873 19.5825 22.1778C20.1837 22.5839 20.9362 22.7293 21.6554 22.5785C22.5299 22.4163 23.3156 21.9626 23.8723 21.2985C24.2508 20.8066 24.5427 20.2591 24.7365 19.6774C24.843 19.3784 24.8618 19.0434 24.9432 18.7264C25.0781 17.9505 24.9714 17.1539 24.6363 16.4355C23.9161 14.8743 22.3505 13.9651 19.8517 14.001Z" fill="#111111"></path>
+                          </svg><span class="tooltip-content no-wrap"><?= $block->escapeHtmlAttr(__('Pinterest')) ?></span></a>
+                    <a href="#" onclick=" window.open( 'https://plus.google.com/share?url='+encodeURIComponent(location.href), 'twitter-share-dialog', 'width=436,height=436'); return false;"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="19.5" fill="white" stroke="#EBEBEB"/>
+                        <path d="M21.8097 14H18.8664C17.5548 14 16.6469 14.2796 15.8298 14.9359C15.1872 15.4751 14.8036 16.2586 14.8036 17.0319C14.8036 18.2234 15.7379 19.4896 17.4692 19.4896C17.6356 19.4896 17.82 19.473 17.9826 19.4583L17.9586 19.5149C17.889 19.677 17.8231 19.83 17.8231 20.0687C17.8231 20.5334 18.0537 20.8201 18.2766 21.0971L18.3047 21.1321L18.2548 21.1355C17.5399 21.1831 16.2093 21.2718 15.2372 21.8527C14.0892 22.5163 14 23.4818 14 23.7618C14 24.8757 15.0676 26 17.4529 26C20.2264 26 21.6776 24.5122 21.6776 23.0426C21.6779 21.9555 21.0224 21.4189 20.3266 20.8492L19.7396 20.4053C19.5582 20.2591 19.3324 20.0773 19.3324 19.7405C19.3324 19.4093 19.5582 19.1907 19.7576 18.9979L19.7784 18.9774C20.4122 18.492 21.1306 17.9416 21.1306 16.7511C21.1306 15.5541 20.3614 14.9356 19.9915 14.6383H20.9682C20.9802 14.6383 20.9922 14.635 21.0021 14.6287L21.8435 14.1144C21.8674 14.0996 21.8786 14.0713 21.8707 14.0447C21.8632 14.0182 21.838 14 21.8097 14ZM18.2404 25.3443C16.5498 25.3443 15.4139 24.5765 15.4139 23.4337C15.4139 22.6875 15.8785 22.1453 16.7935 21.8229C17.5263 21.5831 18.4722 21.5712 18.4816 21.5712C18.6418 21.5712 18.7224 21.5712 18.8503 21.5868C20.0333 22.4054 20.602 22.8352 20.602 23.6538C20.6019 24.6966 19.6969 25.3443 18.2404 25.3443ZM18.2245 19.051C16.8056 19.051 16.2168 17.2375 16.2168 16.2665C16.2168 15.7727 16.3322 15.3938 16.5698 15.1076C16.8277 14.7939 17.2692 14.5913 17.6947 14.5913C18.9974 14.5913 19.7178 16.2939 19.7178 17.4706C19.7178 17.6563 19.7178 18.2211 19.3166 18.6133C19.0467 18.8752 18.6079 19.051 18.2245 19.051Z" fill="#111111"/>
+                        <path d="M25.9368 19.6037H24.3858V18.101C24.3858 18.0668 24.3572 18.0391 24.3221 18.0391H23.655C23.6198 18.0391 23.5913 18.0668 23.5913 18.101V19.6037H22.0481C22.0129 19.6037 21.9844 19.6315 21.9844 19.6657V20.323C21.9844 20.3571 22.0129 20.385 22.0481 20.385H23.5913V21.8974C23.5913 21.9314 23.6198 21.9593 23.655 21.9593H24.3221C24.3572 21.9593 24.3858 21.9314 24.3858 21.8974V20.3848H25.9368C25.9719 20.3848 26.0005 20.3571 26.0005 20.3228V19.6657C26.0005 19.6314 25.9721 19.6037 25.9368 19.6037Z" fill="#111111"/>
+                        </svg>
+                        <span class="tooltip-content no-wrap"><?= $block->escapeHtmlAttr(__('Google')) ?></span></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="post-bottom">
+        <?= $block->getChildHtml('blog.post.bottom') ?>
+    </div>
+</div>

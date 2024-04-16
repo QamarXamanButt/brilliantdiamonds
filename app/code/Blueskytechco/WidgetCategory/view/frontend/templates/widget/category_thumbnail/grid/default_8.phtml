@@ -1,0 +1,71 @@
+<div class="section widget-category-thumbnail-image category-grid-8 margin_item--<?= /*@noEscape*/ $block->getDataWidgetConfig('space_between_item') ?> image_hover_effects--<?= /*@noEscape*/ $block->getDataWidgetConfig('image_hover_effects') ?>">
+	<?php if($block->getDataWidgetConfig('title') != '' || $block->getDataWidgetConfig('short_description') != ''){ ?>
+	<div class="elementor__header">
+		<?php if($block->getDataWidgetConfig('title') != ''){ ?>
+		<h3 class="elementor__headline"><?= $block->escapeHtml($block->getDataWidgetConfig('title')) ?></h3>
+		<?php } ?>
+		<?php if($block->getDataWidgetConfig('short_description') != ''){ ?>
+		<div class="elementor__description"><?= $block->filterOutputContent($block->getDataWidgetConfig('short_description')) ?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+	<?php $_catCollection = $block->getCatCollection(); ?>
+	<div class="elementor__content">
+	<?php 
+	if($_catCollection->count()){
+		$items = 0; 
+		foreach ($_catCollection as $_cat) { ?>
+		<div class="category-thumbnail">
+			<div class="elementor-category-thumbnail-image-item">
+				<div class="category-thumbnail__info">
+					<h3 class="category-thumbnail__title"><a href="<?= /*@noEscape*/ $_cat->getUrl(); ?>" class="btn category-thumbnail__title_as_button"> <?= /*@noEscape*/ $_cat->getName(); ?> <span class="total-count"><?= $_cat->getProductCollection()->Count() ?></span></a></h3>
+				</div>
+			</div>
+		</div>
+		<?php } ?>
+	<?php } else { ?>
+		<div class="category-thumbnail">
+			<div class="elementor-category-thumbnail-image-item">
+				<div class="category-thumbnail__info">
+					<h3 class="category-thumbnail__title"><a href="#" class="btn category-thumbnail__title_as_button"> Women's <span class="total-count">1</span></a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="category-thumbnail">
+			<div class="elementor-category-thumbnail-image-item">
+				<div class="category-thumbnail__info">
+					<h3 class="category-thumbnail__title"><a href="#" class="btn category-thumbnail__title_as_button"> Bag <span class="total-count">6</span></a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="category-thumbnail">
+			<div class="elementor-category-thumbnail-image-item">
+				<div class="category-thumbnail__info">
+					<h3 class="category-thumbnail__title"><a href="#" class="btn category-thumbnail__title_as_button"> Shoes <span class="total-count">11</span></a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="category-thumbnail">
+			<div class="elementor-category-thumbnail-image-item">
+				<div class="category-thumbnail__info">
+					<h3 class="category-thumbnail__title"><a href="#" class="btn category-thumbnail__title_as_button"> Men <span class="total-count">7</span></a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="category-thumbnail">
+			<div class="elementor-category-thumbnail-image-item">
+				<div class="category-thumbnail__info">
+					<h3 class="category-thumbnail__title"><a href="#" class="btn category-thumbnail__title_as_button"> Watches <span class="total-count">8</span></a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="category-thumbnail">
+			<div class="elementor-category-thumbnail-image-item">
+				<div class="category-thumbnail__info">
+					<h3 class="category-thumbnail__title"><a href="#" class="btn category-thumbnail__title_as_button"> Shoes <span class="total-count">23</span></a></h3>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	</div>
+</div>

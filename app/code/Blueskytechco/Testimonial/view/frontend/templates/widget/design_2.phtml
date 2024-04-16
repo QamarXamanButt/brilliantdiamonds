@@ -1,0 +1,175 @@
+<div class="section widget-testimonial design--2 margin_item--<?= /*@noEscape*/ $block->getDataWidgetConfig('margin_item') ?> image_hover_effects--<?= /*@noEscape*/ $block->getDataWidgetConfig('image_hover_effects') ?>">
+	<?php if($block->getDataWidgetConfig('title') != '' || $block->getDataWidgetConfig('short_description') != ''){ ?>
+	<div class="elementor__header">
+		<?php if($block->getDataWidgetConfig('title') != ''){ ?>
+		<h3 class="elementor__headline"><?= $block->escapeHtml($block->getDataWidgetConfig('title')) ?></h3>
+		<?php } ?>
+		<?php if($block->getDataWidgetConfig('short_description') != ''){ ?>
+		<div class="elementor__description"><?= $block->filterOutputContent($block->getDataWidgetConfig('short_description')) ?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+	<?php $testimonials = $block->getTestimonials(); ?>
+	<?php if ($testimonials->count()) { ?>
+	<div class="elementor__content widget-testimonial-slider first-loading-slick">
+		<?php foreach ($testimonials as $testimonial){ ?>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover radius_as_form bg-white">
+					<div class="testimonial__item-content flex-layout mb_20">
+						<div class="col">
+							<p class="testimonial-name my-2 heading_color medium"><?= $this->escapeHtml($testimonial->getName()); ?></p>
+							<div class="testimonial-rating mb-3">
+								<div class="rating-summary">
+									<span class="rating-result">
+										<span style="display:block; width:<?php echo $testimonial->getData('rating_summary')*20; ?>%;" class="rating"></span>
+									</span>
+								</div>
+							</div>
+							<div class="testimonial-content"><?= $this->escapeHtml($testimonial->getText()); ?></div>
+						</div>
+						<div class="testimonial-img ms-4 d-none d-md-block">
+							<img class="avatar radius_as_form" src="<?= $this->escapeUrl($this->getImage($testimonial))?>" alt="<?php echo __($this->escapeHtml($testimonial->getName())) ?>" title="<?php echo __($this->escapeHtml($testimonial->getName())) ?>" />
+						</div>
+						
+					</div>
+					<div class="testimonial-job border_top py-4 heading_color">
+						<?= $testimonial->getJob(); ?>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+	</div>
+
+
+	<?php }else{ ?>
+		<div class="elementor__content widget-testimonial-slider first-loading-slick">
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover radius_as_form bg-white">
+					<div class="testimonial__item-content flex-layout mb_20">
+						<div class="col">
+							<p class="testimonial-name my-2 heading_color medium">Yutang</p>
+							<div class="testimonial-rating mb-3">
+								<div class="rating-summary">
+									<span class="rating-result">
+										<span style="display:block; width:100%;" class="rating"></span>
+									</span>
+								</div>
+							</div>
+							<div class="testimonial-content">Amazing theme, very flexible. I really like the page builder in this item, easy to use and custom. Highly recommended!</div>
+
+						</div>
+						<div class="testimonial-img ms-4 d-none d-md-block">
+							<img class="avatar radius_as_form" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="Yutang" title="Yutang" />
+						</div>
+					
+					</div>
+					<div class="testimonial-job border_top py-4 heading_color">
+						Senior Project Manager
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover radius_as_form bg-white">
+					<div class="testimonial__item-content flex-layout mb_20">
+						<div class="col">
+							<p class="testimonial-name my-2 heading_color medium">Yutang</p>
+							<div class="testimonial-rating mb-3">
+								<div class="rating-summary">
+									<span class="rating-result">
+										<span style="display:block; width:100%;" class="rating"></span>
+									</span>
+								</div>
+							</div>
+							<div class="testimonial-content">This theme works very well with page builder and has extra options on it, very professional template with all the options you need</div>
+
+						</div>
+						<div class="testimonial-img ms-4 d-none d-md-block">
+							<img class="avatar radius_as_form" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="Yutang" title="Yutang" />
+						</div>
+					
+					</div>
+					<div class="testimonial-job border_top py-4 heading_color">
+						Senior Developer
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover radius_as_form bg-white">
+					<div class="testimonial__item-content flex-layout mb_20">
+						<div class="col">
+							<p class="testimonial-name my-2 heading_color medium">Yutang</p>
+							<div class="testimonial-rating mb-3">
+								<div class="rating-summary">
+									<span class="rating-result">
+										<span style="display:block; width:100%;" class="rating"></span>
+									</span>
+								</div>
+							</div>
+							<div class="testimonial-content">This theme works very well with page builder and has extra options on it, very professional template with all the options you need</div>
+
+						</div>
+						<div class="testimonial-img ms-4 d-none d-md-block">
+							<img class="avatar radius_as_form" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="Yutang" title="Yutang" />
+						</div>
+					
+					</div>
+					<div class="testimonial-job border_top py-4 heading_color">
+						Senior Project Manager
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover radius_as_form bg-white">
+					<div class="testimonial__item-content flex-layout mb_20">
+						<div class="col">
+							<p class="testimonial-name my-2 heading_color medium">Yutang</p>
+							<div class="testimonial-rating mb-3">
+								<div class="rating-summary">
+									<span class="rating-result">
+										<span style="display:block; width:100%;" class="rating"></span>
+									</span>
+								</div>
+							</div>
+							<div class="testimonial-content">This theme works very well with page builder and has extra options on it, very professional template with all the options you need</div>
+
+						</div>
+						<div class="testimonial-img ms-4 d-none d-md-block">
+							<img class="avatar radius_as_form" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="Yutang" title="Yutang" />
+						</div>
+					
+					</div>
+					<div class="testimonial-job border_top py-4 heading_color">
+						Senior Developer
+					</div>
+				</div>
+			</div>
+			<div class="item-loading-slick">
+				<div class="elementor-testimonial-item elementor__item--hover radius_as_form bg-white">
+					<div class="testimonial__item-content flex-layout mb_20">
+						<div class="col">
+							<p class="testimonial-name my-2 heading_color medium">Yutang</p>
+							<div class="testimonial-rating mb-3">
+								<div class="rating-summary">
+									<span class="rating-result">
+										<span style="display:block; width:100%;" class="rating"></span>
+									</span>
+								</div>
+							</div>
+							<div class="testimonial-content">This theme works very well with page builder and has extra options on it, very professional template with all the options you need</div>
+
+						</div>
+						<div class="testimonial-img ms-4 d-none d-md-block">
+							<img class="avatar radius_as_form" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png" alt="Yutang" title="Yutang" />
+						</div>
+					
+					</div>
+					<div class="testimonial-job border_top py-4 heading_color">
+						Senior Developer
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	<?php } ?>
+</div>

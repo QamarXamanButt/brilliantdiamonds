@@ -1,0 +1,144 @@
+<?php
+	use Magento\Framework\Escaper;
+	use Magento\Framework\View\Helper\SecureHtmlRenderer;
+	use Magento\Review\Block\Product\View\ListView;
+	$owl_nav = $block->getDataWidgetConfig('owl_nav') ? $block->getDataWidgetConfig('owl_nav') : 'false';
+	$owl_dots = $block->getDataWidgetConfig('owl_dots') ? $block->getDataWidgetConfig('owl_dots') : 'false';
+	$owl_bigdesktop = $block->getDataWidgetConfig('owl_bigdesktop') ? $block->getDataWidgetConfig('owl_bigdesktop') : 5;
+	$owl_items = $block->getDataWidgetConfig('owl_items') ? $block->getDataWidgetConfig('owl_items') : 5;
+	$owl_smalldesktop = $block->getDataWidgetConfig('owl_smalldesktop') ? $block->getDataWidgetConfig('owl_smalldesktop') : 4;
+	$owl_bigtablet = $block->getDataWidgetConfig('owl_bigtablet') ? $block->getDataWidgetConfig('owl_bigtablet') : 3;
+	$owl_tablet = $block->getDataWidgetConfig('owl_tablet') ? $block->getDataWidgetConfig('owl_tablet') : 3;
+	$owl_smalltablet = $block->getDataWidgetConfig('owl_smalltablet') ? $block->getDataWidgetConfig('owl_smalltablet') : 2;
+	$owl_mobile = $block->getDataWidgetConfig('owl_mobile') ? $block->getDataWidgetConfig('owl_mobile') : 1;
+?>
+<div class="section widget-reviewproduct design--2 widget-review-slider-default">
+	<?php if($block->getDataWidgetConfig('title') != '' || $block->getDataWidgetConfig('description') != ''){ ?>
+	<div class="elementor__header">
+		<?php if($block->getDataWidgetConfig('title') != ''){ ?>
+		<h3 class="elementor__headline"><?= $block->escapeHtml($block->getDataWidgetConfig('title')) ?></h3>
+		<?php } ?>
+		<?php if($block->getDataWidgetConfig('description') != ''){ ?>
+		<div class="elementor__description"><?= $block->getDataWidgetConfig('description') ?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+	<?php $_collection = $block->getAllReviews()->getItems(); ?>
+	<?php if (count($_collection)) { ?>
+	<div class="elementor__content widget-reviewproduct-slider first-loading-slick">
+		<?php foreach ($_collection as $_review) { ?>
+			<div class="item-loading-slick">
+				<?php 
+					$_product = $block->getProductById($_review->getEntityPkValue()); 
+					$productImage = $block->getImage($_product, 'category_page_list');
+				?>
+				<div class="elementor-reviewproduct-item elementor__item--hover radius_as_form bg-white">
+					<div class="reviewproduct__item-content flex-layout mb_20">
+						<div class="col">
+							<div class="reviewproduct-info">
+								<div class="rating-info">
+									<div class="reviewproduct-name my-2 heading_color"><a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>"><?= $this->escapeHtml($_review->getTitle()); ?></a></div>
+									<div class="reviewproduct-rating mb-3">
+										<?php if ($_review->getRatingVotes() && count($_review->getRatingVotes())): ?>
+											<?php 
+												$rating_summary = 0; 
+												foreach ($_review->getRatingVotes() as $_vote){
+													$rating_summary += $_vote->getPercent(); 
+												}
+												$rating_summary = $rating_summary/count($_review->getRatingVotes());
+											?>
+											<div class="review-ratings">
+												<div class="rating-summary">
+													<span class="rating-result">
+														<span style="display:block; width:<?php echo $rating_summary; ?>%;" class="rating"></span>
+													</span>
+												</div>
+											</div>
+										<?php endif; ?>
+									</div>
+								</div>
+								<div class="reviewproduct-img ms-4 d-none d-md-block">
+									<a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>"
+									class="product photo product-item-photo"
+									tabindex="-1">
+										<img src="<?= $productImage->getImageUrl() ?>" alt="<?= $_product->getProductName() ?>"/>
+									</a>
+								</div>
+							</div>
+							<div class="reviewproduct-content"><?= $this->escapeHtml($_review->getDetail()); ?></div>
+						</div>
+					</div>
+					<div class="reviewproduct-job border_top py-4 heading_color">
+						<?= $this->escapeHtml($_review->getNickname()); ?>
+						<div class="review-date">
+							<?= $escaper->escapeHtml(__('Posted on')) ?> <?= date("m/d/Y", strtotime($_review->getCreatedAt())) ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+	</div>
+	<?php }else{ ?>
+		<div class="message info empty">
+			<div><?= $escaper->escapeHtml(__('No Review items were found matching your condition.')) ?></div>
+		</div>
+	<?php } ?>
+</div>
+<script> 
+    require([
+        'jquery',
+        'slick'
+        ], function ($) {
+        'use strict';
+        $(document).ready(function() {
+            var $carouselElement = $('.widget-reviewproduct-slider'),
+            slickConfig = {
+                slidesToShow: <?= $owl_bigdesktop ?>,
+                slidesToScroll: <?= $owl_bigdesktop ?>,
+                rows: 1,
+                autoplay: false,
+                autoplaySpeed: false,
+                arrows: <?= $owl_nav ?>,
+                dots: <?= $owl_dots ?>,
+                responsive: [
+                {
+                    breakpoint: 1400,
+                    settings: {
+                    slidesToShow: <?= $owl_items ?>,
+                    slidesToScroll: <?= $owl_items ?>
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                    slidesToShow: <?= $owl_bigtablet ?>,
+                    slidesToScroll: <?= $owl_bigtablet ?>
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                    slidesToShow: <?= $owl_tablet ?>,
+                    slidesToScroll: <?= $owl_tablet ?>
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                    slidesToShow: <?= $owl_smalltablet ?>,
+                    slidesToScroll: <?= $owl_smalltablet ?>
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                    slidesToShow: <?= $owl_mobile ?>,
+                    slidesToScroll: <?= $owl_mobile ?>
+                    }
+                }
+                ]
+            };
+            $carouselElement.slick(slickConfig);
+        });
+    });
+</script>

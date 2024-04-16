@@ -1,0 +1,157 @@
+<div class="section widget-category-thumbnail-image category-slider minimog-animation-scaling-up margin_item--<?= /*@noEscape*/ $block->getDataWidgetConfig('margin_item') ?> image_hover_effects--<?= /*@noEscape*/ $block->getDataWidgetConfig('image_hover_effects') ?>">
+    <?php if($block->getDataWidgetConfig('title') != '' || $block->getDataWidgetConfig('short_description') != ''){ ?>
+    <div class="elementor__header">
+        <?php if($block->getDataWidgetConfig('title') != ''){ ?>
+        <h3 class="elementor__headline"><?= $block->escapeHtml($block->getDataWidgetConfig('title')) ?></h3>
+        <?php } ?>
+        <?php if($block->getDataWidgetConfig('short_description') != ''){ ?>
+        <div class="elementor__description"><?= $block->filterOutputContent($block->getDataWidgetConfig('short_description')) ?></div>
+        <?php } ?>
+    </div>
+    <?php } ?>
+    <?php $data_sizes = $block->getSizeThumbnail(); ?>
+    <?php $_catCollection = $block->getCatCollection(); ?>
+    <?php if ($_catCollection->count()) { ?>
+    <div class="elementor__content widget-category-thumbnail-image-slider first-loading-slick">
+        <?php $items = 0; foreach ($_catCollection as $_cat) { $items ++; ?>
+        <div class="item-loading-slick for_hover-scale">
+            <?php 
+				$width = 440;
+				$height = 595;
+				$featuredImage = '';
+				if($_cat->getData('widget_category_thumbnail') != ''){ $featuredImage = $block->getCategoryThumnnail($_cat->getData('widget_category_thumbnail')); } if(isset($data_sizes['common']['img'])){ $width = $data_sizes['common']['img']['width'];
+            $height = $data_sizes['common']['img']['height']; } if(isset($data_sizes['custom']['img1'])){ $width = $data_sizes['custom']['img1']['width']; $height = $data_sizes['custom']['img1']['height']; }
+            if($block->getDataWidgetConfig('width') && $block->getDataWidgetConfig('width') != ''){ $width = $block->getDataWidgetConfig('width'); } if($block->getDataWidgetConfig('height') && $block->getDataWidgetConfig('height') != ''){
+            $height = $block->getDataWidgetConfig('height'); } if (!$featuredImage) { $featuredImage = '//placehold.jp/1aada3/fff/'.$width.'x'.$height.'.png?text=Minimog'; } $aspect_ratio = $width / $height; ?>
+            <div class="elementor-category-thumbnail-image-item">
+                <div class="elementor__item--hover">
+                    <a
+                        href="<?= /*@noEscape*/ $_cat->getUrl(); ?>"
+                        class="category-thumbnail__image data-bgset-image-wrapper lazyload"
+                        style="--aspect-ratio: <?= $aspect_ratio;?>;"
+                        data-bgset="<?= $block->escapeHtml($featuredImage) ?>"
+                        data-sizes="auto"
+                    >
+                    </a>
+                </div>
+                <div class="category-thumbnail__info absolute flex-layout bottom justify-content-between align-items-center">
+                    <div class="category-info-wrapper">
+                        <h3 class="category-thumbnail__title">
+                            <a href="<?= /*@noEscape*/ $_cat->getUrl(); ?>"> <?= /*@noEscape*/ $_cat->getName(); ?> </a>
+                        </h3>
+                        <div class="category-count">
+                            <span class="cat-count-number"><?= /*@noEscape*/ __('%1', $_cat->getProductCollection()->count()) ?></span>
+                            <span class="cat-count-text"><?= $block->escapeHtml('items') ?></span>
+                        </div>
+                    </div>
+                    <a class="cat-icon-next" href="<?= /*@noEscape*/ $_cat->getUrl(); ?>"><i class="far fa-arrow-right"></i> </a>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    <?php }else{ ?>
+    <div class="elementor__content widget-category-thumbnail-image-slider minimog-animation-scaling-up first-loading-slick">
+        <div class="item-loading-slick for_hover-scale">
+            <div class="elementor-category-thumbnail-image-item">
+                <div class="elementor__item--hover">
+                    <a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 0.73949579831933;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-cloth_1.png" data-sizes="auto">
+                    </a>
+                </div>
+                <div class="category-thumbnail__info absolute flex-layout bottom justify-content-between align-items-center">
+                    <div class="category-info-wrapper">
+                        <h3 class="category-thumbnail__title">
+                            <a href="#"> Sneakers </a>
+                        </h3>
+                        <div class="category-count">
+                            <span class="cat-count-number">10</span>
+                            <span class="cat-count-text">items</span>
+                        </div>
+                    </div>
+                    <a class="cat-icon-next" href="#"><i class="far fa-arrow-right"></i> </a>
+                </div>
+            </div>
+        </div>
+        <div class="item-loading-slick for_hover-scale">
+            <div class="elementor-category-thumbnail-image-item">
+                <div class="elementor__item--hover">
+                    <a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 0.73949579831933;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-cloth_1.png" data-sizes="auto">
+                    </a>
+                </div>
+                <div class="category-thumbnail__info absolute flex-layout bottom justify-content-between align-items-center">
+                    <div class="category-info-wrapper">
+                        <h3 class="category-thumbnail__title">
+                            <a href="#"> Sneakers </a>
+                        </h3>
+                        <div class="category-count">
+                            <span class="cat-count-number">9</span>
+                            <span class="cat-count-text">items</span>
+                        </div>
+                    </div>
+                    <a class="cat-icon-next" href="#"><i class="far fa-arrow-right"></i> </a>
+                </div>
+            </div>
+        </div>
+        <div class="item-loading-slick for_hover-scale">
+            <div class="elementor-category-thumbnail-image-item">
+                <div class="elementor__item--hover">
+                    <a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 0.73949579831933;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-cloth_1.png" data-sizes="auto">
+                    </a>
+                </div>
+                <div class="category-thumbnail__info absolute flex-layout bottom justify-content-between align-items-center">
+                    <div class="category-info-wrapper">
+                        <h3 class="category-thumbnail__title">
+                            <a href="#"> Sneakers </a>
+                        </h3>
+                        <div class="category-count">
+                            <span class="cat-count-number">8</span>
+                            <span class="cat-count-text">items</span>
+                        </div>
+                    </div>
+                    <a class="cat-icon-next" href="#"><i class="far fa-arrow-right"></i> </a>
+                </div>
+            </div>
+        </div>
+        <div class="item-loading-slick for_hover-scale">
+            <div class="elementor-category-thumbnail-image-item">
+                <div class="elementor__item--hover">
+                    <a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 0.73949579831933;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-cloth_1.png" data-sizes="auto">
+                    </a>
+                </div>
+                <div class="category-thumbnail__info absolute flex-layout bottom justify-content-between align-items-center">
+                    <div class="category-info-wrapper">
+                        <h3 class="category-thumbnail__title">
+                            <a href="#"> Sneakers </a>
+                        </h3>
+                        <div class="category-count">
+                            <span class="cat-count-number">11</span>
+                            <span class="cat-count-text">items</span>
+                        </div>
+                    </div>
+                    <a class="cat-icon-next" href="#"><i class="far fa-arrow-right"></i> </a>
+                </div>
+            </div>
+        </div>
+        <div class="item-loading-slick for_hover-scale">
+            <div class="elementor-category-thumbnail-image-item">
+                <div class="elementor__item--hover">
+                    <a href="#" class="category-thumbnail__image data-bgset-image-wrapper lazyload" style="--aspect-ratio: 0.73949579831933;" data-bgset="//blueskytechmage.com/place_holder/kalles/place_holder-cloth_1.png" data-sizes="auto">
+                    </a>
+                </div>
+                <div class="category-thumbnail__info absolute flex-layout bottom justify-content-between align-items-center">
+                    <div class="category-info-wrapper">
+                        <h3 class="category-thumbnail__title">
+                            <a href="#"> Sneakers </a>
+                        </h3>
+                        <div class="category-count">
+                            <span class="cat-count-number">13</span>
+                            <span class="cat-count-text">items</span>
+                        </div>
+                    </div>
+                    <a class="cat-icon-next" href="#"><i class="far fa-arrow-right"></i> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
+</div>

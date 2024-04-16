@@ -1,0 +1,105 @@
+<?php
+use Magento\Framework\App\Action\Action;
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+?>
+<div class="section widget-product-countdown-timers-grid-default margin_item--<?= /*@noEscape*/ $block->getDataWidgetConfig('space_between_item') ?> desgin_product_price_countdown--<?= /*@noEscape*/ $block->getDataWidgetConfig('desgin') ?> products-grid">
+	<?php if($block->getDataWidgetConfig('title') != '' || $block->getDataWidgetConfig('short_description') != ''){ ?>
+	<div class="elementor__header">
+		<?php if($block->getDataWidgetConfig('title') != ''){ ?>
+		<h3 class="elementor__headline"><?= $block->escapeHtml($block->getDataWidgetConfig('title')) ?></h3>
+		<?php } ?>
+		<?php if($block->getDataWidgetConfig('short_description') != ''){ ?>
+		<div class="elementor__description"><?= $block->filterOutputContent($block->getDataWidgetConfig('short_description')) ?></div>
+		<?php } ?>
+	</div>
+	<?php } ?>
+	<?php if($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())){ ?>
+	<?php
+    $type = 'widget-product-countdown-timers-grid';
+
+    $mode = 'grid';
+
+    $image = 'new_products_content_widget_grid';
+    $items = $block->getProductCollection()->getItems();
+
+    $showWishlist = true;
+    $showCompare = true;
+    $showCart = true;
+    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    $description = false;
+    ?>
+	<ol class="elementor__content product-countdown-layout3 row product-items <?= /* @noEscape */ $type ?>">
+        <?php $iterator = 1; ?>
+        <?php foreach ($items as $_item): ?>
+            <?= /* @noEscape */ '<li class="my-0 product-item'.$block->getCol().'">' ?>
+                <div class="product-item-info-time">
+                    <div class="product-item-actions d-flex flex-column">
+                        <h3 class="product-item-name">
+                            <a title="<?= $block->escapeHtml($_item->getName()) ?>"
+                            href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                            class="product-item-link">
+                                <?= $block->escapeHtml($_item->getName()) ?>
+                            </a>
+                        </h3>
+                        <div class="product description product-item-description">
+                            <?= /* @noEscape */ $_helper->productAttribute(
+                                $_item,
+                                $_item->getShortDescription(),
+                                'short_description'
+                            ) ?>
+                        </div>
+                        <div data-countdown="<?= $block->getDataCountdown($_item) ?>"></div>
+                        <div class="final-date-product-countdown-timers"></div>
+                        <?php if ($showCart): ?>
+                            <div class="button-wapper">   
+                                <div class="btn  primary flex-layout justify-center">
+                                    <?php if ($_item->isSaleable()): ?>
+                                        <?php $postParams = $block->getAddToCartPostParams($_item); ?>
+                                        <form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_item->getSku()) ?>" action="<?= $block->escapeUrl($postParams['action']) ?>" method="post">
+                                            <input type="hidden" name="product" value="<?= $block->escapeHtmlAttr($postParams['data']['product']) ?>">
+                                            <input type="hidden" name="<?= /* @noEscape */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?= /* @noEscape */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+                                            <?= $block->getBlockHtml('formkey') ?>
+                                            <button type="submit"
+                                                    title="<?= $block->escapeHtml(__('Add to Cart')) ?>"
+                                                    class="tocart primary p-0 border_0">
+                                                <span><?= $block->escapeHtml(__('Get Only')) ?></span>
+                                            </button>
+                                        </form>
+                                    <?php else: ?>
+                                        <?php if ($_item->isAvailable()): ?>
+                                            <div class="stock available"><span><?= $block->escapeHtml(__('In stock')) ?></span></div>
+                                        <?php else: ?>
+                                            <div class="stock unavailable"><span><?= $block->escapeHtml(__('Out of stock')) ?></span></div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                    <?= $block->getProductPriceHtml($_item, $type) ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </li>
+        <?php endforeach ?>
+    </ol>
+	<?php }else{ ?>
+        <ol class="elementor__content product-countdown-layout3  row product-items widget-product-countdown-timers-grid">
+            <li class="product-item col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="product-item-info-time">
+                    <div class="product-item-actions d-flex flex-column">
+                        <h3 class="product-item-name">
+                            <a href="#"  class="product-item-link">Band Straw Hat</a>
+                        </h3>
+                        <div data-countdown="2024/02/12 23:59:59"></div>
+                        <div class="final-date-product-countdown-timers"></div>
+                        <div class="button-wapper">
+                            <div class="btn primary flex-layout justify-center">
+                                <button class="tocart primary p-0 border_0">Get Only $11.00</button>
+                            </div>  
+                        </div>   
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+	<?php } ?>
+</div>

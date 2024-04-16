@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Blueskytechco_OptimizeSpeed::optimize" title="Optimize" translate="title" module="Blueskytechco_OptimizeSpeed" parent="Blueskytechco_RokanBase::rokanbase" sortOrder="110" resource="Blueskytechco_OptimizeSpeed::optimize" />
+    </menu>
+</config>

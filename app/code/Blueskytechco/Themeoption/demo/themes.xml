@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<root>
+  <themes>
+    <id><![CDATA[36891241]]></id>
+    <name><![CDATA[Umino - Clean minimal Magento 2 theme]]></name>
+    <des><![CDATA[You need install theme before use importer. Importing demo data is the easiest way to setup your theme. It will allow you to quickly edit everything. You can select import theme for each store view. Reload storefront after imported.]]></des>
+    <home>
+      <title><![CDATA[Digital 01]]></title>
+      <identifier><![CDATA[demo_digital_1]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_digital_1.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_digital_1]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Digital 02]]></title>
+      <identifier><![CDATA[demo_digital_2]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_digital_2.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_digital_2]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Digital 03]]></title>
+      <identifier><![CDATA[demo_digital_3]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_digital_3.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_digital_3]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Fashion 01]]></title>
+      <identifier><![CDATA[demo_fashion_1]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_fashion_1.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_fashion_1]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Fashion 02]]></title>
+      <identifier><![CDATA[demo_fashion_2]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_fashion_2.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_fashion_2]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Fashion 03]]></title>
+      <identifier><![CDATA[demo_fashion_3]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_fashion_3.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_fashion_3]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Fashion 04]]></title>
+      <identifier><![CDATA[demo_fashion_4]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_fashion_4.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_fashion_4]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Fashion 05]]></title>
+      <identifier><![CDATA[demo_fashion_5]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_fashion_5.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_fashion_5]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Fashion 06]]></title>
+      <identifier><![CDATA[demo_fashion_6]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_fashion_6.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_fashion_6]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Men 01]]></title>
+      <identifier><![CDATA[demo_men_1]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_men_1.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_men_1]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Men 02]]></title>
+      <identifier><![CDATA[demo_men_2]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_men_2.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_men_2]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Skincare]]></title>
+      <identifier><![CDATA[demo_skincare_1]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_skincare_1.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_skincare_1]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Watches]]></title>
+      <identifier><![CDATA[demo_watches_1]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_watches_1.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_watches_1]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Adventure Gear]]></title>
+      <identifier><![CDATA[demo_adventure_gear_1]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_adventure_gear_1.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_adventure_gear_1]]></linkpreview>
+    </home>
+    <home>
+      <title><![CDATA[Sneaker]]></title>
+      <identifier><![CDATA[demo_sneaker_1]]></identifier>
+      <image><![CDATA[blueskytechmage.com/preview/umino/demo_sneaker_1.png]]></image>
+      <linkpreview><![CDATA[umino.mageblueskytech.com/demo_sneaker_1]]></linkpreview>
+    </home>
+  </themes>
+</root>

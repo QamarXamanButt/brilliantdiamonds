@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<root>
+  <lookbook>
+    <item>
+      <name><![CDATA[lookbook]]></name>
+      <identifier><![CDATA[1685702482794598809]]></identifier>
+      <title><![CDATA[]]></title>
+      <title_link><![CDATA[]]></title_link>
+      <button_style><![CDATA[dark]]></button_style>
+      <width><![CDATA[1066]]></width>
+      <height><![CDATA[779]]></height>
+      <banner_image><![CDATA[lookbook/i/m/img_5_1.jpg]]></banner_image>
+      <product_data><![CDATA[{"1685702052553":{"product_id":"97","label":"+","top":"33.86080819277908","left":"38.08630393996248"}}]]></product_data>
+    </item>
+    <item>
+      <name><![CDATA[Add your lookbook]]></name>
+      <identifier><![CDATA[1685702604300589618]]></identifier>
+      <title><![CDATA[]]></title>
+      <title_link><![CDATA[]]></title_link>
+      <button_style><![CDATA[dark]]></button_style>
+      <width><![CDATA[1066]]></width>
+      <height><![CDATA[780]]></height>
+      <banner_image><![CDATA[lookbook/i/m/img_6_1.jpg]]></banner_image>
+      <product_data><![CDATA[{"1685702544839":{"product_id":"74","label":"+","top":"9.844955110193347","left":"54.22871716697936"},"1685702546499":{"product_id":"57","label":"+","top":"85.35217357476938","left":"39.50515947467167"}}]]></product_data>
+    </item>
+    <item>
+      <name><![CDATA[lookbook men's]]></name>
+      <identifier><![CDATA[1686643010516758275]]></identifier>
+      <title><![CDATA[]]></title>
+      <title_link><![CDATA[]]></title_link>
+      <button_style><![CDATA[dark]]></button_style>
+      <width><![CDATA[3840]]></width>
+      <height><![CDATA[1600]]></height>
+      <banner_image><![CDATA[lookbook/l/b/lb_f6.jpg]]></banner_image>
+      <product_data><![CDATA[{"1686642816290":{"product_id":"105","label":"+","top":"38.999229288678784","left":"31.72132850785295"},"1686642965034":{"product_id":"101","label":"+","top":"50.33321930652467","left":"72.27803728203087"}}]]></product_data>
+    </item>
+    <item>
+      <name><![CDATA[Lookbook adventure gear]]></name>
+      <identifier><![CDATA[16883796801594655527]]></identifier>
+      <title><![CDATA[]]></title>
+      <title_link><![CDATA[]]></title_link>
+      <button_style><![CDATA[dark]]></button_style>
+      <width><![CDATA[960]]></width>
+      <height><![CDATA[784]]></height>
+      <banner_image><![CDATA[lookbook/l/o/lookbook_adventure_gear_1.jpg]]></banner_image>
+      <product_data><![CDATA[{"1688458385796":{"product_id":"220","label":"+","top":"53.91516024111079","left":"36.20595932006836"},"1688458394620":{"product_id":"216","label":"+","top":"60.38020645257086","left":"72.78977076212566"},"1688458404468":{"product_id":"219","label":"+","top":"21.980474110111153","left":"21.082382202148438"}}]]></product_data>
+    </item>
+  </lookbook>
+</root>

@@ -1,0 +1,37 @@
+<?php
+    $enable_f_c = $this->getConfig('themesetting/fake_time_cart/enable_f_c');
+    $fake_time_cart_text = $this->getConfig('themesetting/fake_time_cart/text');
+    $fake_time_cart_date = $this->getConfig('themesetting/fake_time_cart/date');
+?>
+<?php if ($enable_f_c){ ?>
+<div class="mt-2 scd__countdown scd__countdown_cart_page opacity-100" data_countdown_time="<?= $block->escapeHtmlAttr($fake_time_cart_date) ?>">
+    <div class="countdown-time">
+        <span>&#x1F525;  <?= $block->escapeHtml($fake_time_cart_text) ?></span>
+        <strong class="font-medium timer">
+            <span class="countdown-timer-minute">00 m</span>
+            <span class="countdown-timer-sec -ml-1">00 s</span>
+        </strong>
+    </div>
+</div>
+<script>
+    require(["jquery"], function ($) {
+        $(document).ready(function() {
+            var data_timeout_time = $('.scd__countdown_cart_page').attr('data_countdown_time');
+            var timer_timeout = data_timeout_time+":00";
+            var interval = setInterval(function() {
+                var timer = timer_timeout.split(':');
+                var minutes = parseInt(timer[0], 10);
+                var seconds = parseInt(timer[1], 10);
+                --seconds;
+                minutes = (seconds < 0) ? --minutes : minutes;
+                if (minutes < 0) clearInterval(interval);
+                seconds = (seconds < 0) ? 59 : seconds;
+                seconds = (seconds < 10) ? '0' + seconds : seconds;
+                $('.scd__countdown_cart_page .countdown-timer-minute').html(minutes + 'm');
+                $('.scd__countdown_cart_page .countdown-timer-sec').html(seconds + 's');
+                timer_timeout = minutes + ':' + seconds;
+            }, 1000);
+        });
+    });
+</script>
+<?php } ?>

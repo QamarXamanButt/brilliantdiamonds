@@ -1,0 +1,23 @@
+<script>
+    require(["jquery", 'underscore'], function ($, _) {
+        $(document).ready(function() {
+            var last_height = 0, first_height = 0;
+            var parentBody = window.parent.document.body;
+            $('.mfp-preloader', parentBody).css('display', 'none');
+            $('.mfp-iframe-holder .mfp-content', parentBody).css('width', '100%');
+            $('.mfp-close', parentBody).css('display', 'block');
+            $('.mfp-iframe-scaler iframe', parentBody).animate({'opacity': 1}, 2000);
+            $('body').css('overflow', 'hidden');
+            setInterval(function(){
+                first_height =  $('.page-wrapper').outerHeight(true);
+                var documentHeight =  first_height + "px";
+                if ( first_height != last_height ) {
+                    $('.mfp-iframe-holder .mfp-content', parentBody).animate({
+                        'height': documentHeight
+                    }, 500);
+                    last_height = first_height;
+                }
+            }, 500);
+        });
+    });
+</script>

@@ -1,0 +1,132 @@
+// Copyright by Blueskytechco
+// ________________________________________
+//
+
+// Variables
+
+& when (@media-common =true) {
+    .fs_20 {
+        .widget-testimonial {
+            --module_title-size: 20px;
+        }
+    }
+
+    .widget-testimonial {
+        --bls_testimonial-padding: 0;
+        --bls_testimonial-text-align: center;
+
+        --bls_testimonial-image-width: 80px;
+        --bls_testimonial-image-height: 80px;
+        --bls_testimonial-content-size: var(--font-size__base);
+        --text__color: #111111;
+        --module_margin_bottom: 3rem;
+        --bls_testimonial-content-line-height: 1.44;
+        --bls_testimonial-image-margin: 0 auto 15px;
+        --margin-svg: 2rem;
+
+        &.design--3,
+        &.design--2 {
+            --margin-svg: 1rem;
+            --bls_testimonial-padding: 4rem 3rem;
+            --module_margin_bottom: 2rem;
+
+            .elementor-testimonial-item {
+                border-radius: var(--border-radius-item-testi, 10px);
+                border: 1px solid @border-color__base;
+            }
+        }
+
+        &.design--3 {
+            --bls_testimonial-text-align: left;
+        }
+
+        &.widget-testimonial-slider-default {
+            --bls_testimonial-content-size: 32px;
+            --bls_testimonial-content-line-height: 1.44;
+
+            .elementor__headline {
+                font-weight: var(--headings__font-weight-secondary);
+            }
+
+            @media only screen and (max-width: (@screen__l - 1)) {
+                --bls_testimonial-content-size: 20px;
+                --module_margin_bottom: 3rem;
+            }
+
+            .testimonial-text {
+                max-width: 870px;
+                width: 100%;
+                padding: 0 20px;
+                margin: auto;
+            }
+
+
+            .rating-summary {
+
+                *::before {
+                    height: 1.4rem;
+                    line-height: 1.4rem;
+                    font-size: 1.4rem;
+                }
+
+                .rating-result {
+                    width: 8.5rem;
+                }
+            }
+
+        }
+    }
+
+    .elementor-testimonial-item {
+        padding: var(--bls_testimonial-padding);
+        .lib-css(text-align, var(--bls_testimonial-text-align));
+
+        svg {
+            margin-bottom: var(--margin-svg);
+        }
+    }
+
+    .testimonial-img {
+        img {
+            .lib-css(width, var(--bls_testimonial-image-width));
+            .lib-css(height, var(--bls_testimonial-image-height));
+            .lib-css(margin, var(--bls_testimonial-image-margin));
+            object-fit: cover;
+        }
+    }
+
+    .testimonial-content {
+        font-size: var(--bls_testimonial-content-size);
+        line-height: var(--bls_testimonial-content-line-height);
+        color: var(--text__color);
+        margin-bottom: var(--module_margin_bottom);
+    }
+
+    .testimonial-job {
+        font-size: 16px;
+        gap: 5px;
+        color: var(--text__color);
+
+        .testimonial-name {
+            color: var(--text__color);
+        }
+    }
+
+    .testimonial-rating {
+        margin-bottom: 1.2rem;
+
+        .rating-summary {
+            .rating-result {
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
+    .testimonial-min .row-full-width-inner {
+        max-width: 1000px !important;
+        width: 85% !important
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+		<css src="Blueskytechco_PageBuilderCustom::css/font-satoshi.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-generalsans.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-clashgrotesk.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-futura.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-gilroy.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-newyork.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-cerebrisans.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-butler.min.css" />
+		<css src="Blueskytechco_PageBuilderCustom::css/font-worthbites-rough.min.css" /> 
+	</head>
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="Magento\Backend\Block\Template" template="Blueskytechco_PageBuilderCustom::custom_js.phtml" name="customjsbackendini" before="-"/>
+        </referenceBlock>
+    </body>
+</page>

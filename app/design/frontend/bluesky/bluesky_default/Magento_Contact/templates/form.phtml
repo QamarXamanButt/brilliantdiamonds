@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Contact\Block\ContactForm $block */
+?>
+<form class="form contact"
+      action="<?= $block->escapeUrl($block->getFormAction()) ?>"
+      id="contact-form"
+      method="post"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset"> 
+        <h2 class="fs_30"><span><?= $block->escapeHtml(__('Get in Touch')) ?></span></h2>
+        <p class="contact_des"><?= $block->escapeHtml(__('We would love to hear from you about our entire service. Your comments and suggestions will be highly appreciated. Please complete the form below.')) ?></p>
+        <div class="row gx-5 field fieldset">
+			<div class="field name required col-sm-6">
+				<div class="control">
+					<input name="name" id="name" title="<?= $block->escapeHtmlAttr(__('Name')) ?>" value="<?= $block->escapeHtmlAttr($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('name') ?: $this->helper(\Magento\Contact\Helper\Data::class)->getUserName()) ?>" class="input-text" type="text" data-validate="{required:true}" placeholder="Your name"/>
+				</div>
+			</div>
+			<div class="field email required col-sm-6">
+				<div class="control">
+					<input name="email" id="email" title="<?= $block->escapeHtmlAttr(__('Your email')) ?>" value="<?= $block->escapeHtmlAttr($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('email') ?: $this->helper(\Magento\Contact\Helper\Data::class)->getUserEmail()) ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}" placeholder="Your email"/>
+				</div>
+			</div>
+		</div>
+        <div class="field telephone">
+            <div class="control">
+                <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('telephone')) ?>" class="input-text" type="text" placeholder="Phone Number"/>
+            </div>
+        </div>
+        <div class="field comment required">
+            <div class="control">
+                <textarea name="comment" id="comment" title="<?= $block->escapeHtmlAttr(__('Please enter your message')) ?>" placeholder="Please enter your message" class="input-text" cols="5" rows="3" data-validate="{required:true}"><?= $block->escapeHtml($this->helper(\Magento\Contact\Helper\Data::class)->getPostValue('comment')) ?></textarea>
+            </div>
+        </div>
+        <?= $block->getChildHtml('form.additional.info') ?>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button type="submit" title="<?= $block->escapeHtmlAttr(__('Send Message')) ?>" class="action submit primary">
+                <span><?= $block->escapeHtml(__('Send Message')) ?></span>
+            </button>
+        </div> 
+    </div>
+</form>

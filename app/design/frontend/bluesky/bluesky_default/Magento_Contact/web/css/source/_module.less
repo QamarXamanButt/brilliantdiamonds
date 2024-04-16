@@ -1,0 +1,55 @@
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+*/
+
+
+// ___________________________________________
+// Contact page
+& when (@media-common =true) {
+
+    .form {
+        &.contact {
+            float: none;
+            width: 100%;
+
+            .row.field {
+                margin-left: -@layout-indent__width;
+                margin-right: -@layout-indent__width;
+                margin-bottom: 0;
+
+                >div {
+                    .lib-css(margin-bottom, @form-field__vertical-indent);
+                }
+            }
+
+            .control {
+                line-height: 1;
+            }
+
+            .actions-toolbar>.primary,
+            .actions-toolbar>.secondary {
+                text-align: left;
+            }
+        }
+    }
+
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
+    .gx-5.contact-us {
+        --bs-gutter-x: 10rem;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+    .form {
+        &.contact {
+            margin-top: 3rem;
+
+            .control {
+                line-height: 1;
+            }
+        }
+    }
+}

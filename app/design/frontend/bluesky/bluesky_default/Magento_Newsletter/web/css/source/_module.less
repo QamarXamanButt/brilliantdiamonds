@@ -1,0 +1,79 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //  Newsletter subscription
+    .block.newsletter {
+        position: relative;
+        z-index: 2;
+        .form.subscribe {
+            display: table;
+            width: 100%;
+        }
+
+        .fieldset {
+            display: table-cell;
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+        }
+
+        .field {
+            margin: 0;
+
+            .control {
+                .flex();
+                margin: auto;
+                width: 100%;
+                justify-content: center;
+                align-items:center;
+                .input-focus{
+                    flex: 1;
+                }
+            }
+        }
+
+        input {
+            padding: 0 0 0 20px; // Reset some default Safari padding values.
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .title {
+            display: none;
+        }
+
+        .label {
+            &:extend(.abs-visually-hidden all);
+        }
+        .action.subscribe {
+            margin-left: -1px;
+            .lib-css(border-radius, @form-element-input__border-radius);
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+         div.mage-error[generated]{
+            position: absolute;
+         }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block.newsletter {
+        .field {
+            .control {
+            }
+        }
+    }
+}

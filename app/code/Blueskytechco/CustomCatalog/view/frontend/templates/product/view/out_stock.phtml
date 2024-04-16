@@ -1,0 +1,34 @@
+<?php
+/**
+ * Custom Catalog for store
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php 
+$_product = $block->getProduct();
+$view_model = $block->getViewModel();
+$customer = $view_model->getCustomerLogged();
+if (!$_product->isSaleable()) :?>
+<div class="out-stock">
+    <div class="form-notify single_variation_wrap" id="frm_notify">
+        <form method="post" action="<?= $block->escapeUrl($this->getUrl('customcatalog/notifystock/save')) ?>" id="contact_form_notify" class="frm_notify" data-mage-init='{"validation": {}}'>
+            <?php echo $this->getBlockHtml('formkey')?>
+            <input type="hidden" name="product_id" value="<?= $_product->getId() ?>">
+            <p><?= $block->escapeHtml(__('Notify me when this product is available:')) ?></p>
+            <?php if ($customer) { ?>
+            <input type="hidden" name="notify_email" value="<?= $customer->getEmail(); ?>">
+            <?php } else { ?>
+            <div class="field review-field-notify-email required">
+                <label for="notify_email" class="label"><span><?= $block->escapeHtml(__('Email address')) ?></span></label>
+                <div class="control">
+                    <input type="email" name="notify_email" id="nickname_fnotify_emailield"
+                        class="input-text" data-validate="{required:true, 'validate-email':true}">
+                </div>
+            </div>    
+            <?php } ?>
+            <button type="submit" class="notify_button button"><?= $block->escapeHtml(__('Email me when available')) ?></button>
+        </form>
+    </div> 
+</div>
+<?php endif; ?>

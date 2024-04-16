@@ -1,0 +1,137 @@
+// Copyright by Blueskytechco
+// ________________________________________
+//
+
+// Variables
+// Image
+@bls_image-box-max-width: 35%;
+@bls_image-box-top-max-width: var(--bls_image-box-top-max-width, 42px);
+@bls_image-box-border-radius: false;
+
+@bls_image-box-top-margin: var(--bls_image-box-top-margin, 0 0 14px);
+@bls_image-box-left-margin: 0 20px 0 0;
+@bls_image-box-right-margin: 0 0 0 20px;
+
+// Title 
+
+@bls_image-box-title-font-size: var(--bls_image-box-title-font-size, 2rem);
+@bls_image-box-title-font-weight: false;
+@bls_image-box-title-text-transform: false;
+@bls_image-box-title-color: false;
+@bls_image-box-title-margin: var(--bls_image-box-title-margin, 0 0 20px 0);
+.bls_image-box-title(@_bls_image-box-title-font-size: @bls_image-box-title-font-size;
+    @_bls_image-box-title-font-weight: @bls_image-box-title-font-weight;
+    @_bls_image-box-title-text-transform: @bls_image-box-title-text-transform;
+    @_bls_image-box-title-color: @bls_image-box-title-color;
+    @_bls_image-box-title-margin: @bls_image-box-title-margin;
+
+) {
+    .lib-css(font-size, @_bls_image-box-title-font-size);
+    .lib-css(font-weight, @_bls_image-box-title-font-weight);
+    .lib-css(text-transform, @_bls_image-box-title-text-transform);
+    .lib-css(color, @_bls_image-box-title-color);
+    .lib-css(margin, @_bls_image-box-title-margin)
+}
+
+// Bls Image box description
+
+@bls_image-box-des-font-size: var(--bls_image-box-des-font-size, 16px);
+@bls_image-box-des-font-weight: false;
+@bls_image-box-des-text-transform: false;
+@bls_image-box-des-color: @text__color;
+@bls_image-box-des-margin: 0;
+
+.bls_image-box-des(@_bls_image-box-des-font-size: @bls_image-box-des-font-size;
+    @_bls_image-box-des-font-weight: @bls_image-box-des-font-weight;
+    @_bls_image-box-des-text-transform: @bls_image-box-des-text-transform;
+    @_bls_image-box-des-color: @bls_image-box-des-color;
+    @_bls_image-box-des-margin: @bls_image-box-des-margin;
+
+) {
+    .lib-css(font-size, @_bls_image-box-des-font-size);
+    .lib-css(font-weight, @_bls_image-box-des-font-weight);
+    .lib-css(text-transform, @_bls_image-box-des-text-transform);
+    .lib-css(color, @_bls_image-box-des-color);
+    .lib-css(margin, @_bls_image-box-des-margin)
+}
+
+// Bls Image box gobal style
+& when (@media-common =true) {
+    .elementor-image-box-wrapper {
+        --heading__font-weight__base: var(--headings__font-weight-secondary);
+
+        @media only screen and (max-width: (@screen__s - 1)) {
+            --bls_image-box-title-font-size: 1.8rem;
+        }
+
+        .flex(@_flex-wrap: nowrap;
+        );
+
+        .elementor-image-box-content {
+            flex: 1;
+        }
+    }
+
+    .elementor-image-box-img {
+        .lib-css(border-radius, @bls_image-box-border-radius);
+    }
+
+    .elementor-image-box-title {
+        .bls_image-box-title();
+    }
+
+    .elementor-image-box-description {
+        .bls_image-box-des();
+    }
+
+    // Bls Image box top postion
+    .center_vertical {
+        .elementor-image-box-wrapper {
+            align-items: center;
+        }
+    }
+
+    [data-image-box-position="top"] {
+        .elementor-image-box-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .elementor-image-box-img {
+            .lib-css(margin, @bls_image-box-top-margin);
+            .lib-css(max-width, @bls_image-box-top-max-width);
+        }
+    }
+
+    // Bls Image box left postion
+    [data-image-box-position="left"] {
+        .elementor-image-box-img {
+            .lib-css(margin, @bls_image-box-left-margin);
+            .lib-css(max-width, @bls_image-box-max-width);
+            font-size: 0;
+        }
+    }
+
+    // Bls Image box right postion
+    [data-image-box-position="right"] {
+        .elementor-image-box-img {
+            order: 2;
+            .lib-css(margin, @bls_image-box-right-margin);
+            .lib-css(max-width, @bls_image-box-max-width);
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    // Extend styles
+    .body-font {
+        .elementor-image-box-title {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            font-weight: var(--headings__font-weight-secondary);
+            .lib-css(font-family, @font-family-name__base);
+        }
+    }
+}

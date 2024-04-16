@@ -1,0 +1,272 @@
+/* Custom Data <?php echo date("Y-m-d H:i:s"); ?>: Do not change this file. */
+<?php
+$data = $block->getConfig($this->_coreRegistry->registry('css_store'));
+$_helper = $this->helper('Blueskytechco\Themeoption\Helper\Themeconfig');
+?>
+
+:root{
+	/* Page Width */
+	<?php if($_helper->getPageWidth($data)){ ?>
+	--layout__max-width: <?= $_helper->getPageWidth($data); ?>;
+	<?php } ?>
+
+	/* Body Font */
+	<?php if($_helper->getBodyFont($data, 'family')){ ?>
+	--font-family-name__base: <?= $_helper->getBodyFont($data, 'family') ;?>;
+	<?php } ?>
+	<?php if($_helper->getBodyFont($data, 'size')){ ?>
+	--font-size__base: <?= $_helper->getBodyFont($data, 'size') ;?>;
+	<?php } ?>
+	<?php if($_helper->getBodyFont($data, 'weight')){ ?>
+	--text-weight: <?= $_helper->getBodyFont($data, 'weight') ;?>;
+	<?php } ?>
+
+	/* Heading Font */
+	<?php if($_helper->isCustomHeadingFont($data)){ ?>
+	<?php if($_helper->getCustomHeadingFont($data, 'family')){ ?>
+	--heading__font-family__base: <?= $_helper->getCustomHeadingFont($data, 'family'); ?>;
+	<?php } ?>
+	<?php if($_helper->getCustomHeadingFont($data, 'weight')){ ?>
+	--heading__font-weight__base: <?= $_helper->getCustomHeadingFont($data, 'weight'); ?>;
+	<?php } ?>
+	<?php } ?>
+
+	/* Menu Font */
+	<?php if($_helper->isCustomMenuFont($data)){ ?>
+	<?php if($_helper->getCustomMenuFont($data, 'family')){ ?>
+	--navigation-level0-item__font-family:  <?= $_helper->getCustomMenuFont($data, 'family'); ?>;
+	<?php } ?>
+	<?php if($_helper->getCustomMenuFont($data, 'size')){ ?>
+	--naviation-level0-item__font-size: <?= $_helper->getCustomMenuFont($data, 'size'); ?>;
+	<?php } ?>
+	<?php if($_helper->getCustomMenuFont($data, 'weight')){ ?>
+	--navigation-level0-item__font-weight: <?= $_helper->getCustomMenuFont($data, 'weight'); ?>;
+	<?php } ?>
+	<?php } ?>
+	
+	/* Other Font */
+	<?php if($_helper->isCustomOtherFont($data)){ ?>
+	--other_font_family: <?= $_helper->getCustomOtherFont($data); ?>;
+	<?php } ?>
+
+	/* Theme Colors */
+	<?php if($_helper->getThemeColors($data)){ ?>
+	--theme__color__primary: <?= $_helper->getThemeColors($data); ?>; 
+	<?php } ?>
+
+	/* Basic Colors */
+	<?php if($_helper->isEnableBasicColors($data)){ ?>
+	<?php if($_helper->getBasicColors($data, 'text_color')){ ?>
+	--text__color: <?= $_helper->getBasicColors($data, 'text_color');?>;
+	<?php } ?>
+	<?php if($_helper->getBasicColors($data, 'heading_color')){ ?>
+	--heading__color__base: <?= $_helper->getBasicColors($data, 'heading_color');?>;
+	<?php } ?>
+	<?php if($_helper->getBasicColors($data, 'link_color')){ ?>
+	--link__color: <?= $_helper->getBasicColors($data, 'link_color');?>;
+	<?php } ?>
+	<?php if($_helper->getBasicColors($data, 'link_hover_color')){ ?>
+	--link__hover__color: <?= $_helper->getBasicColors($data, 'link_hover_color');?>;
+	<?php } ?>
+	<?php } ?>
+	
+	/* Buttons Colors */
+	<?php if($_helper->getButtonBorderRadius($data)){ ?>
+	--button__border-radius: <?= $_helper->getButtonBorderRadius($data);?>;
+	<?php } ?>
+	<?php if($_helper->isEnableButtonsColors($data)){ ?>
+	<?php if($_helper->getButtonsColors($data, 'button_text_color')){ ?>
+	--button__color: <?= $_helper->getButtonsColors($data, 'button_text_color');?>;
+	--button-primary__color: <?= $_helper->getButtonsColors($data, 'button_text_color');?>;
+	<?php } ?>
+	<?php if($_helper->getButtonsColors($data, 'button_bg_color')){ ?> 
+	--button-secondary-bg: <?= $_helper->getButtonsColors($data, 'button_bg_color');?>;
+	--button__background: <?= $_helper->getButtonsColors($data, 'button_bg_color');?>;
+	--button-primary__background: <?= $_helper->getButtonsColors($data, 'button_bg_color');?>;
+	<?php } ?>
+	<?php if($_helper->getButtonsColors($data, 'button_hover_bg_color')){ ?>
+	--button__hover__background: <?= $_helper->getButtonsColors($data, 'button_hover_bg_color');?>;
+	--button-primary__hover__background: <?= $_helper->getButtonsColors($data, 'button_hover_bg_color');?>;
+	<?php } ?>
+	<?php if($_helper->getButtonsColors($data, 'button_hover_text_color')){ ?>
+	--button__hover__color: <?= $_helper->getButtonsColors($data, 'button_hover_text_color');?>;
+	--button-primary__hover__color: <?= $_helper->getButtonsColors($data, 'button_hover_text_color');?>;
+	<?php } ?>
+	<?php } ?>
+
+	/* Custom Sticky Background Color */
+	<?php if($_helper->getCustomStickyBackgroundColor($data)){ ?>
+	--header_sticky_bg: <?= $_helper->getCustomStickyBackgroundColor($data); ?>;
+	<?php } ?>
+
+	/* Custom Header */
+	<?php if($_helper->isEnableCustomHeader($data)){ ?>
+	<?php if($_helper->getTopbarBackgroundColor($data)){?>
+	--topbarbg: <?= $_helper->getTopbarBackgroundColor($data); ?>;
+	<?php } ?>
+	<?php if($_helper->getTopbarTextColor($data)){?>
+	--topbarcolor: <?= $_helper->getTopbarTextColor($data); ?>;
+	<?php } ?>
+	<?php if($_helper->getHeaderTextColor($data)){?>
+	--header-icons-color: <?= $_helper->getHeaderTextColor($data); ?>;
+	<?php } ?>
+	<?php if($_helper->getHeaderBackgroundColor($data)){?>
+	--header__background-color: <?= $_helper->getHeaderBackgroundColor($data); ?>;
+	<?php } ?>
+	<?php } ?>
+
+	/* Custom Footer */
+	<?php if($_helper->isEnableCustomFooter($data)){ ?>
+	<?php if($_helper->getCustomFooterTitleColor($data)){ ?>
+	--footer-title-color: <?= $_helper->getCustomFooterTitleColor($data) ;?>;
+	<?php } ?>
+	<?php if($_helper->getCustomFooterColor($data)){ ?>
+	--footer-links-color: <?= $_helper->getCustomFooterColor($data) ;?>;
+	<?php } ?>
+	<?php if($_helper->getFooterBackgroundColor($data)){ ?>
+	--footer__background-color: <?= $_helper->getFooterBackgroundColor($data) ;?>;
+	<?php } ?>
+	<?php } ?>
+
+	/* Custom Menu */
+	<?php if($_helper->isEnableCustomMenu($data)){ ?>
+	<?php if($_helper->getCustomMenuColorCode($data, 'menu_text_color')){ ?>
+	--navigation-level0-item__color: <?= $_helper->getCustomMenuColorCode($data, 'menu_text_color') ;?>;
+	<?php } ?>
+	<?php if($_helper->getCustomMenuColorCode($data, 'menu_background_color')){ ?>
+	--navigation__background: <?= $_helper->getCustomMenuColorCode($data, 'menu_background_color') ;?>;
+	<?php } ?>
+	<?php if($_helper->getCustomMenuColorCode($data, 'sub_menu_background_color')){ ?>
+	--submenu__background: <?= $_helper->getCustomMenuColorCode($data, 'sub_menu_background_color') ;?>;
+	<?php } ?>
+	<?php if($_helper->getCustomMenuColorCode($data, 'sub_menu_text_color')){ ?>
+	--submenu-item__color: <?= $_helper->getCustomMenuColorCode($data, 'sub_menu_text_color') ;?>;
+	<?php } ?>
+	<?php } ?>
+
+	/* Page wraper */
+	<?php if($_helper->isEnablePageWrapper($data)){ ?>
+		<?php if($_helper->getPageWrapperBackgroundColor($data)){ ?>
+			--page__background-color: 	<?= $_helper->getPageWrapperBackgroundColor($data); ?>
+		<?php } ?>
+	<?php } ?>
+}
+@media (min-width: 1200px){
+	.cms-index-index .header-absolute{
+		<?php if($_helper->isEnableCustomMenu($data)){ ?>
+		<?php if($_helper->getCustomMenuColorCode($data, 'menu_background_color')){ ?>
+		--navigation__background: <?= $_helper->getCustomMenuColorCode($data, 'menu_background_color') ;?>;
+		<?php } ?>
+		<?php } ?>
+	}
+	.cms-index-index .header-container:not(.header_scroll_up) .header_light{
+		<?php if($_helper->isEnableCustomMenu($data)){ ?>
+			<?php if($_helper->getCustomMenuColorCode($data, 'menu_text_color')){ ?>
+			--navigation-level0-item__color: <?= $_helper->getCustomMenuColorCode($data, 'menu_text_color') ;?>;
+			<?php } ?>
+			--navigation-desktop-level0-item__hover__color: var(--navigation-level0-item__color);
+		<?php } ?>
+		<?php if($_helper->isEnableCustomHeader($data)){ ?>
+			<?php if($_helper->getHeaderTextColor($data)){?>
+			--header-icons-color: <?= $_helper->getHeaderTextColor($data); ?>;
+			<?php } ?>
+		<?php } ?>
+	}
+}
+
+
+<?php if($_helper->getIconLazyLoad($data)){ ?>
+/* Icon LazyLoad */
+img.lazyload,  
+img.lazyloading,
+img.swatch-option-loading,
+.fotorama__spinner,
+.data-bgset-image-wrapper.lazyload:after,
+.data-bgset-image-wrapper.lazyloading:after{
+	<?= $_helper->getIconLazyLoad($data); ?>
+	background-repeat: no-repeat;
+    animation: none;
+    background-position: center;
+	--lazyload_bg_size: 100px;
+}
+<?php } ?>
+<?php if($_helper->getBodyFont($data, 'weight')){ ?>
+	body{
+		font-weight: var(--text-weight);
+	}
+<?php } ?>
+<?php if($_helper->getBodyFont($data, 'size')){ ?>
+	body{
+		font-size: var(--font-size__base);
+	}
+<?php } ?>
+<?php if($_helper->getBasicColors($data, 'link_color')){ ?>
+	:root{
+	--footer-links-color: <?= $_helper->getBasicColors($data, 'link_color');?>;
+	}
+<?php } ?>
+<?php if($_helper->getCustomFooterColor($data)){ ?>
+	footer{
+		--footer-links-color: <?= $_helper->getCustomFooterColor($data) ;?>;
+		--link__color: <?= $_helper->getCustomFooterColor($data) ;?>;
+	}
+<?php } ?>
+<?php if($_helper->getButtonsColors($data, 'button_text_color')){ ?>
+	.minicart-wrapper .block-content .actions .secondary .action.viewcart:not(:hover){
+		--heading__color__base: <?= $_helper->getButtonsColors($data, 'button_text_color');?>;
+	}
+<?php } ?>
+<?php if($_helper->getButtonsColors($data, 'button_bg_color')){ ?> 
+	button, .cart.table-wrapper .actions-toolbar > .action, .action-gift{
+		border: 1px solid var(--button__background);
+	}
+<?php } ?>	
+
+<?php if($_helper->isEnableCustomHeader($data)){ ?>
+/* Custom Header */
+header.page-header{
+	<?= $_helper->getHeaderBackgroundImage($data); ?>
+}
+<?php } ?>
+
+
+
+<?php if($_helper->isEnableCustomFooter($data)){ ?>
+/* Custom Footer */
+footer.page-footer{
+	<?= $_helper->getFooterBackgroundImage($data); ?>
+}
+<?php } ?>
+
+
+<?php if($_helper->isEnablePageWrapper($data)){ ?>
+/* Page Wrapper */
+.page-wrapper{
+	<?= $_helper->getPageWrapperBackgroundImage($data); ?>
+}
+.page-wrapper,
+.breadcrumbs{
+	background-color: <?= $_helper->getPageWrapperBackgroundColor($data); ?>;
+}
+<?php } ?>
+
+
+<?php if($_helper->isEnableMainContentContainer($data)){ ?>
+	/* Main Content Container */
+	#maincontent{
+		<?= $_helper->getMainContentContainerBackgroundColor($data); ?>
+	}
+	#maincontent{
+		<?= $_helper->getMainContentContainerBackgroundImage($data); ?>
+	}
+<?php } ?>
+
+
+<?php if($_helper->getCustomizationStyle($data)){ ?>
+/* Customization Style */
+<?= $_helper->getCustomizationStyle($data); ?>
+<?php } ?>
+
+<?php if($_helper->isBoxLayout($data)){ ?>
+
+<?php } ?>

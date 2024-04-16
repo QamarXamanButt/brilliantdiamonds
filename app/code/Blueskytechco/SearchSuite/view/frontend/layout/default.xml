@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceContainer name="header-wrapper"> 
+			<block class="Blueskytechco\SearchSuite\Block\Autocomplete" name="rokan-search-autocomplete" template="Blueskytechco_SearchSuite::result.phtml">
+				<arguments>
+					<argument name="configProvider" xsi:type="object">Magento\Search\ViewModel\ConfigProvider</argument>
+				</arguments>
+			</block>
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo_search_rokan">
+                <arguments>
+                    <argument name="logoPathResolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoPathResolver</argument>
+                    <argument name="logo_size_resolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoSizeResolver</argument>
+                </arguments>
+            </block>
+		</referenceContainer>
+		<referenceBlock name="top.search" remove="true"/>
+        <move element="logo_search_rokan" destination="rokan-search-autocomplete"/>
+    </body>
+</page>

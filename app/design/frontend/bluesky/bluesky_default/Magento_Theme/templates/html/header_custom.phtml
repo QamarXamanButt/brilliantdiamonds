@@ -1,0 +1,48 @@
+<div class="header-container layout-1">
+	<?php if($block->isEnableTopBar()){ ?>
+	<div class="topbar d-none d-md-block border_bottom">
+		<div class="topbar__inner flex-layout space-between center_vertical container-fluid">
+			<div class="topbar__section col_left d-none d-xxl-block">
+				<div class="topbar__section-inner">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('default_topbar_social')->toHtml(); ?>
+				</div>
+			</div>
+			<div class="topbar__section">
+				<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('default_topbar_static_text')->toHtml(); ?> 
+			</div>
+			<div class="topbar__section col_right flex-layout center_vertical flex-end">
+				<div class="container-setting-language-currency">
+					<?php echo $this->getChildHtml("store_language"); ?>  
+					<?php echo $this->getChildHtml("currency"); ?> 
+				</div>		
+			</div>
+		</div>
+	</div>
+	<?php } ?>
+	<div class="sticky-header">
+		<div class="for-full-width-menu">
+			<div class="header_middle header_padding blueskytechco-header container-fluid flex-layout space-between center_vertical flex-nowrap">
+				<div class="header__menu col_left">
+					<?php echo $this->getChildHtml("horizontal.menu"); ?>
+				</div>
+				<div class="header__logo logo-container">
+					<?php echo $this->getChildHtml('logo'); ?>
+				</div>
+				<div class="header__action col_right flex-layout flex-end flex-nowrap">
+					<div class="flex-layout center_vertical flex-end flex-nowrap">
+						<?php echo $this->getChildHtml("rokan-search-autocomplete");?>
+						<ul class="flex-layout header__action-default center_vertical no-wrap-desktop">
+							<li class="account-link-header d-none d-xl-block">
+								<?php echo $this->getChildHtml("header.links"); ?>
+							</li>
+							<?php echo $block->getLayout()->createBlock('Magento\Wishlist\Block\Link')->setTemplate('Magento_Wishlist::link.phtml')->toHtml();?>
+							<li class="minicart-li-content-show-hide fixed-minicart">
+								<?php echo $this->getChildHtml('minicart'); ?>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

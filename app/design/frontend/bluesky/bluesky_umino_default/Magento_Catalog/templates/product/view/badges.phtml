@@ -1,0 +1,7 @@
+<?php 
+    $_product = $block->getProduct();
+    $_helper = $this->helper('Blueskytechco\Themeoption\Helper\Product');
+?>
+<span class="product-label">
+    <?= $_helper->getProductSaleLabel($_product) ?>
+</span>

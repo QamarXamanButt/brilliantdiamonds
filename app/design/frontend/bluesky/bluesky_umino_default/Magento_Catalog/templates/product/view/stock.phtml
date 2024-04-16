@@ -1,0 +1,18 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Catalog\Block\Product\View*/
+?>
+<?php
+    $_product = $block->getProduct();
+    $view_model = $block->getViewModel();
+    $stock_countdow = $view_model->getProductSalableQuantityHtml($_product);
+?>
+<?php if ($stock_countdow) { ?>
+    <?= $stock_countdow ?>
+<?php } ?>

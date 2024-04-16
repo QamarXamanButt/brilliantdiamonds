@@ -1,0 +1,97 @@
+<?php
+    $view_model = $block->getViewModel();
+    $helper = $this->helper('Blueskytechco\LayeredAjax\Helper\Data');
+    $opend_desktop = $helper->opendDesktop();
+    $opend_mobile = $helper->opendMobile();
+    $rating_enabled = $helper->isEnabledRating();
+    $rating_lable = $helper->ratingLable();
+    $position_quickview = $view_model->getDataQuickView('position');
+    $label_quickview = $view_model->getDataQuickView('label');
+    $class_position_quickview = $view_model->getDataQuickView('class_position')?$view_model->getDataQuickView('class_position')
+        :'[data-role=add-to-links]';
+    $nav_quickview = $view_model->getDataQuickView('nav');
+    $navdir_quickview = $view_model->getDataQuickView('navdir');
+    if ($nav_quickview == 'dots') {
+        $add_class_quickview = 'thumb_slide';
+    } else {
+        $add_class_quickview = ($navdir_quickview == 'bottom')?'horizontal_'.$navdir_quickview.'':
+            'vertical_'.$navdir_quickview.'';
+    }
+?>
+<?php if ($block->canShowBlock()) : ?>
+    <div class="block filter bluesky_filter" id="layered-filter-block">
+        <div class="cat_filter">
+            <a href="javascript:;" class="btn_filter">
+                <span><?= $block->escapeHtml(__('Filter')) ?></span>
+            </a>
+        </div>
+        <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
+        <div class="block-title filter-title" data-count="<?= /* @noEscape */ $filtered ?>">
+            <strong data-role="title"><?= $block->escapeHtml(__('Shop By')); ?></strong>
+        </div>
+        <div class="block-content filter-content">
+            <?= $block->getChildHtml('state') ?>
+
+            <?php if ($block->getLayer()->getState()->getFilters()) : ?>
+                <div class="block-actions filter-actions">
+                    <a href="<?= $block->escapeUrl($block->getClearUrl()) ?>" class="action clear filter-clear">
+                        <span><?= $block->escapeHtml(__('Clear All')) ?></span>
+                    </a>
+                </div>
+            <?php endif; ?>
+            <?php $wrapOptions = false; ?>
+            <?php foreach ($block->getFilters() as $filter) : ?>
+                <?php if ($filter->getItemsCount()) : ?>
+                        <?php if (!$wrapOptions) : ?>
+                            <div class="filter-area">
+                            <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle"><?= $block->escapeHtml(__('Filter')) ?></strong>
+                            <div class="filter-options" id="narrow-by-list">
+                        <?php $wrapOptions = true; endif; ?>
+                        <?php
+                            if (!$rating_enabled && $filter->getRequestVar() == 'rating') {
+                                continue;
+                            }
+                        ?>
+                        <div class="filter-options-item <?= $opend_desktop?'active':'' ?>">
+                            <div class="filter-options-title">
+                                <?php if ($filter->getRequestVar() == 'rating' && $rating_lable) { ?>
+                                    <?php /* @escapeNotVerified */ echo __($rating_lable) ?>
+                                <?php } else { ?>
+                                    <?php /* @escapeNotVerified */ echo __($filter->getName()) ?>
+                                <?php } ?>
+                            </div>
+                            <div class="filter-options-content" style="display:<?= $opend_desktop?'block':'none' ?>"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></div>
+                        </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <?php if ($wrapOptions) : ?>
+                </div></div>
+                <script type="text/x-magento-init">
+					{
+						"#narrow-by-list": {
+							"Blueskytechco_LayeredAjax/js/layeredajax": {
+                                "opendTabMobile": "<?php echo $opend_mobile ?>",
+                                "quickviewUrl": "<?= $block->escapeUrl($block->getUrl('blueskytechco_quickview/product/view')); ?>",
+                                "positionQuickview": "<?= $block->escapeHtml($position_quickview) ?>",
+                                "labelQuickview": "<?= $block->escapeHtml($label_quickview) ?>",
+                                "classPositionQuickview": "<?= $block->escapeHtmlAttr($class_position_quickview) ?>",
+                                "addClassQuickview": "<?= $block->escapeHtmlAttr($add_class_quickview) ?>"
+                            } 
+						} 
+					}
+				</script>
+            <?php else : ?>
+                <script>
+                    require([
+                        'jquery'
+                    ], function ($) {
+                        $('#layered-filter-block').addClass('filter-no-options');
+                    });
+                </script>
+            <?php endif; ?>
+        </div>
+        <div id="layered_ajax_overlay" class="layered_ajax_overlay">
+			<div><img src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>" alt="<?php echo __('Loading') ?>"></div>
+		</div>
+    </div>
+<?php endif; ?>

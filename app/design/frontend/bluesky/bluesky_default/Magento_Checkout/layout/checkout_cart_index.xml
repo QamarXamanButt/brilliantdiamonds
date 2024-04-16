@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+		<referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string" translate="true">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Cart</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Cart</item>
+                    <item name="label" xsi:type="string" translate="true">Cart</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="checkout.cart.items">
+            <container name="cart.top"  htmlTag="div" htmlClass="cart-top" before="-">
+                <container name="scd.ountdown"  htmlTag="div" htmlClass="scd-countdown" before="-">
+                    <block class="Blueskytechco\Themeoption\Block\Themeoption" name="checkout.cart.countdown" template="Blueskytechco_AjaxSuite::cart/countdown.phtml" before="-"/>
+                </container>
+                <container name="free.shipping"  htmlTag="div" htmlClass="free-ship-calculated" after="-">
+                    <block class="Magento\Framework\View\Element\Template" name="checkout.cart.threshold" template="Blueskytechco_AjaxSuite::cart/threshold.phtml" before="-"/>
+                </container>
+            </container>
+        </referenceContainer>
+        <move element="free.shipping" destination="cart.summary"  before="-"/>
+    </body>
+</page>

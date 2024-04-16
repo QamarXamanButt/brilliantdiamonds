@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
+	<default>
+		<layered_ajax>
+            <general>
+                <enable>1</enable>
+                <multiselect>1</multiselect>
+                <open_desktop>1</open_desktop>
+                <open_mobile>1</open_mobile>
+                <show_count_item>1</show_count_item>
+            </general>
+            <price_slider>
+                <enable>1</enable>
+            </price_slider>
+            <rate_filter>
+                <enable>1</enable>
+            </rate_filter>
+            <show_more>
+                <enable>1</enable>
+                <number>6</number>
+            </show_more>
+        </layered_ajax>
+	</default>
+</config>

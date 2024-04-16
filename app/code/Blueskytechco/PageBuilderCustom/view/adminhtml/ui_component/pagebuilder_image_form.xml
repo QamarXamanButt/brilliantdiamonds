@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="general">
+        <field name="img_width" sortOrder="18" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string"></item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Width</label>
+                <notice translate="true">Please specify width you want to display on the frontend. You can leave it blank if necessary.</notice>
+            </settings>
+        </field>
+        <field name="img_height" sortOrder="19" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string"></item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Height</label>
+                <notice translate="true">Please specify height you want to display on the frontend. You can leave it blank if necessary.</notice>
+            </settings>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,245 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog related posts template
+ *
+ * @var $block \Magefan\Blog\Block\Post\View\RelatedProducts
+ */
+?>
+
+<?php
+use Magento\Framework\App\Action\Action;
+if ($exist = $block->getItems()->getSize()) {
+    $type = 'related';
+    $class = $type;
+
+    $image = 'related_products_list';
+    $title = __('Related Products');
+    $items = $block->getItems();
+    $limit = 0;
+    $shuffle = 0;
+    $canItemsAddToCart = true;
+
+    $showWishlist = true;
+    $showCompare = true;
+    $showCart = true;
+    $templateType = null;
+    $description = false;
+}
+?>
+
+<?php if ($exist):?>
+
+    <?php if ($type == 'related' || $type == 'upsell'): ?>
+        <?php if ($type == 'related'): ?>
+            <div class="block <?= $block->escapeHtml($class); ?>"
+                 data-mage-init='{"relatedProducts":{"relatedCheckbox":".related.checkbox"}}'
+                 data-limit="<?= $block->escapeHtml($limit); ?>"
+                 data-shuffle="<?= $block->escapeHtml($shuffle); ?>">
+        <?php else: ?>
+            <div class="block <?= $block->escapeHtml($class); ?>"
+                 data-mage-init='{"upsellProducts":{}}'
+                 data-limit="<?= $block->escapeHtml($limit); ?>"
+                 data-shuffle="<?= $block->escapeHtml($shuffle); ?>">
+        <?php endif; ?>
+    <?php else: ?>
+        <div class="block <?= $block->escapeHtml($class); ?>">
+    <?php endif; ?>
+    <div class="elementor__header">
+        <h3 class="elementor__headline">
+        <span id="block-<?= $block->escapeHtml($class)?>-heading"
+                role="heading"
+                aria-level="2"><?= $block->escapeHtml($title); ?>
+    </span>
+        </h3>
+    </div>
+    <div class="block-content content" aria-labelledby="block-<?= $block->escapeHtml($class)?>-heading">
+        <div class="products wrapper grid products-grid products-<?= $block->escapeHtml($type); ?>">
+            <ol class="post-product-list  products list items product-items owl-carousel owl-theme" data-rtl="false" data-items="3" 
+			data-bigdesktop="3" data-smalldesktop="3" 
+			data-bigtablet="3" data-tablet="2" 
+			data-smalltablet="2" data-mobile="1" 
+			data-margin="20" data-loop="true" data-center="false" data-mousedrag="true" data-touchdrag="true" data-stagepadding="0" 
+			data-nav="false" data-navnext="" data-navprev="" data-rewind="false" data-dots="false" data-autoplay="false" data-speed="250">
+                <?php $iterator = 1; ?>
+                <?php foreach ($items as $_item): ?>
+                    <?php $available = ''; ?>
+                    <?php if (!$_item->isComposite() && $_item->isSaleable() && $type == 'related'): ?>
+                        <?php if (!$_item->getRequiredOptions()): ?>
+                            <?php $available = 'related-available'; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
+                    <?php if ($type == 'related' || $type == 'upsell'): ?>
+                        <?= ($iterator++ == 1) ?
+                            '<li class="item product product-item" >' :
+                            '</li><li class="item product product-item" >' ?>
+                <?php else: ?>
+                    <?= ($iterator++ == 1) ?
+                            '<li class="item product product-item">' :
+                            '</li><li class="item product product-item">' ?>
+                <?php endif; ?>
+                <div class="product-item-info <?= $block->escapeHtml($available); ?>">
+                    <div class="product_item_images">
+                    <?= '<!-- ' . $block->escapeHtml($image) . '-->' ?>
+                    <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                       class="product photo product-item-photo">
+                        <?= $block->getImage($_item, $image)->toHtml(); ?>
+                    </a>
+                    <?php if ($showWishlist || $showCompare || $showCart): ?>
+                        <div class="product-item-inner">
+                        <div class="product-item-actions">
+                            <?php if ($showCart): ?>
+                                <div class="product-item-actions_middle">
+                                    <div class="actions-primary">
+                                        <?php if ($_item->isSaleable()):?>
+                                            <?php $postParams = $block->getAddToCartUrl($_item); ?>
+                                            <?php $postDataHelper = $this->helper(Magento\Framework\Data\Helper\PostHelper::class);
+                                                $postData = json_decode($postDataHelper->getPostData($block->getAddToCartUrl($_item), ['product' => $_item->getEntityId()]), true);
+                                            ?>
+                                            <form data-role="tocart-form"
+                                                data-product-sku="<?= $escaper->escapeHtml($_item->getSku()) ?>"
+                                                action="<?= $escaper->escapeUrl($block->getAddToCartUrl($_item)) ?>"
+                                                method="post">
+                                                <input type="hidden"
+                                                    name="product"
+                                                    value="<?= /* @noEscape */ $_item->getEntityId() ?>">
+                                                <input type="hidden"
+                                                    name="<?= /* @noEscape */ Action::PARAM_NAME_URL_ENCODED ?>"
+                                                    value="<?=$postData['data']['uenc']?>">
+                                                <?= $block->getBlockHtml('formkey') ?>
+                                                <button type="submit"
+                                                        title="<?= $escaper->escapeHtmlAttr(__('Add to Cart')) ?>"
+                                                        class="action tocart primary">
+                                                    <span><?= $escaper->escapeHtml(__('Add to Cart')) ?></span>
+                                                </button>
+                                            </form>
+                                        <?php else:?>
+                                            <?php if ($_item->isAvailable()):?>
+                                                <div class="stock available">
+                                                    <span><?= $escaper->escapeHtml(__('In stock')) ?></span></div>
+                                            <?php else:?>
+                                                <div class="stock unavailable">
+                                                    <span><?= $escaper->escapeHtml(__('Out of stock')) ?></span></div>
+                                            <?php endif; ?>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if ($showWishlist || $showCompare): ?>
+                                <div class="secondary-addto-links actions-secondary" data-role="add-to-links">
+                                    <?php if ($this->helper(Magento\Wishlist\Helper\Data::class)->isAllow() && $showWishlist): ?>
+                                        <a href="#"
+                                            data-post='<?= $block->escapeHtml($block->getAddToWishlistParams($_item)); ?>'
+                                            class="action towishlist"
+                                            data-action="add-to-wishlist"
+                                            title="<?= $block->escapeHtml(__('Add to Wish List')) ?>">
+                                            <span><?= $block->escapeHtml(__('Add to Wish List')) ?></span>
+                                        </a>
+                                    <?php endif; ?>
+                                    <?php if ($block->getAddToCompareUrl() && $showCompare): ?>
+                                        <?php
+                                        $compareHelper = $this->helper(Magento\Catalog\Helper\Product\Compare::class);
+                                        ?>
+                                        <a href="#" class="action tocompare"
+                                            data-post='<?= $block->escapeHtml($compareHelper->getPostDataParams($_item));?>'
+                                            data-role="add-to-links"
+                                            title="<?= $block->escapeHtml(__('Add to Compare')); ?>">
+                                            <span><?= $block->escapeHtml(__('Add to Compare')) ?></span>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        </div>
+                    <?php endif; ?>
+                    </div>
+                    <div class="product details product-item-details">
+                        <strong class="product name product-item-name">
+                            <a class="product-item-link"
+                               title="<?= $block->escapeHtml($_item->getName()) ?>"
+                               href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>">
+                            <?= $block->escapeHtml($_item->getName()) ?></a>
+                        </strong>
+
+                        <?= /*@noEscape*/ $block->getProductPrice($_item); ?>
+
+                            <?php if ($templateType): ?>
+                                <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>
+                            <?php endif; ?>
+
+                            
+                        </div>
+                    </div>
+                    <?= ($iterator == count($items)+1) ? '</li>' : '' ?>
+                <?php endforeach ?>
+            </ol>
+        </div>
+    </div>
+    <script> 
+        require([
+            'jquery',
+            'slick'
+            ], function ($) {
+            'use strict';
+            $(document).ready(function() {
+                var $carouselElement = $('.related .post-product-list'),
+                slickConfig = {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    rows: 1,
+                    autoplay: false,
+                    autoplaySpeed: false,
+                    arrows: true,
+                    dots: false,
+                    responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 2
+                        }
+                    }
+                    ]
+                };
+                $carouselElement.slick(slickConfig);
+            });
+        });
+    </script>
+</div>
+<?php endif;?>

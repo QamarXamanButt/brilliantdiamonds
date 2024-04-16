@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="catalogsearch.leftnav">
+            <action method="setTemplate" ifconfig="layered_ajax/general/enable">
+                <argument name="template" xsi:type="string">Blueskytechco_LayeredAjax::layer/view.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="view_model" xsi:type="object">Blueskytechco\LayeredAjax\ViewModel\Layered</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="catalogsearch.navigation.renderer">
+            <action method="setTemplate" ifconfig="layered_ajax/general/enable">
+                <argument name="template" xsi:type="string">Blueskytechco_LayeredAjax::layer/filter.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="view_model" xsi:type="object">Blueskytechco\LayeredAjax\ViewModel\Layered</argument>
+            </arguments>
+        </referenceBlock>
+		<referenceBlock name="catalogsearch.navigation.state">
+            <action method="setTemplate" ifconfig="layered_ajax/general/enable">
+                <argument name="template" xsi:type="string">Blueskytechco_LayeredAjax::layer/state.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="catalogsearch.products">
+            <action method="setTemplate" ifconfig="layered_ajax/general/enable">
+                <argument name="template" xsi:type="string">Blueskytechco_LayeredAjax::category/products.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

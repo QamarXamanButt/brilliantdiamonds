@@ -1,0 +1,8 @@
+<?php
+    $urls = $block->getCustomFont();
+?>
+<?php if (count($urls) > 0) { ?>
+    <?php foreach($urls as $url) { ?>
+    <link rel="stylesheet" type="text/css" media="all" href="<?= $url ?>" />
+    <?php } ?>
+<?php } ?>

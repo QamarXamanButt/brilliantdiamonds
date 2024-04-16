@@ -1,0 +1,181 @@
+<?php
+	/**
+		* @var \Blueskytechco\GroupedProduct\Block\Grouped $block
+	*/
+    use Magento\Framework\App\Action\Action;
+	$_productCollection = $block->_getProduct();
+	$widget_title = $block->getData('title');
+	$widget_description = $block->getData('description');
+?>
+<div class="grouped grouped-widget">
+	<div class="giftcard__header">
+		<?php if ($widget_title) { ?>
+			<h2 class="giftcard__title"><?= $widget_title ?></h2>
+		<?php } ?>
+		<?php if ($widget_description) { ?>
+			<p class="giftcard__description"><?= $widget_description ?></p>
+		<?php } ?>
+	</div>
+    <?php if($_productCollection->getSize()){ ?>
+	<?php
+        $type = 'widget-product-grouped-grid';
+        $mode = 'grid';
+        $image = 'category_page_grid';
+        $showWishlist = true;
+        $showCompare = true;
+    ?>
+	<ol class="elementor__content row product-items <?= /* @noEscape */ $type ?>">
+        <?php foreach ($_productCollection as $_product): ?>
+            <li class="product-item">
+                <div class="product-item-info">
+                    <?php
+                        $_associatedProducts = $block->getAssociatedProducts($_product);
+                        $_hasAssociatedProducts = count($_associatedProducts) > 0;
+                        $price_all = 0;
+                    ?>
+                    <?php if ($_hasAssociatedProducts) : ?>
+                        <?php $i = 1; ?>
+                        <?php foreach ($_associatedProducts as $_item) : ?>
+                            <?php if ($_item->isSaleable()) : ?>
+                            <?php $_item_product = $block->getProductItem($_item->getId()); ?>
+                            <div class="grouped-item flex-layout center_vertical">
+                                <div class="item item-order-count me-4 pe-2">
+                                    <span class="radius-50 medium heading_color"><?= $i ?></span>
+                                </div>
+                                <div class="item product-image me-4 pe-2">
+                                    <?= $block->getImage($_item_product, $image)->toHtml() ?>
+                                </div>
+                                <div class="col group-item-price flex-layout space-between">
+                                    <div class="item product-name me-4">
+                                        <strong class="product-item-name bold uppercase "><a href=""><?= $block->escapeHtml($_item->getName()) ?></a></strong>
+                                    </div>
+                                    <div class="item product-price fs_18 regular">
+                                        <?php
+                                            $price = $_item_product->getPrice();
+                                            $price_final = $_item_product->getPriceInfo()->getPrice('final_price')->getValue();
+                                            if ($price && $price_final && $price_final < $price) {
+                                                $price_all += $price_final;
+                                                $price = (float)$price;
+                                                $price_final = (float)$price_final;
+                                            } else {
+                                                $price_all += $price;
+                                            }
+                                        ?>
+                                        <?= /* @noEscape */ $block->getProductPrice($_item_product) ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php $i++; ?>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <div>
+                            <?= $block->escapeHtml(__('No options of this product are available.')) ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($_product->isSaleable()) : ?>
+                        <div class="group-addcart-action flex-layout center_vertical justify-content-center">
+                            <?php $postParams = $block->getAddToCartPostParams($_product); ?>
+                            <form data-role="tocart-form text-center" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?= $block->escapeUrl($postParams['action']) ?>" method="post">
+                                <input type="hidden" name="product" value="<?= $block->escapeHtmlAttr($postParams['data']['product']) ?>">
+                                <input type="hidden" name="<?= /* @noEscape */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?= /* @noEscape */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+                                <?= $block->getBlockHtml('formkey') ?>
+                                <button type="submit"
+                                        title="<?= $block->escapeHtml(__('Add to Cart')) ?>"
+                                        class="action tocart primary">
+                                    <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                </button>
+                            </form>
+                            <div class="group-price"><span class="pe-4 px-4 regular">|</span><?= $block->getFormatedPrice($price_all) ?></div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </li>
+        <?php endforeach ?>
+    </ol>
+
+    <?php }else{ ?>
+        <ol class="elementor__content row product-items widget-product-grouped-grid">
+            <li class="product-item">
+                <div class="product-item-info image_hover_effects--zoom">
+                    <div class="grouped-item flex-layout center_vertical">
+                        <div class="item item-order-count me-4 pe-2">
+                            <span class="radius-50 medium heading_color">1</span>
+                        </div>
+                        <div class="item product-image me-4 pe-2">
+                            <a href="#" class="product-item-photo">
+                                <span class="product-image-container" style="width: 500px;" data-hover="image_hover_effects--zoom-overlay">
+                                    <span class="product-image-wrapper" style="padding-bottom: 133.25%;">
+                                        <img class="product-image-photo lazyloaded" loading="lazy" width="700" height="892" alt="Sample product" src="//blueskytechmage.com/place_holder/kalles/place_holder-watch_1.png">
+                                    </span>
+                                </span>    					
+                            </a>
+                        </div>
+                        <div class="col group-item-price flex-layout space-between">
+                            <div class="item product-name me-4">
+                                <strong class="product-item-name bold uppercase "><a href="#">The Perform Cropped Top</a></strong>
+                            </div>
+                            <div class="item product-price fs_18 regular price-box price-final_price">
+                                <span class="price-wrapper "><span class="price">$15.00</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="product-item">
+                <div class="product-item-info image_hover_effects--zoom">
+                    <div class="grouped-item flex-layout center_vertical">
+                        <div class="item item-order-count me-4 pe-2">
+                            <span class="radius-50 medium heading_color">2</span>
+                        </div>
+                        <div class="item product-image me-4 pe-2">
+                            <a href="#" class="product-item-photo">
+                                <span class="product-image-container" style="width: 500px;" data-hover="image_hover_effects--zoom-overlay">
+                                    <span class="product-image-wrapper" style="padding-bottom: 133.25%;">
+                                        <img class="product-image-photo lazyloaded" loading="lazy" width="700" height="892" alt="Sample product" src="//blueskytechmage.com/place_holder/kalles/place_holder-cloth_1.png">
+                                    </span>
+                                </span>    					
+                            </a>
+                        </div>
+                        <div class="col group-item-price flex-layout space-between">
+                            <div class="item product-name me-4">
+                                <strong class="product-item-name bold uppercase "><a href="#">The Perform Cropped Top</a></strong>
+                            </div>
+                            <div class="item product-price fs_18 regular price-box price-final_price">
+                                <span class="price-wrapper "><span class="price">$30.00</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="product-item">
+                <div class="product-item-info image_hover_effects--zoom">
+                    <div class="grouped-item flex-layout center_vertical">
+                        <div class="item item-order-count me-4 pe-2">
+                            <span class="radius-50 medium heading_color">3</span>
+                        </div>
+                        <div class="item product-image me-4 pe-2">
+                            <a href="#" class="product-item-photo">
+                                <span class="product-image-container" style="width: 500px;" data-hover="image_hover_effects--zoom-overlay">
+                                    <span class="product-image-wrapper" style="padding-bottom: 133.25%;">
+                                        <img class="product-image-photo lazyloaded" loading="lazy" width="700" height="892" alt="Sample product" src="//blueskytechmage.com/place_holder/kalles/place_holder-backpack_1.png">
+                                    </span>
+                                </span>    					
+                            </a>
+                        </div>
+                        <div class="col group-item-price flex-layout space-between">
+                            <div class="item product-name me-4">
+                                <strong class="product-item-name bold uppercase "><a href="#">The Perform Cropped Top</a></strong>
+                            </div>
+                            <div class="item product-price fs_18 regular price-box price-final_price">
+                                <span class="price-wrapper "><span class="price">$20.00</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+	<?php } ?>
+</div>
+

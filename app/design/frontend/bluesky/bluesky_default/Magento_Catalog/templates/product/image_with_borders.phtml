@@ -1,0 +1,53 @@
+<?php
+$width = (int)$block->getWidth();
+$paddingBottom = $block->getRatio() * 100;
+$_helper = $this->helper('Blueskytechco\Themeoption\Helper\Product');
+$_product = $_helper->getProductById($block->getProductId());
+?> 
+<span class="product-image-container product-image-container-<?= /* @noEscape */ $block->getProductId() ?>" style="width: <?= $width ;?>px;" data-hover="image_hover_effects--zoom">
+    <span class="product-image-wrapper" style="padding-bottom: <?= $paddingBottom ;?>%;">
+        <?php if(!$_helper->disableProductImagePreload()){ ?>
+            <img class="<?= $escaper->escapeHtmlAttr($block->getClass()) ?> lazyload"
+                <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
+                    <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
+                <?php endforeach; ?>
+                data-src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                loading="lazy"
+                width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
+                height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
+                alt="<?= $escaper->escapeHtmlAttr($block->getLabel()) ?>"/>
+            <?php if($_product->getData('hover') && $_product->getData('hover') != '' && $_product->getData('hover') != 'no_selection' && $_helper->enableImageHover()){ ?>
+            <img class="products-image-hover lazyload" data-src="<?= $_helper->resizeImage($_product, 'hover', $block->getWidth(), $block->getHeight()) ?>"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                loading="lazy"
+                width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
+                height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
+                alt="<?= $escaper->escapeHtmlAttr($block->getLabel()) ?>"/>
+            <?php } ?>
+        <?php }else{ ?>
+            <img class="<?= $escaper->escapeHtmlAttr($block->getClass()) ?> lazyload"
+                <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
+                    <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
+                <?php endforeach; ?>
+                data-src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
+                src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
+                loading="lazy"
+                width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
+                height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
+                alt="<?= $escaper->escapeHtmlAttr($block->getLabel()) ?>"/>
+            <?php if($_product->getData('hover') && $_product->getData('hover') != '' && $_product->getData('hover') != 'no_selection' && $_helper->enableImageHover()){ ?>
+            <img class="products-image-hover lazyload" data-src="<?= $_helper->resizeImage($_product, 'hover', $block->getWidth(), $block->getHeight()) ?>"
+                src="<?= $_helper->resizeImage($_product, 'hover', $block->getWidth(), $block->getHeight()) ?>"
+                loading="lazy"
+                width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
+                height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
+                alt="<?= $escaper->escapeHtmlAttr($block->getLabel()) ?>"/>
+            <?php } ?>
+        <?php } ?>
+    </span>
+    <span class="product-label">
+        <?= $_helper->getProductSaleLabel($_product) ?>
+        <?= $_helper->getProductNewLabel($_product) ?>
+    </span>
+</span>

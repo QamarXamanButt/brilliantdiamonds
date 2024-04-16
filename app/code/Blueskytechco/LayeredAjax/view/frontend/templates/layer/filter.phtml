@@ -1,0 +1,150 @@
+<?php
+/**
+ * layer filter
+ *
+ * @var $viewModel \Blueskytechco\LayeredAjax\ViewModel\Layered
+ */
+?>
+<?php
+    $view_model = $block->getViewModel();
+    $helper = $this->helper('Blueskytechco\LayeredAjax\Helper\Data');
+    $show_more = $helper->isEnabledLessMore();
+    $show_more_number = (int)$helper->numberItem();
+    if ($show_more && $show_more_number) {
+        if (is_int($show_more_number) && $show_more_number > 0) {
+            $show_more = true;
+        } else {
+            $show_more = false;
+        }
+    } else {
+        $show_more = false;
+    }
+    $position_quickview = $view_model->getDataQuickView('position');
+    $label_quickview = $view_model->getDataQuickView('label');
+    $class_position_quickview = $view_model->getDataQuickView('class_position')?$view_model->getDataQuickView('class_position')
+        :'[data-role=add-to-links]';
+    $nav_quickview = $view_model->getDataQuickView('nav');
+    $navdir_quickview = $view_model->getDataQuickView('navdir');
+    if ($nav_quickview == 'dots') {
+        $add_class_quickview = 'thumb_slide';
+    } else {
+        $add_class_quickview = ($navdir_quickview == 'bottom')?'horizontal_'.$navdir_quickview.'':
+            'vertical_'.$navdir_quickview.'';
+    }
+?>
+<ol class="items">
+    <?php $i = 1; ?>
+    <?php foreach ($filterItems as $filterItem): ?>
+        <?php
+        $filter = $filterItem->getFilter();
+        $attributeModel = $filter->getData('attribute_model');
+        $inputName = $filter->getRequestVar();
+        $requestValue = $block->getRequest()->getParam($inputName);
+        $requestArray = $requestValue ? explode(',', $requestValue) : [];
+        $url = in_array($filterItem->getValue(), $requestArray) ? $filterItem->getRemoveUrl() : $filterItem->getUrl();
+		if($inputName == 'cat'){
+			$ex_url = explode("cat=", $url);
+			if(isset($ex_url[1])){
+				$ex2_url = explode("%2C",$ex_url[1]);
+				if(isset($ex2_url[1])){
+					$url = $ex_url[0].'cat='.$ex2_url[1];
+				}
+			}
+		}
+        ?>
+        <?php 
+            if ($inputName == 'rating' && $filterItem->getCount() < 1) {
+                continue;
+            }
+        ?>
+        <li class="item <?= ($show_more && ($i > $show_more_number))?'orther-link':'' ?>" <?= ($show_more && ($i > $show_more_number))?'style="display:none;"':'' ?>>
+            <?php if($helper->isEnabledPriceRangeSliders() && $attributeModel && $attributeModel->getFrontendInput() == 'price'): ?>
+                <?php
+					$currencySymbol = $view_model->getCurrencySymbol();
+                    $priceRange = $view_model->getPriceRange();
+                    if ($priceRange) {
+                        $min = $priceRange['min'];
+                        $max = $priceRange['max'];
+                    } else {
+                        $max = $filter->getLayer()->getProductCollection()->getMaxPrice();
+                        $min = $filter->getLayer()->getProductCollection()->getMinPrice();
+                    }
+                    list($from, $to) = $requestValue ? explode('-', $requestValue) : [$min, $max];
+                ?>
+                <div id="layered_ajax_price_attribute">
+					<input type="hidden" id="price-range-slider" data-max="<?php echo $max ?>" data-min="<?php echo $min ?>" name="price-range-slider">
+                </div>
+                <script type="text/x-magento-init">
+                    {
+                        "#layered_ajax_price_attribute": {
+                            "Blueskytechco_LayeredAjax/js/price/layeredajaxslider": {
+                                "selectedFrom": <?php echo $from ?>,
+                                "selectedTo": <?php echo $to ?>,
+                                "selectedFromMin": <?php echo $min ?>,
+                                "selectedToMax": <?php echo $max ?>,
+								"currency": "<?php echo $currencySymbol ?>",
+                                "priceFormat": <?php echo $this->helper('Magento\Tax\Helper\Data')->getPriceFormat($block->getStore()); ?>,
+                                "ajaxUrl": <?php echo $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode($filterItem->getUrl()) ?>,
+                                "quickviewUrl": "<?= $block->escapeUrl($block->getUrl('blueskytechco_quickview/product/view')); ?>",
+                                "positionQuickview": "<?= $block->escapeHtml($position_quickview) ?>",
+                                "labelQuickview": "<?= $block->escapeHtml($label_quickview) ?>",
+                                "classPositionQuickview": "<?= $block->escapeHtmlAttr($class_position_quickview) ?>",
+                                "addClassQuickview": "<?= $block->escapeHtmlAttr($add_class_quickview) ?>"
+                            }
+                        }
+                    }
+                </script>
+                <?php break; ?>
+            <?php else: ?>
+				<?php if ($filterItem->getCount() > 0): ?>
+                    <a <?php echo in_array($filterItem->getValue(), $requestArray) ? 'class="active"' : ''  ?> href="<?php echo $block->escapeUrl($url) ?>">
+                        <?php if($inputName != 'cat'): ?>
+                            <input type="checkbox" <?php echo in_array($filterItem->getValue(), $requestArray) ? 'checked="checked"' : ''  ?> />
+                        <?php endif; ?>
+						<?php if($inputName == 'rating') { ?>
+							<?php
+								if ($filterItem->getValue() == '1') {
+									$width = 20;
+								} elseif ($filterItem->getValue() == '2') {
+									$width = 40;
+								} elseif ($filterItem->getValue() == '3') {
+									$width = 60;
+								} elseif ($filterItem->getValue() == '4') {
+									$width = 80;
+								} else {
+									$width = 100;
+								}
+							?>
+							<div class="rating-summary">
+								<div class="rating-result" title="100%">
+									<span style="width:<?= $width ?>%">
+                                        <span><span>100</span>% of <span>100</span></span>
+                                    </span>
+								</div>
+							</div>
+						<?php } else { ?>
+							<?php echo $filterItem->getLabel() ?>
+						<?php } ?>
+                        <?php if ($helper->showCountItem()): ?>
+                            <span class="count"><?php echo $filterItem->getCount()?><span class="filter-count-label">
+								<?php if ($filterItem->getCount() == 1):?> <?php echo __('item')?><?php else:?> <?php echo __('items') ?><?php endif;?></span></span>
+                        <?php endif; ?>
+					</a>
+                <?php else:?>
+                    <input type="checkbox" disabled="disabled" />
+                    <?php echo $filterItem->getLabel() ?>
+                    <?php if ($helper->showCountItem()): ?>
+                        <span class="count"><?php echo $filterItem->getCount()?><span class="filter-count-label">
+							<?php if ($filterItem->getCount() == 1):?><?php echo __('item')?><?php else:?><?php echo __('items') ?><?php endif;?></span></span>
+                    <?php endif; ?>
+                <?php endif; ?>
+            <?php endif; ?>
+        </li>
+        <?php $i++; ?>
+    <?php endforeach ?>
+    <?php if ($show_more && ($i > ($show_more_number + 1))) { ?>
+        <li class="expand-item-link item">
+            <a href="javascript:void(0);" class="level-top"><?php echo __('Show More') ?></a>
+        </li>
+    <?php } ?>
+</ol>

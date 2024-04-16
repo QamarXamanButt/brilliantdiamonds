@@ -1,0 +1,246 @@
+// Copyright by Blueskytechco
+// ________________________________________
+//
+
+// Variables
+
+@bls_countdown-timers-border-radius: false;
+@bls_countdown-timers-padding: 4px 20px;
+@bls_countdown-timers-bkg: #dd3327;
+@bls_countdown-timers-color: @color-white;
+@bls_countdown-timers-font-size: var(--bls_countdown-timers-font-size, 1.4rem);
+@bls_countdown-timers-font-weight: 600;
+@bls_countdown-sold-percent-bkg: #dd3327;
+@bls_countdown-timers-margin: 2rem 0 0;
+@bls_countdow-item-name-font-size: 1.4rem;
+
+// Bls Daily deal gobal styles
+
+& when (@media-common =true) {
+    .header-daily-deal-container {
+        --module_margin_bottom: 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid @border-color__base;
+        margin-bottom: 3rem;
+        justify-content: space-between;
+
+        .container-countdown-time {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media only screen and (max-width: (@screen__m - 1)) {
+                --bls_countdown-timers-font-size: 1.6rem;
+            }
+
+            .final-text-daily-deal {
+                padding-right: 1rem;
+            }
+
+            .final-date-daily-deal {
+                display: inline-flex;
+
+                .countdown_ti {
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                >span {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    .lib-css(background-color, @bls_countdown-timers-bkg);
+                    .lib-css(color, @bls_countdown-timers-color);
+                    .lib-css(font-size, @bls_countdown-timers-font-size);
+                    .lib-css(font-weight, @bls_countdown-timers-font-weight);
+                    border-radius: 3px;
+                    padding: 2px 5px;
+                    min-width: 4.5rem;
+                    min-height: 3.8rem;
+
+                    &:not(:last-child) {
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .container-sold-salable-quantity {
+
+        .container-sold-percent {
+            width: 100%;
+            height: 10px;
+            background-color: #eaeaea;
+            margin: 10px 0 0;
+            display: inline-block;
+
+            .sold-percent {
+                .lib-css(background-color, @bls_countdown-sold-percent-bkg );
+                height: 100%;
+            }
+        }
+
+        .container-sold-number {
+            .lib-font-size(14px);
+            color: #383838;
+
+            .number-sold {
+                font-weight: 600;
+                padding-left: 2px;
+            }
+        }
+    }
+
+    .percent-2,
+    .percent-3 {
+        .container-sold-salable-quantity {
+            .container-sold-percent {
+                height: 8px;
+                border-radius: 5px;
+                background-color: #ededed;
+
+                .sold-percent {
+                    background-image: -webkit-linear-gradient(215deg, #5fbd74 0%, #b7e0c0 100%);
+                    background-image: linear-gradient(235deg, #5fbd74 0%, #b7e0c0 100%);
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    .percent-3 {
+        .container-sold-salable-quantity {
+            .container-sold-percent {
+                .sold-percent {
+                    background-image: -webkit-linear-gradient(215deg, #000000 0%, #e9e9e9 100%);
+                    background-image: linear-gradient(235deg, #000000 0%, #e9e9e9 100%);
+                }
+            }
+        }
+    }
+
+    // Style 2
+    [data-daily-style="daily__style-3"] {
+        .header-daily-deal-container {
+            .flex();
+            justify-content: space-between;
+
+            .elementor__header {
+                margin-right: 2.5rem;
+                margin-bottom: 0;
+            }
+        }
+
+        // Flash sale
+        .products-grid {
+
+            .widget-daily-deal-slider {
+                border: 1px solid @border-color__base;
+                border-left: 0;
+
+                .product-item {
+                    @box-shadow: 1px 0 0 0 @border-color__base,
+                    0 0px 0 0 @border-color__base,
+                    1px 0px 0 0 @border-color__base,
+                    /* Just to fix the corner */
+                    1px 0 0 0 @border-color__base inset,
+                    0 0px 0 0 @border-color__base inset;
+                    .lib-css(box-shadow, @box-shadow, 1);
+                }
+
+                .product-item-info {
+                    .flex(@_flex-wrap: nowrap;
+                    );
+                    flex-direction: column-reverse;
+
+                    .container-sold-salable-quantity {
+                        display: none;
+                    }
+
+                    .product-item-details {
+                        margin-bottom: 0 !important;
+
+                        .product-item-name,
+                        .price-box .price {
+                            font-size: inherit;
+                        }
+                    }
+                }
+
+                .container-sold-salable-quantity {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    [data-daily-style="daily__style-2"] {
+        .header-daily-deal-container {
+            border: 0;
+            margin: 0;
+
+            .container-countdown-time {
+                background: none;
+                font-weight: normal;
+                padding: 0;
+
+                .final-date-daily-deal {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    >span {
+                        display: flex !important;
+                        flex-direction: column;
+                        margin: 0 30px;
+                        position: relative;
+                        min-width: 64px;
+
+                        &::after {
+                            content: ":";
+                            padding-left: 5px;
+                            position: absolute;
+                            right: -33px;
+                            top: 0;
+                            opacity: .6;
+                            font-size: 30px;
+                        }
+                    }
+
+                    .countdown_ti {
+                        font-size: 60px;
+                        font-family: var(--heading__font-family__base, false);
+                        font-weight: 300;
+                        line-height: 1;
+                        margin: 0 0 5px;
+                    }
+
+                    .countdown_tx {
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                    }
+
+                    @media only screen and (max-width: (@screen__s - 1)) {
+                        >span {
+                            margin: 0 10px;
+
+                            &::after {
+                                right: -15px;
+                                top: -14px;
+                            }
+                        }
+
+                        .countdown_ti {
+                            font-size: 30px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<div class="header-container layout-3">
+	<?php if($block->isEnableTopBar()){ ?>
+	<div class="topbar d-block border_bottom">
+		<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('default_topbar_text_slider')->toHtml(); ?> 
+	</div>
+	<?php } ?>
+	<div class="sticky-header">
+		<div class="layout3_header_middle">
+			<div class="header_middle header_padding container flex-layout space-between center_vertical flex-nowrap">
+				<div class="col_left flex-mb-unset d-none d-xl-block">
+					<div class="container-setting-language-currency">
+						<?php echo $this->getChildHtml("store_language"); ?>  
+						<?php echo $this->getChildHtml("currency"); ?> 
+					</div>
+				</div>
+				<div class="header__logo logo-container">
+					<?php echo $this->getChildHtml('logo'); ?>
+				</div>
+				<div class="header__action col_right flex-layout flex-end flex-nowrap">
+					<div class="flex-layout center_vertical flex-end flex-nowrap">
+						<?php echo $this->getChildHtml("rokan-search-autocomplete");?>
+						<ul class="flex-layout header__action-default center_vertical no-wrap-desktop">
+							<li class="account-link-header d-none d-xl-block">
+								<?php echo $this->getChildHtml("header.links"); ?>
+							</li>
+							<?php echo $block->getLayout()->createBlock('Magento\Wishlist\Block\Link')->setTemplate('Magento_Wishlist::link.phtml')->toHtml();?>
+							<li class="minicart-li-content-show-hide fixed-minicart">
+								<?php echo $this->getChildHtml('minicart'); ?>
+							</li>
+							<?php if(!$block->isEnableTopBar()){ ?>
+								<li class="setting-view d-none">
+									<label for="modal-mobile-input">					
+										<svg width="15" height="13" viewBox="0 0 15 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M15 1.08333C15 0.48503 14.5203 0 13.9286 0H1.07143C0.4797 0 0 0.48503 0 1.08333C0 1.68164 0.4797 2.16667 1.07143 2.16667H13.9286C14.5203 2.16667 15 1.68164 15 1.08333ZM15 6.5C15 5.90168 14.5203 5.41667 13.9286 5.41667H5.35714C4.7654 5.41667 4.28571 5.90168 4.28571 6.5C4.28571 7.09833 4.76541 7.58333 5.35714 7.58333H13.9286C14.5203 7.58333 15 7.09833 15 6.5ZM13.9286 10.8333C14.5203 10.8333 15 11.3183 15 11.9167C15 12.515 14.5203 13 13.9286 13H1.07143C0.4797 13 0 12.515 0 11.9167C0 11.3183 0.4797 10.8333 1.07143 10.8333H13.9286Z" fill="currentColor"/>
+										</svg>
+
+									</label>
+								</li>
+							<?php } ?>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="for-full-width-menu blueskytechco-header border_top">
+			<div class="header__menu text-center">
+				<?php echo $this->getChildHtml("horizontal.menu"); ?>
+			</div>
+		</div>
+	</div>
+<?php //echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('free-earring-top-banner')->toHtml(); ?>
+</div>
+
+
+<!-- header setting modal -->
+<?php if(!$block->isEnableTopBar()){ ?>
+	<div class="header__setting--modal">
+		<input type="checkbox" hidden class="modal_input" name="s" id="modal-mobile-input">
+		<label for="modal-mobile-input" class="nav_overlay "></label>
+		<div class="header__setting">
+			<div class="settings-head">
+			<label for="modal-mobile-input" class="settings-close"><span class="action close no-shadow"></span></label>
+			</div>
+			<div class="settings-inner">
+				<?php echo $this->getChildHtml("store_language"); ?>
+				<?php echo $this->getChildHtml("currency"); ?>
+			</div>
+		</div>
+	</div>
+<?php } ?>

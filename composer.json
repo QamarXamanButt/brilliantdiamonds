@@ -24,6 +24,7 @@
         "ampersand/magento2-disable-stock-reservation": "^1.3",
         "apptrian/meta-pixel-and-conversions-api": "^5.0",
         "godatafeed/godatafeed-feed-management": "^2.0",
+        "hyva-themes/magento2-default-theme": "^1.3",
         "katapult/module-katapult-gateway": "2.5.1",
         "klaviyo/magento2-extension": "^4.0",
         "litespeed/module-litemage": "^2.2",
@@ -93,6 +94,10 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
+        "private-packagist": {
+            "type": "composer",
+            "url": "https://hyva-themes.repo.packagist.com/brilliantdiamonds/"
+        },
         "amasty": {
             "type": "composer",
             "url": "https://composer.amasty.com/community/"

@@ -20,13 +20,13 @@
 ?>
 <?php if ($block->canShowBlock()) : ?>
     <div class="block filter bluesky_filter" id="layered-filter-block">
-        <div class="cat_filter">
+        <div class="cat_filter hidden">
             <a href="javascript:;" class="btn_filter">
                 <span><?= $block->escapeHtml(__('Filter')) ?></span>
             </a>
         </div>
         <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
-        <div class="block-title filter-title" data-count="<?= /* @noEscape */ $filtered ?>">
+        <div class="block-title filter-title hidden" data-count="<?= /* @noEscape */ $filtered ?>">
             <strong data-role="title"><?= $block->escapeHtml(__('Shop By')); ?></strong>
         </div>
         <div class="block-content filter-content">
@@ -44,7 +44,7 @@
                 <?php if ($filter->getItemsCount()) : ?>
                         <?php if (!$wrapOptions) : ?>
                             <div class="filter-area">
-                            <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle"><?= $block->escapeHtml(__('Filter')) ?></strong>
+                            <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle hidden"><?= $block->escapeHtml(__('Filter')) ?></strong>
                             <div class="filter-options" id="narrow-by-list">
                         <?php $wrapOptions = true; endif; ?>
                         <?php
@@ -53,14 +53,14 @@
                             }
                         ?>
                         <div class="filter-options-item <?= $opend_desktop?'active':'' ?>">
-                            <div class="filter-options-title">
+                            <div class="filter-options-title text-lg font-medium mb-3 mt-3">
                                 <?php if ($filter->getRequestVar() == 'rating' && $rating_lable) { ?>
                                     <?php /* @escapeNotVerified */ echo __($rating_lable) ?>
                                 <?php } else { ?>
                                     <?php /* @escapeNotVerified */ echo __($filter->getName()) ?>
                                 <?php } ?>
                             </div>
-                            <div class="filter-options-content" style="display:<?= $opend_desktop?'block':'none' ?>"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></div>
+                            <div class="filter-options-content border-b pb-6" style="display:<?= $opend_desktop?'block':'none' ?>"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></div>
                         </div>
                 <?php endif; ?>
             <?php endforeach; ?>
@@ -76,8 +76,8 @@
                                 "labelQuickview": "<?= $block->escapeHtml($label_quickview) ?>",
                                 "classPositionQuickview": "<?= $block->escapeHtmlAttr($class_position_quickview) ?>",
                                 "addClassQuickview": "<?= $block->escapeHtmlAttr($add_class_quickview) ?>"
-                            } 
-						} 
+                            }
+						}
 					}
 				</script>
             <?php else : ?>

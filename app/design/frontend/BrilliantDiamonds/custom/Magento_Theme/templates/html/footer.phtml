@@ -1,0 +1,33 @@
+<?php
+/**
+ * Hyvä Themes - https://hyva.io
+ * Copyright © Hyvä Themes 2020-present. All rights reserved.
+ * This product is licensed per Magento install
+ * See https://hyva.io/license
+ */
+
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\Escaper;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+?>
+<div class="text-gray-700 body-font bg-bgFooter">
+    <div class="container py-8 mx-auto px-4">
+        <div class="flex flex-wrap order-first gap-y-16">
+            <?php foreach ($block->getChildNames() as $childName): ?>
+                <?= $childName !== 'footer-copyright' ? $block->getBlockHtml($childName) : '' ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="border-t border-container">
+        <div class="container py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a
+                class="flex title-font items-center md:justify-start justify-center">
+                <span class="ml-3 text-md">© 2009-Present Agape Diamonds LLC. All Rights Reserved</span>
+            </a>
+        </div>
+    </div>
+</div>

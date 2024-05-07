@@ -1,0 +1,80 @@
+<?php declare(strict_types=1);
+
+/** @var Details $block */
+/** @var Escaper $escaper */
+
+use Magento\Catalog\Block\Product\View\Details;
+use Magento\Framework\Escaper;
+
+$titleRenderer = $block->getChildBlock('product.section.title.renderer');
+$defaultTitleTemplate = $titleRenderer->getTemplate();
+
+?>
+<div class="flex gap-8 justify-center">
+    <div><a class="pdp_desc_tabs py-2 px-4  shadow-sm active" onclick="openCity('description',event)">Details</a></div>
+    <div><a class="pdp_desc_tabs py-2 px-4 shadow-sm" onclick="openCity('product.attributes',event)">More Information</a></div>
+    <div><a class="pdp_desc_tabs py-2 px-4 shadow-sm" onclick="openCity('customer-review-list',event)">Reviews</a></div>
+    <div><a class="pdp_desc_tabs py-2 px-4 shadow-sm" onclick="openCity('review-form',event)">Review Form</a></div>
+</div>
+
+<div class="product attribute description">
+<?php
+foreach ($block->getGroupSortedChildNames('detailed_info', '') as $sectionName) {
+    $sectionBlock  = $block->getLayout()->getBlock($sectionName);
+    $sectionHtml   = (string) $sectionBlock->toHtml();
+    $titleTemplate = $sectionBlock->getData('title_template') ?? $defaultTitleTemplate;
+
+    if (empty(trim($sectionHtml))) {
+        continue;
+    }
+    ?>
+    <section class="city" id="<?= $escaper->escapeHtmlAttr($sectionBlock->getNameInLayout()) ?>">
+        <?=
+            $titleRenderer->setTemplate($titleTemplate)
+                          ->assign('sectionBlock', $sectionBlock)
+                          ->toHtml()
+        ?>
+        <div class="w-full border-b pt-6">
+            <?= /** @noEscape  */ $sectionHtml ?>
+        </div>
+    </section>
+<?php } ?>
+</div>
+<script>
+    function openCity(cityName,e) {
+        let i,j;
+        let desc = document.getElementsByClassName("city");
+        let pdp_desc_tabs = document.getElementsByClassName("pdp_desc_tabs");
+        for (i = 0; i < desc.length; i++) {
+            desc[i].style.display = "none";
+            pdp_desc_tabs[i].classList.remove('active');
+        }
+        e.target.classList.add('active');
+
+        document.getElementById(cityName).style.display = "block";
+
+    }
+
+</script>
+<style>
+    .city{
+        display:none;
+    }
+    .city:nth-child(1){
+        display:block;
+    }
+    .pdp_desc_tabs{
+        background: #f5f5f5;
+        color: #181717;
+        cursor:pointer;
+    }
+    .pdp_desc_tabs:hover{
+        background: #464646;
+        color:#fff;
+    }
+    .pdp_desc_tabs.active{
+        background: #464646;
+        color:#fff;
+    }
+
+</style>

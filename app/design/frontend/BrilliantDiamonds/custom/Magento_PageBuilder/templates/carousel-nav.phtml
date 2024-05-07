@@ -1,0 +1,38 @@
+<?php
+/**
+ * Hyvä Themes - https://hyva.io
+ * Copyright © Hyvä Themes 2020-present. All rights reserved.
+ * This product is licensed per Magento install
+ * See https://hyva.io/license
+ */
+
+declare(strict_types=1);
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use Hyva\Theme\ViewModel\HeroiconsOutline;
+use Magento\Framework\View\Element\Template;
+use Magento\Framework\Escaper;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var ViewModelRegistry $viewModels */
+
+/** @var HeroiconsOutline $heroicons */
+$heroicons = $viewModels->require(HeroiconsOutline::class);
+?>
+
+<div class="carousel-nav flex items-center justify-center flex-1 p-4">
+    <button
+        aria-label="<?= $escaper->escapeHtml(__('Previous')) ?>"
+        class="glider-prev bestSeller_preve absolute left-0 w-10 h-10 mr-1 text-black rounded-full bg-white flex items-center justify-center shadow outline-none focus:outline-none hidden">
+        <?= $heroicons->chevronLeftHtml(); ?>
+    </button>
+    <div role="tablist" class="glider-dots select-none flex flex-wrap mx-1 justify-center p-0 focus:outline-none"></div>
+    <button
+        aria-label="<?= $escaper->escapeHtml(__('Next')) ?>"
+        class="glider-next bestSeller_preve absolute right-0 w-10 h-10 bg-white flex items-center justify-center shadow ml-1 text-black rounded-full outline-none focus:outline-none hidden">
+        <?= $heroicons->chevronRightHtml(); ?>
+    </button>
+</div>
+
+

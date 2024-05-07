@@ -1,0 +1,37 @@
+
+.product-item {
+    .price-container {
+        @apply block;
+
+        .price {
+            @apply font-semibold text-lg;
+        }
+
+        .price-label {
+            @apply text-sm;
+        }
+    }
+
+    .special-price .price-container .price-label {
+        @apply sr-only;
+    }
+
+    .old-price .price-container {
+        @apply text-gray-500;
+
+        .price {
+            @apply font-normal text-base;
+        }
+    }
+}
+/* Category Page */
+.filter-options-content a:hover {
+    color: #705407;
+    text-decoration: none;
+}
+.catalog-product-view .breadcrumbs{
+    margin-top: 40px;
+}
+.catalog-product-view .breadcrumbs .items{
+    justify-content: start;
+}

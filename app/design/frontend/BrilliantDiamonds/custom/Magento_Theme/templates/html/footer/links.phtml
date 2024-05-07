@@ -1,0 +1,106 @@
+<?php
+/**
+ * Hyvä Themes - https://hyva.io
+ * Copyright © Hyvä Themes 2020-present. All rights reserved.
+ * This product is licensed per Magento install
+ * See https://hyva.io/license
+ */
+
+declare(strict_types=1);
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use Hyva\Theme\ViewModel\Customer;
+use Hyva\Theme\ViewModel\StoreConfig;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var ViewModelRegistry $viewModels */
+
+/** @var Customer $customer */
+$customer = $viewModels->require(Customer::class);
+/** @var StoreConfig $storeConfig */
+$storeConfig = $viewModels->require(StoreConfig::class);
+?>
+<div class="w-full flex flex-wrap pr-4">
+    <div class="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-6">
+      <div class="leading-7">
+          <div>
+              <a href="<?= $escaper->escapeUrl($block->getUrl('/')) ?>"><img src="<?php echo $this->getViewFileUrl('images/footer-logo.png'); ?>" alt="footer-logo" class="w-48 mb-6"></a>
+          </div>
+          <div><?= $escaper->escapeHtml(__('14341 N Dale Mabry Hwy,')) ?></div>
+          <div><?= $escaper->escapeHtml(__('Tampa, FL 33618, United States.')) ?></div>
+
+          <div>
+              <a href="tel:1-800-861-5144"><?= $escaper->escapeHtml(__('1-800-861-5144')) ?></a>
+         </div>
+
+            <div><?= $escaper->escapeHtml(__('Email Us')) ?></div>
+
+          <div>
+              <ul class="social-link flex gap-2 mt-3">
+                  <li class="w-8 h-8 rounded-full border flex items-center justify-center border border-black"><a class="my-tooltip-bottom tooltip-center ml__10 fs_20" href="https://www.facebook.com/agapediamonds/"> <span class="fab fa-facebook-f tooltip-toggle"></span> </a></li>
+                  <li class="w-8 h-8 rounded-full border flex items-center justify-center border border-black"><a class="my-tooltip-bottom tooltip-center fs_20" href="https://twitter.com/agape_diamonds?lang=en"> <span class="fab fa-twitter"></span></a></li>
+                  <li class="w-8 h-8 rounded-full border flex items-center justify-center border border-black"><a class="my-tooltip-bottom tooltip-center fs_20" href="https://www.instagram.com/agapediamonds/"> <span class="fab fa-instagram"></span> </a></li>
+                  <li class="w-8 h-8 rounded-full border flex items-center justify-center border border-black"><a class="my-tooltip-bottom tooltip-center fs_20" href="https://www.tiktok.com/discover/agape-diamonds"> <span class="fab fa-tiktok"></span></a></li>
+                  <li class="w-8 h-8 rounded-full border flex items-center justify-center border border-black"><a class="my-tooltip-bottom tooltip-center fs_20" href="https://www.pinterest.com/agape_diamonds/"> <span class="fab fa-pinterest"></span> </a></li>
+              </ul>
+          </div>
+          <div class="payment mt-4">
+              <img src="<?php echo $this->getViewFileUrl('images/payment.png'); ?>" alt="payment" />
+          </div>
+      </div>
+        <div>
+            <h2 class="text-lg leading-5 tracking-wider uppercase mb-6">
+                Company
+            </h2>
+            <p class="leading-7">
+                <a tabindex="0" title="About Agape Diamonds" href="<?= $escaper->escapeUrl($block->getUrl('about-agape-diamonds')) ?>">About Us</a>
+                <br>
+                <a tabindex="0" title="10 Reasons to Shop Agape" href="<?= $escaper->escapeUrl($block->getUrl('agape-diamonds-10-reasons-to-shop')) ?>">10 Reasons to Shop Agape</a>
+                <br>
+                <a tabindex="0" title="Why Shop Agape" href="<?= $escaper->escapeUrl($block->getUrl('why-shop-agape-diamonds')) ?>">Why Shop Agape</a>
+                <br>
+                <a tabindex="0" title="FAQ's" href="<?= $escaper->escapeUrl($block->getUrl('faqs')) ?>">FAQ's</a>
+                <br>
+                <a tabindex="0" title="Financing" href="<?= $escaper->escapeUrl($block->getUrl('financing-with-agape-diamonds')) ?>">Financing</a>
+                <br>
+                <a tabindex="0" title="Risk Free Shopping" href="<?= $escaper->escapeUrl($block->getUrl('risk-free-shopping')) ?>">Risk Free Shopping</a>
+                <br>
+                <a tabindex="0" title="Education" href="<?= $escaper->escapeUrl($block->getUrl('diamond-education')) ?>">Education</a>
+                <br>
+                <a tabindex="0" title="Agape Diamonds Reviews" href="<?= $escaper->escapeUrl($block->getUrl('agape_diamonds_reviews')) ?>">Agape Diamonds Reviews</a>
+            </p>
+        </div>
+        <div>
+            <h2 class="text-lg leading-5 tracking-wider uppercase mb-6">
+                Policies
+            </h2>
+            <p class="leading-7"><a tabindex="0" title="Agape Diamonds Lifetime Warranty" href="<?= $escaper->escapeUrl($block->getUrl('lifetime-warranty-1')) ?>">Lifetime Warranty</a>
+            <br><a tabindex="0" title="Agape Diamonds Return Policy" href="<?= $escaper->escapeUrl($block->getUrl('return-policy')) ?>">Return Policy</a>
+           <br><a tabindex="0" title="Terms Of Use" href="<?= $escaper->escapeUrl($block->getUrl('terms-of-use')) ?>">Terms Of Use</a>
+    <br><a tabindex="0" title="Privacy Notice" href="<?= $escaper->escapeUrl($block->getUrl('privacy-policy-agape-diamonds')) ?>">Privacy Notice</a><br>
+    <a tabindex="0" title="Social Media" href="<?= $escaper->escapeUrl($block->getUrl('social-media-community-guidelines')) ?>">Social Media</a><br>
+    <a tabindex="0" title="Advertising Partners" href="<?= $escaper->escapeUrl($block->getUrl('advertising-partner-guidelines')) ?>">Advertising Partners</a><br>
+    <a tabindex="0" title="Advertising Policies" href="<?= $escaper->escapeUrl($block->getUrl('advertising-policy')) ?>">Advertising Policies</a><br>
+    <a tabindex="0" title="Security" href="<?= $escaper->escapeUrl($block->getUrl('agape-diamonds-security')) ?>">Security</a><br>
+                <a tabindex="0" title="AML Policy" href="<?= $escaper->escapeUrl($block->getUrl('aml-policy')) ?>">AML Policy</a></p>
+
+        </div>
+        <div>
+            <h2 class="text-lg leading-5 tracking-wider uppercase mb-6">
+                Customer Service
+            </h2>
+            <p class="leading-7">
+                <a tabindex="0" title="Contact Agape Diamonds" href="<?= $escaper->escapeUrl($block->getUrl('contact-agape-diamonds')) ?>">Contact Us</a>
+                <br><a tabindex="0" title="Account Sign In" href="<?= $escaper->escapeUrl($block->getUrl('customer/account/login')) ?>">Account Sign In</a>
+                <br><a tabindex="0" href="<?= $escaper->escapeUrl($block->getUrl('custom-engagement-ring-designs')) ?>">Custom Design Studio</a>
+                <br><a tabindex="0" title="Exchanges or Services" href="<?= $escaper->escapeUrl($block->getUrl('agape-diamonds-service-request')) ?>">Exchanges or Services</a>
+                <br><a tabindex="0" title="Agape Diamonds Jewelry Care" href="<?= $escaper->escapeUrl($block->getUrl('agape-diamonds-simulated-diamond-jewelry-care')) ?>">Jewelry Care</a>
+                <br><a tabindex="0" title="Ring Sizing Guide" href="<?= $escaper->escapeUrl($block->getUrl('ring-sizing-guide')) ?>">Ring Sizing Guide</a>
+                <br><a tabindex="0" title="Shipping &amp; Packaging" href="<?= $escaper->escapeUrl($block->getUrl('shipping-packaging')) ?>">Shipping &amp; Packaging</a>
+            </p>
+        </div>
+    </div>
+</div>

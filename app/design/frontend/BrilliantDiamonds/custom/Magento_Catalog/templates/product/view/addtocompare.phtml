@@ -1,0 +1,75 @@
+<?php declare(strict_types=1);
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use Hyva\Theme\ViewModel\CurrentProduct;
+use Hyva\Theme\ViewModel\HeroiconsOutline;
+use Hyva\Theme\ViewModel\ProductCompare;
+use Magento\Catalog\Model\Product;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var ViewModelRegistry $viewModels */
+
+/** @var ProductCompare $compareViewModel */
+$compareViewModel = $viewModels->require(ProductCompare::class);
+
+/** @var HeroiconsOutline $heroicons */
+$heroicons = $viewModels->require(HeroiconsOutline::class);
+
+/** @var CurrentProduct $currentProduct */
+$currentProduct = $viewModels->require(CurrentProduct::class);
+
+/** @var Product $product */
+$product = $currentProduct->get();
+
+if (!$product->getId() || !$compareViewModel->showOnProductPage()) {
+    return;
+}
+?>
+<script>
+    function initCompareOnProductView() {
+        return {
+            addToCompare: function (productId) {
+                const formKey = hyva.getFormKey();
+                const postUrl = BASE_URL + 'catalog/product_compare/add/';
+
+                fetch(postUrl, {
+                    "headers": {
+                        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    },
+                    "body": "form_key=" + formKey + "&product=" + productId + "&uenc=" + hyva.getUenc(),
+                    "method": "POST",
+                    "mode": "cors",
+                    "credentials": "include"
+                }).then(function (response) {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    }
+                }).catch(function (error) {
+                    typeof window.dispatchMessages !== "undefined" && window.dispatchMessages(
+                        [{
+                            type: "error",
+                            text: error
+                        }], 5000
+                    );
+                });
+            }
+        };
+    }
+</script>
+
+<div class="flex item-center" x-data="initCompareOnProductView()"
+     @click.prevent="addToCompare(<?= (int)$product->getId() ?>)"
+     title="<?= $escaper->escapeHtmlAttr(__('Add to Compare')) ?>"
+     aria-label="<?= $escaper->escapeHtmlAttr(__('Add to Compare')) ?>"
+     id="add-to-compare"
+     data-addto="compare"
+>
+<button class="text-gray-500 hover:text-yellow-500 ml-2"
+>
+    <?= $heroicons->scaleHtml("w-5 h-5", 25, 25) ?>
+</button>
+    <span class="cursor-pointer pl-1">Add to Compare</span>
+</div>

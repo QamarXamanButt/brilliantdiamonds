@@ -32,7 +32,7 @@
             'vertical_'.$navdir_quickview.'';
     }
 ?>
-<ol class="items">
+<ol class="items leading-7">
     <?php $i = 1; ?>
     <?php foreach ($filterItems as $filterItem): ?>
         <?php
@@ -52,12 +52,12 @@
 			}
 		}
         ?>
-        <?php 
+        <?php
             if ($inputName == 'rating' && $filterItem->getCount() < 1) {
                 continue;
             }
         ?>
-        <li class="item <?= ($show_more && ($i > $show_more_number))?'orther-link':'' ?>" <?= ($show_more && ($i > $show_more_number))?'style="display:none;"':'' ?>>
+        <li class="item pb-2 <?= ($show_more && ($i > $show_more_number))?'orther-link':'' ?>" <?= ($show_more && ($i > $show_more_number))?'style="display:none;"':'' ?>>
             <?php if($helper->isEnabledPriceRangeSliders() && $attributeModel && $attributeModel->getFrontendInput() == 'price'): ?>
                 <?php
 					$currencySymbol = $view_model->getCurrencySymbol();
@@ -97,9 +97,9 @@
                 <?php break; ?>
             <?php else: ?>
 				<?php if ($filterItem->getCount() > 0): ?>
-                    <a <?php echo in_array($filterItem->getValue(), $requestArray) ? 'class="active"' : ''  ?> href="<?php echo $block->escapeUrl($url) ?>">
+                    <a class="flex items-center" <?php echo in_array($filterItem->getValue(), $requestArray) ? 'class="active"' : ''  ?> href="<?php echo $block->escapeUrl($url) ?>">
                         <?php if($inputName != 'cat'): ?>
-                            <input type="checkbox" <?php echo in_array($filterItem->getValue(), $requestArray) ? 'checked="checked"' : ''  ?> />
+                            <input type="checkbox" class="mr-2" <?php echo in_array($filterItem->getValue(), $requestArray) ? 'checked="checked"' : ''  ?> />
                         <?php endif; ?>
 						<?php if($inputName == 'rating') { ?>
 							<?php
@@ -115,7 +115,7 @@
 									$width = 100;
 								}
 							?>
-							<div class="rating-summary">
+							<div class="rating-summary pl-2">
 								<div class="rating-result" title="100%">
 									<span style="width:<?= $width ?>%">
                                         <span><span>100</span>% of <span>100</span></span>
@@ -126,8 +126,10 @@
 							<?php echo $filterItem->getLabel() ?>
 						<?php } ?>
                         <?php if ($helper->showCountItem()): ?>
-                            <span class="count"><?php echo $filterItem->getCount()?><span class="filter-count-label">
-								<?php if ($filterItem->getCount() == 1):?> <?php echo __('item')?><?php else:?> <?php echo __('items') ?><?php endif;?></span></span>
+                            <span class="count pl-2" style="color: #999;">
+                                (<?php echo $filterItem->getCount()?>)
+                                <span class="filter-count-label">
+								<?php if ($filterItem->getCount() == 1):?> <?php else:?> <?php endif;?></span></span>
                         <?php endif; ?>
 					</a>
                 <?php else:?>
@@ -143,7 +145,7 @@
         <?php $i++; ?>
     <?php endforeach ?>
     <?php if ($show_more && ($i > ($show_more_number + 1))) { ?>
-        <li class="expand-item-link item">
+        <li class="expand-item-link item underline">
             <a href="javascript:void(0);" class="level-top"><?php echo __('Show More') ?></a>
         </li>
     <?php } ?>

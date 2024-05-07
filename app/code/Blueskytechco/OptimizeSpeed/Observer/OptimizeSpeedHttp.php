@@ -31,10 +31,10 @@ class OptimizeSpeedHttp implements ObserverInterface {
         $this->_geDir = $this->_getFile->getDirectoryRead(DirectoryList::APP)->getAbsolutePath('code/Blueskytechco/OptimizeSpeed');
         $this->_parser = new \Magento\Framework\Xml\Parser();
     }
-	
+
 	public function execute(Observer $observer) {
 		$response = $observer->getResponse();
-		$this->customResponse($response);
+//		$this->customResponse($response);
     }
 
     public function customResponse($response) {
@@ -81,7 +81,7 @@ class OptimizeSpeedHttp implements ObserverInterface {
 																				$data_bgset = $bgset_images['desktop_image'];
 																				if(isset($bgset_images['mobile_image'])){
 																					$data_bgset = $bgset_images['mobile_image']. ' [(max-width: 768px)] | '.$data_bgset;
-																				} 
+																				}
 																			}else{
 																				if(isset($bgset_images['mobile_image'])){
 																					$data_bgset = $bgset_images['mobile_image']. ' [(max-width: 768px)]';
@@ -120,9 +120,9 @@ class OptimizeSpeedHttp implements ObserverInterface {
 					}
 				}
 			}
-			
+
 			$content = preg_replace('#<style type="text/css">#', '<style>', $content);
-			
+
 			if(preg_match_all('#<style>(.*?)</style>#is', $content, $inline_styles)) {
 				if(isset($inline_styles[0])){
 					foreach($inline_styles[0] as $key_inline_styles => $inline_style){

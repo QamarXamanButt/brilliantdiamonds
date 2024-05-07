@@ -23,7 +23,7 @@
         : $limit_show;
 if ($view_model->getVerticalMenuHtml()) {
     ?>
-<div id="vertical-menu-container" class="vertical-menu-container navigation">
+<div id="vertical-menu-container" class="vertical-menu-container navigation hidden">
     <div data-action="toggle-nav" class="action nav-toggle d-xl-none sticky-toggle">
         <span><?= $block->escapeHtml(__('Toggle Nav')) ?></span>
     </div>
@@ -44,11 +44,11 @@ if ($view_model->getVerticalMenuHtml()) {
             </div>
             <?php } ?>
             <div class="verticalmenu-html">
-                <ul class="verticalmenu-list <?= $block->escapeHtml($animation) ?>" style="display: none;">  
+                <ul class="verticalmenu-list <?= $block->escapeHtml($animation) ?>" style="display: none;">
                     <?= $view_model->getVerticalMenuHtml() ?>
                     <li class="expand-menu-link level0">
                         <a href="#" class="level-top"><?= $block->escapeHtml(__('More Menus')) ?></a>
-                    </li> 
+                    </li>
                 </ul>
             </div>
         </div>
@@ -59,7 +59,7 @@ if ($view_model->getVerticalMenuHtml()) {
         "#vertical-menu-container": {
             "Blueskytechco_MenuBuilder/js/components/verticalmenu": {
                 "limitShow":"<?= $block->escapeHtml($limit_show) ?>",
-                "smallDesktop":"<?= $block->escapeHtml($small_desktop) ?>"     
+                "smallDesktop":"<?= $block->escapeHtml($small_desktop) ?>"
             }
         }
     }

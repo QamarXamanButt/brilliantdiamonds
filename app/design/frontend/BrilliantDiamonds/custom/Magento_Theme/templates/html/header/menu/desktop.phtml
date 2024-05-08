@@ -40,7 +40,7 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
             class="relative"
             aria-label="<?= $escaper->escapeHtmlAttr(__('Main menu')) ?>"
         >
-            <ul class="flex justify-start flex-wrap py-3">
+            <ul class="flex justify-center flex-wrap py-3">
                 <?php foreach ($menuItems as $index => $menuItem): ?>
                     <li class="relative level-0 border-b-2 border-transparent data-[active]:border-primary"
                         @mouseenter="hoverPanelActiveId = '<?= /* @noEscape */ (string) $index ?>'"

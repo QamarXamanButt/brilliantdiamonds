@@ -43,7 +43,7 @@ $_helper = $this->helper('Blueskytechco\Themeoption\Helper\Themeconfig');
 	--navigation-level0-item__font-weight: <?= $_helper->getCustomMenuFont($data, 'weight'); ?>;
 	<?php } ?>
 	<?php } ?>
-	
+
 	/* Other Font */
 	<?php if($_helper->isCustomOtherFont($data)){ ?>
 	--other_font_family: <?= $_helper->getCustomOtherFont($data); ?>;
@@ -51,7 +51,7 @@ $_helper = $this->helper('Blueskytechco\Themeoption\Helper\Themeconfig');
 
 	/* Theme Colors */
 	<?php if($_helper->getThemeColors($data)){ ?>
-	--theme__color__primary: <?= $_helper->getThemeColors($data); ?>; 
+	--theme__color__primary: <?= $_helper->getThemeColors($data); ?>;
 	<?php } ?>
 
 	/* Basic Colors */
@@ -69,7 +69,7 @@ $_helper = $this->helper('Blueskytechco\Themeoption\Helper\Themeconfig');
 	--link__hover__color: <?= $_helper->getBasicColors($data, 'link_hover_color');?>;
 	<?php } ?>
 	<?php } ?>
-	
+
 	/* Buttons Colors */
 	<?php if($_helper->getButtonBorderRadius($data)){ ?>
 	--button__border-radius: <?= $_helper->getButtonBorderRadius($data);?>;
@@ -79,7 +79,7 @@ $_helper = $this->helper('Blueskytechco\Themeoption\Helper\Themeconfig');
 	--button__color: <?= $_helper->getButtonsColors($data, 'button_text_color');?>;
 	--button-primary__color: <?= $_helper->getButtonsColors($data, 'button_text_color');?>;
 	<?php } ?>
-	<?php if($_helper->getButtonsColors($data, 'button_bg_color')){ ?> 
+	<?php if($_helper->getButtonsColors($data, 'button_bg_color')){ ?>
 	--button-secondary-bg: <?= $_helper->getButtonsColors($data, 'button_bg_color');?>;
 	--button__background: <?= $_helper->getButtonsColors($data, 'button_bg_color');?>;
 	--button-primary__background: <?= $_helper->getButtonsColors($data, 'button_bg_color');?>;
@@ -177,7 +177,7 @@ $_helper = $this->helper('Blueskytechco\Themeoption\Helper\Themeconfig');
 
 <?php if($_helper->getIconLazyLoad($data)){ ?>
 /* Icon LazyLoad */
-img.lazyload,  
+img.lazyload,
 img.lazyloading,
 img.swatch-option-loading,
 .fotorama__spinner,
@@ -216,11 +216,11 @@ img.swatch-option-loading,
 		--heading__color__base: <?= $_helper->getButtonsColors($data, 'button_text_color');?>;
 	}
 <?php } ?>
-<?php if($_helper->getButtonsColors($data, 'button_bg_color')){ ?> 
-	button, .cart.table-wrapper .actions-toolbar > .action, .action-gift{
-		border: 1px solid var(--button__background);
-	}
-<?php } ?>	
+<?php if($_helper->getButtonsColors($data, 'button_bg_color')){ ?>
+<!--	button, .cart.table-wrapper .actions-toolbar > .action, .action-gift{-->
+<!--		border: 1px solid var(--button__background);-->
+<!--	}-->
+<?php } ?>
 
 <?php if($_helper->isEnableCustomHeader($data)){ ?>
 /* Custom Header */

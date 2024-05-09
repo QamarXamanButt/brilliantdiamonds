@@ -10,11 +10,11 @@ $titleRenderer = $block->getChildBlock('product.section.title.renderer');
 $defaultTitleTemplate = $titleRenderer->getTemplate();
 
 ?>
-<div class="flex gap-8 justify-center">
-    <div><a class="pdp_desc_tabs py-2 px-4  shadow-sm active" onclick="openCity('description',event)">Details</a></div>
-    <div><a class="pdp_desc_tabs py-2 px-4 shadow-sm" onclick="openCity('product.attributes',event)">More Information</a></div>
-    <div><a class="pdp_desc_tabs py-2 px-4 shadow-sm" onclick="openCity('customer-review-list',event)">Reviews</a></div>
-    <div><a class="pdp_desc_tabs py-2 px-4 shadow-sm" onclick="openCity('review-form',event)">Review Form</a></div>
+<div class="flex gap-4 md:gap-8 justify-center flex-col md:flex-row">
+    <div class="w-full md:w-auto"><a class="pdp_desc_tabs flex md:inline-flex justify-center md:justify-start py-2 px-4  shadow-sm active" onclick="openCity('description',event)">Details</a></div>
+    <div class="w-full md:w-auto"><a class="pdp_desc_tabs flex md:inline-flex justify-center md:justify-start py-2 px-4 shadow-sm" onclick="openCity('product.attributes',event)">More Information</a></div>
+    <div class="w-full md:w-auto"><a class="pdp_desc_tabs flex md:inline-flex justify-center md:justify-start py-2 px-4 shadow-sm" onclick="openCity('customer-review-list',event)">Reviews</a></div>
+    <div class="w-full md:w-auto"><a class="pdp_desc_tabs flex md:inline-flex justify-center md:justify-start py-2 px-4 shadow-sm" onclick="openCity('review-form',event)">Review Form</a></div>
 </div>
 
 <div class="product attribute description">

@@ -65,7 +65,7 @@ $currentProduct = $block->getCurrentProduct();
 
         <div class="border-b pb-6" role="group" aria-label="<?= $escaper->escapeHtmlAttr('Price') ?>">
             <?= $block->getChildHtml("product.info.price") ?>
-            <div class="flex">
+            <div class="flex flex-wrap gap-2">
                 <?= $block->getChildHtml('product.info.addtowishlist'); ?>
                 <?= $block->getChildHtml('product.info.addtocompare'); ?>
                 <?= $block->getChildHtml('product.info.emailtofriend'); ?>
@@ -81,7 +81,7 @@ $currentProduct = $block->getCurrentProduct();
             <?= /* @noEscape */ __('No credit? Shop now. Pay over time.') ?>
             <a href="<?= $currentProduct ?>"><?= /* @noEscape */ __('Get pre-approved') ?></a>
         </div>
-        <div id="als_pdp" data-amount="240880.00000000003" class="affirm-as-low-as w-full flex pt-2" data-page-type="product" data-affirm-color="blue" data-learnmore-show="true" style="visibility: visible;">Starting at <span class="affirm-ala-price">$117</span>/mo or 0% APR with <span class="__affirm-logo __affirm-logo-blue __ligature__affirm_full_logo__ __processed">Affirm</span>. <a class="affirm-modal-trigger" aria-label="See if you qualify - Learn more about Affirm Financing (opens in modal)" href="javascript:void(0)"> See if you qualify</a></div>
+        <div id="als_pdp" data-amount="240880.00000000003" class="affirm-as-low-as w-full md:flex pt-2" data-page-type="product" data-affirm-color="blue" data-learnmore-show="true" style="visibility: visible;">Starting at <span class="affirm-ala-price">$117</span>/mo or 0% APR with <span class="__affirm-logo __affirm-logo-blue __ligature__affirm_full_logo__ __processed">Affirm</span>. <a class="affirm-modal-trigger" aria-label="See if you qualify - Learn more about Affirm Financing (opens in modal)" href="javascript:void(0)"> See if you qualify</a></div>
     </div>
 
     <div>

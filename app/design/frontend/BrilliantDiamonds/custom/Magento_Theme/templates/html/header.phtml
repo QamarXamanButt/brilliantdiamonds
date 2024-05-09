@@ -74,11 +74,14 @@ $showMiniCart = $storeConfig->getStoreConfig(SidebarCart::XML_PATH_CHECKOUT_SIDE
      x-data="initHeader()"
      @private-content-loaded.window="getData(event.detail.data)"
 >
-    <div class="container flex flex-wrap lg:flex-nowrap items-center justify-between w-full px-6 py-2 mx-auto mt-0 border-b">
+    <div class="lg:container flex items-center justify-between w-full px-2 md:px-6 py-2 mx-auto mt-0 border-b">
         <div></div>
+        <div class="block lg:hidden mr-auto">
+            <?= $block->getChildHtml('topmenu') ?>
+        </div>
         <!--Logo-->
         <?= $block->getChildHtml('logo'); ?>
-        <div class="flex items-center gap-2 md:gap-1 order-3 md:-mr-1">
+        <div class="flex items-center gap-1 order-3 md:-mr-1">
             <!--Compare Icon-->
             <a id="compare-link"
                class="relative inline-block rounded p-1 hover:bg-primary/10 outline-offset-2 invisible"
@@ -94,7 +97,7 @@ $showMiniCart = $storeConfig->getStoreConfig(SidebarCart::XML_PATH_CHECKOUT_SIDE
                         : hyva.str('<?= $escaper->escapeJs(__('%1 Item')) ?>', itemCount)
                     }`"
             >
-                <?= $heroicons->scaleHtml("md:h-6 md:w-6", 28, 28, ["aria-hidden" => "true"]) ?>
+                <?= $heroicons->scaleHtml("h-6 w-6", 28, 28, ["aria-hidden" => "true"]) ?>
                 <span
                     x-text="itemCount"
                     class="absolute -top-1.5 -right-1.5 h-5 px-2 py-1 rounded-full bg-yellow-500 text-white
@@ -115,7 +118,7 @@ $showMiniCart = $storeConfig->getStoreConfig(SidebarCart::XML_PATH_CHECKOUT_SIDE
                 :aria-expanded="searchOpen"
                 x-ref="searchButton"
             >
-                <?= $heroicons->searchHtml("md:h-6 md:w-6", 28, 28, ["aria-hidden" => "true"]) ?>
+                <?= $heroicons->searchHtml("h-6 w-6", 28, 28, ["aria-hidden" => "true"]) ?>
             </button>
 
             <!-- Additional Header Elements -->
@@ -154,7 +157,7 @@ $showMiniCart = $storeConfig->getStoreConfig(SidebarCart::XML_PATH_CHECKOUT_SIDE
                     title="<?= $escaper->escapeHtmlAttr(__('View cart')) ?>"
                 <?php endif ?>
             >
-                <?= $heroicons->shoppingCartHtml("md:h-6 md:w-6", 28, 28, ["aria-hidden" => "true"]) ?>
+                <?= $heroicons->shoppingCartHtml("h-6 w-6", 28, 28, ["aria-hidden" => "true"]) ?>
                 <span
                     x-text="cart.summary_count"
                     x-show="!isCartEmpty()"
@@ -171,7 +174,9 @@ $showMiniCart = $storeConfig->getStoreConfig(SidebarCart::XML_PATH_CHECKOUT_SIDE
         </div>
     </div>
     <!--Main Navigation-->
+    <div class="hidden lg:block">
     <?= $block->getChildHtml('topmenu') ?>
+    </div>
 
     <!--Search-->
     <div class="absolute z-10 w-full border-t shadow-sm bg-container-lighter border-container-lighter"

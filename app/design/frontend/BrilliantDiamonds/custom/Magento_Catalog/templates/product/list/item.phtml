@@ -154,7 +154,7 @@ $viewModels->require(BlockJsDependencies::class)->setBlockTemplateDependency($bl
             <?= /* @noEscape */ $productListItemViewModel->getProductPriceHtml($product) ?>
         </div>
 
-        <div style="top: -78px;" class="product_hoverEffect left-1/2 -translate-x-1/2 flex flex-wrap items-center justify-center gap-y-4 order-1 gap-x-2
+        <div style="top: -78px;" class="product_hoverEffect left-1/2 -translate-x-1/2 flex items-center justify-center gap-y-4 order-1 gap-x-2
             <?= $viewIsGrid ? '' : 'md:justify-center' ?>">
             <?php if ($product->isSaleable()): ?>
                 <?php if ($isProductGroupedOrBundle): ?>
@@ -188,7 +188,7 @@ $viewModels->require(BlockJsDependencies::class)->setBlockTemplateDependency($bl
                 <?= $block->getChildBlock('stockstatus')->setData('product', $product)->toHtml() ?>
             </div>
             <?php endif; ?>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex gap-2">
                 <?php if ($showAddToWishlist): ?>
                 <button x-data="initWishlist()"
                         x-defer="intersect"

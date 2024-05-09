@@ -5,12 +5,46 @@
         </div>
     </div>
 <?php endif; ?>
-<?php 
+<?php
     $cmsBlockTopHeader = $block->getCmsBlockTopHeader();
 ?>
 <?php if($cmsBlockTopHeader && $cmsBlockTopHeader != ''){ ?>
-<div class="section-top-header">
+<div class="section-top-header banner" id="banner">
     <div class="content__top--header--banner"><?= $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($cmsBlockTopHeader)->toHtml(); ?></div>
-    <a rel="nofollow" href="#" class="btn__top--header--banner--close fs_18"><i class="icon-x"></i></a>
+    <a rel="nofollow" href="#" class="btn__top--header--banner--close fs_18 close" onclick="closeBanner()"><i class="icon-x"></i></a>
 </div>
 <?php } ?>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if (getCookie("bannerClosed") !== "true") {
+            document.getElementById("banner").style.display = "block";
+        }
+    });
+
+    function closeBanner() {
+        document.getElementById("banner").style.display = "none";
+        setCookie("bannerClosed", "true", 365);
+    }
+
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+</script>

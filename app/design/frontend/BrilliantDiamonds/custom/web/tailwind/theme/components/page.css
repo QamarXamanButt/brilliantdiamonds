@@ -43,6 +43,11 @@ a.button:hover,button.btn.btn-primary:hover{
     top: 50%;
     transform: translateY(-50%);
 }
+@media(max-width:600px){
+    .bestSeller_preve{
+        display: none;
+    }
+}
 .product_slider_price .price-box.price-final_price{
     display:flex;
     justify-content:center;

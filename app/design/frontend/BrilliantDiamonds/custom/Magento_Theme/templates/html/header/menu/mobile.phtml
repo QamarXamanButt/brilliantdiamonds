@@ -48,12 +48,12 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
         :aria-expanded="open"
         :hidden="open"
     >
-        <?= $heroicons->menuHtml('p-3', 48, 48, [":class" => "{ 'hidden' : open, 'block': !open }", "aria-hidden" => "true"]) ?>
+        <?= $heroicons->menuHtml('p-2.5', 48, 48, [":class" => "{ 'hidden' : open, 'block': !open }", "aria-hidden" => "true"]) ?>
     </button>
     <div
         x-ref="mobileMenuNavLinks"
         class="
-            fixed top-0 right-0 w-full h-full p-1 hidden
+            fixed top-0 right-0 w-full h-full hidden
             flex-col border-t border-container bg-container-lighter
             overflow-y-auto overflow-x-hidden
         "
@@ -63,7 +63,7 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
         aria-modal="true"
     >
         <ul
-            class="border-t flex flex-col gap-y-1 mt-16"
+            class="border-t flex flex-col gap-y-1 mt-12 pt-4"
             aria-label="<?= $escaper->escapeHtmlAttr(__('Site navigation links')) ?>"
         >
             <?php foreach ($menuItems as $index => $menuItem): ?>
@@ -79,7 +79,7 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
                         }"
                     >
                         <a
-                            class="flex items-center w-full px-8 py-4 border-b cursor-pointer
+                            class="flex items-center w-full px-4 py-3 border-b cursor-pointer
                                 bg-container-lighter border-container level-0
                             "
                             href="<?= $escaper->escapeUrl($menuItem['url']) ?>"
@@ -90,13 +90,12 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
                         <?php if (!empty($menuItem['childData'])): ?>
                             <button
                                 @click="openSubcategory('<?= /* @noEscape */ $index ?>')"
-                                class="absolute right-0 flex items-center justify-center w-11 h-11 mr-8 cursor-pointer
-                                bg-container-lighter border-container"
+                                class="absolute right-0 flex items-center justify-center w-11 h-11 mr-2 cursor-pointer"
                                 aria-label="<?= $escaper->escapeHtmlAttr(__('Open %1 subcategories', $menuItem['name'])) ?>"
                                 aria-haspopup="true"
                                 :aria-expanded="mobilePanelActiveId === '<?= /* @noEscape */ (string) $index ?>'"
                             >
-                                <div class="w-8 h-8 border rounded">
+                                <div class="w-8 h-8">
                                     <?= $heroicons->chevronRightHtml('w-full h-full p-1', 24, 24, ["aria-hidden" => "true"]) ?>
                                 </div>
                             </button>
@@ -121,7 +120,7 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
                                 <li>
                                     <button
                                         type="button"
-                                        class="flex items-center px-8 py-4 border-b cursor-pointer bg-container border-container w-full border-t"
+                                        class="flex items-center px-8 py-3 border-b cursor-pointer bg-container border-container w-full border-t"
                                         @click="backToMainCategories('<?= /* @noEscape */ $index ?>-main')"
                                         aria-label="<?= $escaper->escapeHtmlAttr(__('Back to main categories')) ?>"
                                     >
@@ -135,7 +134,7 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
                                     <a
                                         href="<?= $escaper->escapeUrl($menuItem['url']) ?>"
                                         title="<?= $escaper->escapeHtmlAttr($menuItem['name']) ?>"
-                                        class="flex items-center w-full px-8 py-4 border-b cursor-pointer
+                                        class="flex items-center w-full px-4 py-3 border-b cursor-pointer
                                             bg-container-lighter border-container
                                         "
                                     >
@@ -149,7 +148,7 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
                                         <a
                                             href="<?= $escaper->escapeUrl($subMenuItem['url']) ?>"
                                             title="<?= $escaper->escapeHtmlAttr($subMenuItem['name']) ?>"
-                                            class="flex items-center w-full px-8 py-4 border-b cursor-pointer
+                                            class="flex items-center w-full px-4 py-3 border-b cursor-pointer
                                                 bg-container-lighter border-container
                                             "
                                         >
@@ -162,10 +161,12 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
                             </ul>
                             <button
                                 @click="closeMenu()"
-                                class="absolute flex justify-end w-16 self-end mb-1 transition-none"
+                                class="absolute flex justify-between items-center w-full self-end"
+                                style="background-color: #464646;color:white;"
                                 aria-label="<?= $escaper->escapeHtmlAttr(__('Close menu')) ?>"
                             >
-                                <?= $heroicons->xHtml('hidden p-4', 64, 64, [":class" => "{ 'hidden' : !open, 'block': open }", "aria-hidden" => "true"]) ?>
+                                <span class="text-white ml-4 pl-3">Menu</span>
+                                <?= $heroicons->xHtml('hidden p-3', 64, 64, [":class" => "{ 'hidden' : !open, 'block': open }", "aria-hidden" => "true"]) ?>
                             </button>
                         </div>
                     <?php endif; ?>
@@ -174,11 +175,13 @@ $block->setData('cache_tags', $viewModelNavigation->getIdentities());
         </ul>
         <button
             @click="closeMenu()"
-            class="absolute flex justify-end w-16 self-end mb-1"
+            class="absolute flex justify-between items-center w-full self-end"
             aria-label="<?= $escaper->escapeHtmlAttr(__('Close menu')) ?>"
             type="button"
+            style="background-color: #464646;color:white;"
         >
-            <?= $heroicons->xHtml('hidden p-4', 64, 64, [":class" => "{ 'hidden' : !open, 'block': open }", "aria-hidden" => "true"]) ?>
+            <span class="text-white ml-4 pl-3">Menu</span>
+            <?= $heroicons->xHtml('hidden p-3', 64, 64, [":class" => "{ 'hidden' : !open, 'block': open }", "aria-hidden" => "true"]) ?>
         </button>
     </div>
 </nav>

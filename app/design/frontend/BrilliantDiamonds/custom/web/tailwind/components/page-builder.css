@@ -637,3 +637,24 @@ div {
         display:none;
     }
 }
+.desktop_banner{
+    display:block;
+}
+.mobile_banner{
+    display:none;
+}
+@media(max-width:600px){
+    .desktop_banner{
+        display:none;
+    }
+    .mobile_banner{
+        display:block;
+    }
+}
+[data-content-type=slide] .pagebuilder-slide-wrapper [data-element=content]{
+    overflow: auto;
+    min-height: auto !important;
+}
+button, .cart.table-wrapper .actions-toolbar > .action, .action-gift {
+    border: none !important;
+}

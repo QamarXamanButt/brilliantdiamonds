@@ -1720,11 +1720,11 @@ button.btn.actions-toolbar .primary button{
 }
 
 button.actions-toolbar .primary button.btn-primary:hover{
-  background: #916c09;
+  background: #095b3c;
 }
 
 button.btn.actions-toolbar .primary button:hover{
-  background: #916c09;
+  background: #095b3c;
 }
 
 #category-view-container {
@@ -2948,11 +2948,11 @@ buttona.btn.pagebuilder-button-primary,button button.btn.pagebuilder-button-prim
 }
 
 buttona.pagebuilder-button-primary.btn-primary:hover,button button.pagebuilder-button-primary.btn-primary:hover,button div.pagebuilder-button-primary.btn-primary:hover{
-  background: #916c09;
+  background: #095b3c;
 }
 
 buttona.btn.pagebuilder-button-primary:hover,button button.btn.pagebuilder-button-primary:hover,button div.btn.pagebuilder-button-primary:hover{
-  background: #916c09;
+  background: #095b3c;
 }
 
 a.pagebuilder-button-secondary, button.pagebuilder-button-secondary, div.pagebuilder-button-secondary {
@@ -3061,7 +3061,7 @@ buttona.pagebuilder-button-secondary.btn-primary,button button.pagebuilder-butto
 }
 
 buttona.pagebuilder-button-secondary.btn-primary:hover,button button.pagebuilder-button-secondary.btn-primary:hover,button div.pagebuilder-button-secondary.btn-primary:hover{
-  background: #916c09;
+  background: #095b3c;
 }
 
 /* HTML Code */
@@ -3648,6 +3648,33 @@ buttona.pagebuilder-button-secondary.btn-primary:hover,button button.pagebuilder
   .top_text_slide .carousel-nav .glider-next{
     display:none;
   }
+}
+
+.desktop_banner{
+  display:block;
+}
+
+.mobile_banner{
+  display:none;
+}
+
+@media(max-width:600px){
+  .desktop_banner{
+    display:none;
+  }
+
+  .mobile_banner{
+    display:block;
+  }
+}
+
+[data-content-type=slide] .pagebuilder-slide-wrapper [data-element=content]{
+  overflow: auto;
+  min-height: auto !important;
+}
+
+button, .cart.table-wrapper .actions-toolbar > .action, .action-gift {
+  border: none !important;
 }
 
 /* purgecss end ignore */
@@ -5792,8 +5819,20 @@ button.btn.btn-primary{
   color: white;
 }
 
+a.level-0:hover, a.level-1:hover, a.level-3:hover{
+  color:#626d54;
+}
+
+.leading-7 a:hover{
+  color: #705407;
+}
+
+.items .category_name{
+  color: #095b3c;
+}
+
 a.button:hover,button.btn.btn-primary:hover{
-  background: #916c09;
+  background: #095b3c;
 }
 
 .product_hoverEffect{

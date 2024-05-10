@@ -55,7 +55,7 @@ if (!$count) {
                                     aria-label="<?= $escaper->escapeHtmlAttr(__('%1 filter, %2 available products', $category->getName(), $category->getProductCount())) ?>"
                                     <?php endif; ?>
                                 >
-                                    <span><?= $escaper->escapeHtml($category->getName()) ?></span>
+                                    <span class="category_name"><?= $escaper->escapeHtml($category->getName()) ?></span>
                                     <span class="count text-primary">(<?= $escaper->escapeHtml($category->getProductCount()) ?>)</span>
                                 </a>
                             </li>

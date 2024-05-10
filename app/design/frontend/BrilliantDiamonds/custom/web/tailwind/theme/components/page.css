@@ -21,8 +21,17 @@ button.btn.btn-primary{
     background: black;
     color: white;
 }
+a.level-0:hover, a.level-1:hover, a.level-3:hover{
+    color:#626d54;
+}
+.leading-7 a:hover{
+    color: #705407;
+}
+.items .category_name{
+    color: #095b3c;
+}
 a.button:hover,button.btn.btn-primary:hover{
-    background: #916c09;
+    background: #095b3c;
 }
 .product_hoverEffect{
     position: absolute;

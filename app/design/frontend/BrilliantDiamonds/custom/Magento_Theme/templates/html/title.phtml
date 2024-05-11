@@ -6,7 +6,7 @@ use Magento\Theme\Block\Html\Title;
 /** @var Escaper $escaper */
 /** @var Title $block */
 
-$textSizeCssClass = ' product text-3xl mt-8';
+$textSizeCssClass = ' product';
 $titleContainerClasses = $block->getData('maybe_purged_tailwind_section_classes')
     ?? 'flex flex-col md:flex-row flex-wrap justify-center';
 $titleHtml = '';
@@ -20,7 +20,7 @@ if (trim((string)$block->getPageHeading())) {
 ?>
 <?php if ($titleHtml): ?>
 <div class="<?= $escaper->escapeHtmlAttr($titleContainerClasses . $textSizeCssClass) ?>">
-    <h1 class="text-gray-900 page-title title-font uppercase"
+    <h1 class="text-gray-900 page-title title-font uppercase font-normal text-2xl"
         <?php if ($block->getId()): ?> id="<?= $escaper->escapeHtmlAttr($block->getId()) ?>" <?php endif; ?>>
         <?= /* @noEscape */ $titleHtml ?>
     </h1>

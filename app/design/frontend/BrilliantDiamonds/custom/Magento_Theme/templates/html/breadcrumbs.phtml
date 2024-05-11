@@ -25,7 +25,7 @@ use Magento\Framework\Escaper;
                     ><?= $escaper->escapeHtml($crumbInfo['label']) ?></a>
                 <?php elseif ($crumbInfo['last']): ?>
                     <span
-                       class="text-primary-lighter"
+                       class="text-breadTitle"
                        aria-current="page"
                     ><?= $escaper->escapeHtml($crumbInfo['label']) ?></span>
                 <?php else: ?>

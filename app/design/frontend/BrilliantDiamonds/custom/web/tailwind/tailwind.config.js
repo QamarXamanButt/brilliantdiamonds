@@ -26,6 +26,8 @@ module.exports = hyvaModules.mergeTailwindConfig({
       },
       colors: {
         finalPrice: '#C22200',
+        breadTitle: '#999',
+        webFont : '#095b3c',
         primary: {
           lighter: colors.blue['300'],
           "DEFAULT": colors.blue['800'],

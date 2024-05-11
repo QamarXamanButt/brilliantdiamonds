@@ -60,16 +60,15 @@ if (!$product->getId() || !$compareViewModel->showOnProductPage()) {
     }
 </script>
 
-<div class="flex item-center" x-data="initCompareOnProductView()"
+<div class="flex item-center product-addto-links" x-data="initCompareOnProductView()"
      @click.prevent="addToCompare(<?= (int)$product->getId() ?>)"
      title="<?= $escaper->escapeHtmlAttr(__('Add to Compare')) ?>"
      aria-label="<?= $escaper->escapeHtmlAttr(__('Add to Compare')) ?>"
      id="add-to-compare"
      data-addto="compare"
 >
-<button class="text-gray-500 hover:text-yellow-500 ml-2"
+<button class="text-gray-500 hover:text-yellow-500 ml-2 action tocompare"
 >
-    <?= $heroicons->scaleHtml("w-5 h-5", 25, 25) ?>
 </button>
-    <span class="cursor-pointer pl-1">Add to Compare</span>
+    <span class="cursor-pointer pl-1 text-webFont">Add to Compare</span>
 </div>
